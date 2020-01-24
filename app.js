@@ -172,6 +172,28 @@ function handleMessage(sender_psid, received_message) {
         }
       }
     }
+  } else if (received_message.text == "test") {
+    // Get the URL of the message attachment
+    let attachment_url = received_message.attachments[0].payload.url;
+    response = {
+      "messaging_type": "RESPONSE",
+      "message":{
+        "text": "Pick a color:",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"Red",
+            "payload":"<POSTBACK_PAYLOAD>",
+            "image_url":"http://example.com/img/red.png"
+          },{
+            "content_type":"text",
+            "title":"Green",
+            "payload":"<POSTBACK_PAYLOAD>",
+            "image_url":"http://example.com/img/green.png"
+          }
+        ]
+      }
+    }
   } 
   
   // Send the response message
