@@ -139,7 +139,7 @@ function handleMessage(sender_psid, received_message) {
     }
   }else if (received_message.text == "test") {
     // Get the URL of the message attachment
-    let attachment_url = received_message.attachments[0].payload.url;
+    
     response = {
       "messaging_type": "RESPONSE",
       "message":{
