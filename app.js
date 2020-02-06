@@ -147,19 +147,7 @@ function handleMessage(sender_psid, received_message) {
   ]
 } 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    //response = {
+    response = {
       "text":"မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ်",
       "quick_replies":[
         {
