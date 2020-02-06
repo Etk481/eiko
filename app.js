@@ -129,13 +129,27 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": `Min Ga Lar Par Sint!မင်္ဂလာပါ`
+      "text": `မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ်`,
+    "quick_replies":[
+      {
+        "content_type":"text",
+        "title":"Red",
+        "payload":"<POSTBACK_PAYLOAD>",
+        "image_url":"http://example.com/img/red.png"
+      },{
+        "content_type":"text",
+        "title":"Green",
+        "payload":"<POSTBACK_PAYLOAD>",
+        "image_url":"http://example.com/img/green.png"
+      }
+    ]
+  }
     }
   }else if (received_message.text == "hello") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": `Hello!!!!!!!!!`
+      "text": `မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ်`
     }
   }
    else if (received_message.text) {    
