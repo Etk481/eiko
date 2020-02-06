@@ -128,7 +128,38 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text == "Hi") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
-    response = {
+   "payload": {
+  "template_type":"generic",
+  "elements":[
+     {
+      "title":"<TITLE_TEXT>",
+      "image_url":"<IMAGE_URL_TO_DISPLAY>",
+      "subtitle":"<SUBTITLE_TEXT>",
+      "default_action": {
+        "type": "web_url",
+        "url": "<DEFAULT_URL_TO_OPEN>",
+        "messenger_extensions": <TRUE | FALSE>,
+        "webview_height_ratio": "<COMPACT | TALL | FULL>"
+      },
+      "buttons":[<BUTTON_OBJECT>, ...]      
+    },
+    ...
+  ]
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //response = {
       "text":"မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ်",
       "quick_replies":[
         {
