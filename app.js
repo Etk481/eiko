@@ -239,18 +239,23 @@ function handlePostback(sender_psid, received_postback) {
                   "payload": {
                     "template_type": "generic",
                     "elements": [{
-                      "title": "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ်",
-                      "subtitle": "ဘာများအလိုရှိပါသလဲ?",
+                      "title": "ဆိုင်ရှိတံခါးရွက်",
+                      "subtitle": "ရွေးပါ",
                       "buttons": [
                         {
                           "type": "postback",
-                          "title": "ဆိုင်ရှိတံခါးရွက်ဒီဇိုင်းများ",
-                          "payload": "sstgym",
+                          "title": "တံခါးမကြီး",
+                          "payload": "door",
                         },
                         {
                           "type": "postback",
-                          "title": "ဒီဇိုင်းပေးမည်",
-                          "payload": "gd",
+                          "title": "ပြတင်းပေါက်",
+                          "payload": "window",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "ရောင်လင်း",
+                          "payload": "light",
                         }
                       ],
                     }]
