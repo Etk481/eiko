@@ -262,7 +262,36 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
-            }
+  }else if (payload === 'door') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "တံခါးမကြီးများ",
+                      "subtitle": "ပုံစံ",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ကြီးခွေ",
+                          "payload": "k",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "တစ်ဖက်ပိတ်",
+                          "payload": "d1",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "နှစ်ဖက်ပိတ်",
+                          "payload": "d2",
+                        } 
+                      ],
+                    }]
+                  }
+                }
+              }
+  }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
