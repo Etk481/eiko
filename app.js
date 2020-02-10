@@ -240,7 +240,7 @@ function handlePostback(sender_psid, received_postback) {
                     "template_type": "generic",
                     "elements": [{
                       "title": "ဆိုင်ရှိတံခါးရွက်ဒီဇိုင်းများ",
-                      "subtitle": "",
+                      "subtitle": "ရွေးပါ",
                       "buttons": [
                         {
                           "type": "postback",
