@@ -233,6 +233,40 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
               }
+  }else if (payload === 'sstgym') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "ဆိုင်ရှိတံခါးရွက်ဒီဇိုင်းများ",
+                      "subtitle": "",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "တံခါးမကြီး",
+                          "payload": "d",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "ပြတင်းပေါက်",
+                          "payload": "w",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "ရောင်လင်း",
+                          "payload": "y",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "ကြီးခွေ",
+                          "payload": "g",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              }
             }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
