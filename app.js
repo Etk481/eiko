@@ -274,7 +274,7 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "ကြီးခွေ",
-                          "payload": "k",
+                          "payload": "dk",
                         },
                         {
                           "type": "postback",
@@ -285,6 +285,35 @@ function handlePostback(sender_psid, received_postback) {
                           "type": "postback",
                           "title": "နှစ်ဖက်ပိတ်",
                           "payload": "d2",
+                        } 
+                      ],
+                    }]
+                  }
+                }
+              }
+  }else if (payload === 'window') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "ပြတင်းပေါက်များ",
+                      "subtitle": "ပုံစံ",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ကြီးခွေ",
+                          "payload": "wk",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "တစ်ဖက်ပိတ်",
+                          "payload": "w1",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "နှစ်ဖက်ပိတ်",
+                          "payload": "w2",
                         } 
                       ],
                     }]
