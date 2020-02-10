@@ -209,7 +209,31 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "Thanks!" }
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
-  }
+  }else if (payload === 'get_started') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ်",
+                      "subtitle": "ဘာများအလိုရှိပါသလဲ?",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ဆိုင်ရှိတံခါးရွက်ဒီဇိုင်းများ",
+                          "payload": "sstgym",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "ဒီဇိုင်းပေးမည်",
+                          "payload": "gd",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              }
+            }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
