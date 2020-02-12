@@ -201,7 +201,26 @@ function handleMessage(sender_psid, received_message) {
         }
       ]
       }
-  }  
+  }else if (received_message.text == "no") {
+      response = {
+        "text":'ကျေးဇူးတင်ပါတယ်' 
+      }
+  }else if (received_message.text == "yes") {
+     response = {
+        "text":'လာယူမှာလား?',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"အိမ်ပို့ပေး",
+          "payload":"<POSTBACK_PAYLOAD>"
+        },{
+          "content_type":"text",
+          "title":"ယူမယ်",
+          "payload":"<POSTBACK_PAYLOAD>"
+        }
+      ]
+      }
+  } 
   
   // Send the response message
   callSendAPI(sender_psid, response);    
