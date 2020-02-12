@@ -220,8 +220,15 @@ function handleMessage(sender_psid, received_message) {
         }
       ]
       }
-  } 
-  
+  } else if (received_message.text == "အိမ်ပို့ပေး") {
+      response = {
+        "text":'လိပ်စာပေးပါ' 
+      }
+  }else if (received_message.text == "ယူမယ်") {
+      response = {
+        "text":'ဆိုင်မှာတွေ့မယ်နော်' 
+      }
+  }
   // Send the response message
   callSendAPI(sender_psid, response);    
 }
