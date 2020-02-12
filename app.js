@@ -220,7 +220,7 @@ function handlePostback(sender_psid, received_postback) {
                       "buttons": [
                         {
                           "type": "postback",
-                          "title": "ဆိုင်ရှိတံခါးရွက်ဒီဇိုင်းများ",
+                          "title": "တံခါးရွက်ဒီဇိုင်းများ",
                           "payload": "sstgym",
                         },
                         {
@@ -239,7 +239,7 @@ function handlePostback(sender_psid, received_postback) {
                   "payload": {
                     "template_type": "generic",
                     "elements": [{
-                      "title": "ဆိုင်ရှိတံခါးရွက်",
+                      "title": "တံခါးရွက်ဒီဇိုင်းများ",
                       "subtitle": "ရွေးပါ",
                       "buttons": [
                         {
