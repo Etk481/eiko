@@ -222,11 +222,13 @@ function handleMessage(sender_psid, received_message) {
       }
   } else if (received_message.text == "အိမ်ပို့ပေး") {
       response = {
-        "text":'ပို့ပေးရန်တည်နေရာရွေးပါ လိပ်စာပေးပါ',
-         "quick_replies":[
-        {"content_type":"location"
+        "text":'ပို့ပေးရန်တည်နေရာရွေးပါ',
+        "quick_replies":[
+        {
+          "content_type":"location",
+          "payload":"<POSTBACK_PAYLOAD>"
         }
-      ]
+        ]
       }
   }else if (received_message.text == "ယူမယ်") {
       response = {
