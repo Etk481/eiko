@@ -728,7 +728,7 @@ function handlePostback(sender_psid, received_postback) {
                 "title":"View Website"
               },{
                 "type":"postback",
-                "title":"Start Chatting",
+                "title":"မှာမည်",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
               }              
             ]      
