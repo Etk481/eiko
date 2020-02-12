@@ -723,10 +723,6 @@ function handlePostback(sender_psid, received_postback) {
             },
             "buttons":[
               {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
-              },{
                 "type":"postback",
                 "title":"မှာမည်",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
