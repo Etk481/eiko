@@ -228,6 +228,10 @@ function handleMessage(sender_psid, received_message) {
       response = {
         "text":'ဆိုင်မှာတွေ့မယ်နော်' 
       }
+  }else if (received_message.text == "1234") {
+      response = {
+        "text":'ဟုတ်ကဲ့ 15.2.2020 ရက်နေ့ကျလာပို့ပါမယ်' 
+      }
   }
   // Send the response message
   callSendAPI(sender_psid, response);    
@@ -436,7 +440,7 @@ function handlePostback(sender_psid, received_postback) {
              {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -453,7 +457,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -470,7 +474,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           }
@@ -498,7 +502,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -515,7 +519,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -532,7 +536,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -549,7 +553,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           }
@@ -577,7 +581,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -594,7 +598,7 @@ function handlePostback(sender_psid, received_postback) {
              {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -611,7 +615,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -628,7 +632,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -645,7 +649,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           }
@@ -673,7 +677,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"Start Chatting",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -688,13 +692,9 @@ function handlePostback(sender_psid, received_postback) {
             },
             "buttons":[
               {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
-              },{
                 "type":"postback",
                 "title":"Start Chatting",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -709,13 +709,9 @@ function handlePostback(sender_psid, received_postback) {
             },
             "buttons":[
               {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
-              },{
                 "type":"postback",
                 "title":"Start Chatting",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           }
@@ -743,7 +739,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -760,7 +756,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           }
@@ -788,7 +784,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           }
