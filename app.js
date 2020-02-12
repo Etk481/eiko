@@ -500,23 +500,6 @@ function handlePostback(sender_psid, received_postback) {
                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
               }              
             ]      
-          },
-          {
-            "title":"Welcome!",
-            "image_url":"",
-            "subtitle":"We have the right hat for everyone.",
-            "default_action": {
-              "type": "web_url",
-              "url": "",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"postback",
-                "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
-              }              
-            ]      
           }
         ]
       }
