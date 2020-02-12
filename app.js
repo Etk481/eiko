@@ -494,9 +494,9 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"အလျား =",
+            "title":"အလျား = 1.5'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/86261970_128707278671850_951335569596612608_o.jpg?_nc_cat=104&_nc_ohc=m_2wLarJytIAX_Z6vy_&_nc_ht=scontent.fnyt1-1.fna&oh=daa8cb40f609749cd9cd30d338d961ee&oe=5ED57961",
-            "subtitle":"အနံ = ",
+            "subtitle":"အနံ = 4'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/86261970_128707278671850_951335569596612608_o.jpg?_nc_cat=104&_nc_ohc=m_2wLarJytIAX_Z6vy_&_nc_ht=scontent.fnyt1-1.fna&oh=daa8cb40f609749cd9cd30d338d961ee&oe=5ED57961",
@@ -511,9 +511,9 @@ function handlePostback(sender_psid, received_postback) {
             ]      
           },
           {
-            "title":"အလျား =",
+            "title":"အလျား =1.5'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84516484_128707305338514_4909051974701285376_o.jpg?_nc_cat=103&_nc_ohc=ZEf538L72_oAX8wsJqy&_nc_ht=scontent.fnyt1-1.fna&oh=2b9bcfc820440c59704ca4eb143da255&oe=5EBA7D91",
-            "subtitle":"အနံ = ",
+            "subtitle":"အနံ = 4'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84516484_128707305338514_4909051974701285376_o.jpg?_nc_cat=103&_nc_ohc=ZEf538L72_oAX8wsJqy&_nc_ht=scontent.fnyt1-1.fna&oh=2b9bcfc820440c59704ca4eb143da255&oe=5EBA7D91",
@@ -528,9 +528,9 @@ function handlePostback(sender_psid, received_postback) {
             ]      
           },
           {
-            "title":"အလျား =",
+            "title":"အလျား =1.5'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/85059093_128707345338510_7829820041687203840_o.jpg?_nc_cat=105&_nc_ohc=kBtUdkbsRJMAX_QYOsS&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=e6001d29d75b70d61b6a853f1d9eab80&oe=5ECC791D",
-            "subtitle":"အနံ = ",
+            "subtitle":"အနံ = 4'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/85059093_128707345338510_7829820041687203840_o.jpg?_nc_cat=105&_nc_ohc=kBtUdkbsRJMAX_QYOsS&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=e6001d29d75b70d61b6a853f1d9eab80&oe=5ECC791D",
@@ -545,9 +545,9 @@ function handlePostback(sender_psid, received_postback) {
             ]      
           },
           {
-            "title":"အလျား =",
+            "title":"အလျား =1.5'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85250402_128707368671841_204791702894936064_o.jpg?_nc_cat=107&_nc_ohc=J1pGoSS24DkAX8edl6Z&_nc_ht=scontent.fnyt1-1.fna&oh=991f7b8752edbce5db3d3316a83c2f46&oe=5ECA65DD",
-            "subtitle":"အနံ = ",
+            "subtitle":"အနံ = 4'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85250402_128707368671841_204791702894936064_o.jpg?_nc_cat=107&_nc_ohc=J1pGoSS24DkAX8edl6Z&_nc_ht=scontent.fnyt1-1.fna&oh=991f7b8752edbce5db3d3316a83c2f46&oe=5ECA65DD",
@@ -573,9 +573,9 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"Welcome!",
+            "title":"အလျား = 3'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/85023815_128707408671837_1862269537185955840_o.jpg?_nc_cat=103&_nc_ohc=wTIcFAk9bWAAX8SUotO&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=af2ba927646c94118f5ca728312df4c8&oe=5EBCEFBD",
-            "subtitle":"We have the right hat for everyone.",
+            "subtitle":"အနံ = 4'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/85023815_128707408671837_1862269537185955840_o.jpg?_nc_cat=103&_nc_ohc=wTIcFAk9bWAAX8SUotO&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=af2ba927646c94118f5ca728312df4c8&oe=5EBCEFBD",
@@ -590,9 +590,9 @@ function handlePostback(sender_psid, received_postback) {
             ]      
           },
           {
-            "title":"Welcome!",
+            "title":"အလျား = 3'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84482301_128707435338501_3270701025643724800_o.jpg?_nc_cat=109&_nc_ohc=al6vnhdG-4kAX-pBUlq&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=29de43cc8573a2fb24ec6a59789b796b&oe=5EB4FAAF",
-            "subtitle":"We have the right hat for everyone.",
+            "subtitle":"အနံ = 4'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84482301_128707435338501_3270701025643724800_o.jpg?_nc_cat=109&_nc_ohc=al6vnhdG-4kAX-pBUlq&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=29de43cc8573a2fb24ec6a59789b796b&oe=5EB4FAAF",
@@ -607,9 +607,9 @@ function handlePostback(sender_psid, received_postback) {
             ]      
           },
           {
-            "title":"Welcome!",
+            "title":"အလျား = 3'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84353475_128707478671830_2425593354625482752_o.jpg?_nc_cat=110&_nc_ohc=mlYuYO7C55cAX848IYT&_nc_ht=scontent.fnyt1-1.fna&oh=0207efe0b84d3f432b35c7f52346cdc6&oe=5EB8AC7A",
-            "subtitle":"We have the right hat for everyone.",
+            "subtitle":"အနံ = 4'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84353475_128707478671830_2425593354625482752_o.jpg?_nc_cat=110&_nc_ohc=mlYuYO7C55cAX848IYT&_nc_ht=scontent.fnyt1-1.fna&oh=0207efe0b84d3f432b35c7f52346cdc6&oe=5EB8AC7A",
@@ -624,9 +624,9 @@ function handlePostback(sender_psid, received_postback) {
             ]      
           },
           {
-            "title":"Welcome!",
+            "title":"အလျား = 3'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85145127_128707675338477_5778662326769025024_o.jpg?_nc_cat=100&_nc_ohc=T2fDm1dMklMAX9zwjN5&_nc_ht=scontent.fnyt1-1.fna&oh=f46c2aec1ea73b75ae684736bb25a3d7&oe=5ECAA092",
-            "subtitle":"We have the right hat for everyone.",
+            "subtitle":"အနံ = 4'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85145127_128707675338477_5778662326769025024_o.jpg?_nc_cat=100&_nc_ohc=T2fDm1dMklMAX9zwjN5&_nc_ht=scontent.fnyt1-1.fna&oh=f46c2aec1ea73b75ae684736bb25a3d7&oe=5ECAA092",
@@ -641,9 +641,9 @@ function handlePostback(sender_psid, received_postback) {
             ]      
           },
           {
-            "title":"Welcome!",
+            "title":"အလျား = 3'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85106340_128707742005137_7266967579728543744_o.jpg?_nc_cat=105&_nc_ohc=U-PKOqC73h0AX-0SIlS&_nc_ht=scontent.fnyt1-1.fna&oh=30e2deaf28b3f0533f5a81140ef8fcf7&oe=5EBC4CFA",
-            "subtitle":"We have the right hat for everyone.",
+            "subtitle":"အနံ = 4'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85106340_128707742005137_7266967579728543744_o.jpg?_nc_cat=105&_nc_ohc=U-PKOqC73h0AX-0SIlS&_nc_ht=scontent.fnyt1-1.fna&oh=30e2deaf28b3f0533f5a81140ef8fcf7&oe=5EBC4CFA",
@@ -669,43 +669,9 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"Welcome!",
+            "title":"အလျား = ",
             "image_url":"https://petersfancybrownhats.com/company_image.png",
-            "subtitle":"We have the right hat for everyone.",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"postback",
-                "title":"Start Chatting",
-                "payload":"ol"
-              }              
-            ]      
-          },
-          {
-            "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
-            "subtitle":"We have the right hat for everyone.",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"postback",
-                "title":"Start Chatting",
-                "payload":"ol"
-              }              
-            ]      
-          },
-          {
-            "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
-            "subtitle":"We have the right hat for everyone.",
+            "subtitle":"အနံ = ",
             "default_action": {
               "type": "web_url",
               "url": "https://petersfancybrownhats.com/view?item=103",
@@ -731,9 +697,9 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"Welcome!",
+            "title":"အလျား = 1.5'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84445199_128731638669414_8788996082672599040_o.jpg?_nc_cat=105&_nc_ohc=B_5XxoqU2V8AX8av3yE&_nc_ht=scontent.fnyt1-1.fna&oh=7c8e5a7d417f8c466f5361e55ef55a40&oe=5EC08340",
-            "subtitle":"We have the right hat for everyone.",
+            "subtitle":"အနံ = 6.5'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84445199_128731638669414_8788996082672599040_o.jpg?_nc_cat=105&_nc_ohc=B_5XxoqU2V8AX8av3yE&_nc_ht=scontent.fnyt1-1.fna&oh=7c8e5a7d417f8c466f5361e55ef55a40&oe=5EC08340",
@@ -748,9 +714,9 @@ function handlePostback(sender_psid, received_postback) {
             ]      
           },
           {
-            "title":"Welcome!",
+            "title":"အလျား = 1.5'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85124252_128731588669419_8225910691752574976_o.jpg?_nc_cat=109&_nc_ohc=Z5dkuSQUQJwAX8kXFSa&_nc_ht=scontent.fnyt1-1.fna&oh=525217a6019e787cdb74108c40b0f42f&oe=5ED07986",
-            "subtitle":"We have the right hat for everyone.",
+            "subtitle":"အနံ = 6.5'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85124252_128731588669419_8225910691752574976_o.jpg?_nc_cat=109&_nc_ohc=Z5dkuSQUQJwAX8kXFSa&_nc_ht=scontent.fnyt1-1.fna&oh=525217a6019e787cdb74108c40b0f42f&oe=5ED07986",
@@ -776,9 +742,9 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"Welcome!",
+            "title":"အလျား = 3'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84265124_128731702002741_8643057543540637696_o.jpg?_nc_cat=102&_nc_ohc=fR4ICBk7b60AX-e0uwj&_nc_ht=scontent.fnyt1-1.fna&oh=2c0e0ab8d9c29c2558b44835c2605ebf&oe=5F01FE75",
-            "subtitle":"We have the right hat for everyone.",
+            "subtitle":"အနံ = 6.5'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84265124_128731702002741_8643057543540637696_o.jpg?_nc_cat=102&_nc_ohc=fR4ICBk7b60AX-e0uwj&_nc_ht=scontent.fnyt1-1.fna&oh=2c0e0ab8d9c29c2558b44835c2605ebf&oe=5F01FE75",
