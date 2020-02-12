@@ -345,40 +345,15 @@ function handlePostback(sender_psid, received_postback) {
           },
           {
             "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
+            "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84114239_128691935340051_6444479401219325952_o.jpg?_nc_cat=110&_nc_ohc=UeQOG9MaKT8AX-U9GjJ&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=08d806478f9c31aee658300c2089da63&oe=5ED177E0",
             "subtitle":"We have the right hat for everyone.",
             "default_action": {
               "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
+              "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84114239_128691935340051_6444479401219325952_o.jpg?_nc_cat=110&_nc_ohc=UeQOG9MaKT8AX-U9GjJ&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=08d806478f9c31aee658300c2089da63&oe=5ED177E0",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
-              },{
-                "type":"postback",
-                "title":"Start Chatting",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
-              }              
-            ]      
-          },
-          {
-            "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
-            "subtitle":"We have the right hat for everyone.",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
-              },{
                 "type":"postback",
                 "title":"Start Chatting",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
