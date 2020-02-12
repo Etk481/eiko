@@ -197,7 +197,12 @@ function handleMessage(sender_psid, received_message) {
         "text":'15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ 30000ကျပါမယ်။ မှာယူမှာသေချာပါသလား?',
          
       }
-  }  
+  }else if (received_message.text == "2") {
+      response = {
+        "text":'15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ 30000ကျပါမယ်။ မှာယူမှာသေချာပါသလား?',
+         
+      }
+  }   
   
   // Send the response message
   callSendAPI(sender_psid, response);    
