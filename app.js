@@ -278,12 +278,12 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "type": "postback",
-                          "title": "တံခါးတစ်ဖက်ပိတ်",
+                          "title": "တစ်ဖက်ပိတ်တံခါးမ",
                           "payload": "d1",
                         },
                         {
                           "type": "postback",
-                          "title": "တံခါးနှစ်ဖက်ပိတ်",
+                          "title": "နှစ်ဖက်ပိတ်တံခါးမ",
                           "payload": "d2",
                         } 
                       ],
@@ -302,17 +302,17 @@ function handlePostback(sender_psid, received_postback) {
                       "buttons": [
                         {
                           "type": "postback",
-                          "title": "ကြီးခွေ",
+                          "title": "ပြတင်းကြီးခွေ",
                           "payload": "wk",
                         },
                         {
                           "type": "postback",
-                          "title": "တစ်ဖက်ပိတ်",
+                          "title": "တစ်ဖက်ပိတ်ပြတင်း",
                           "payload": "w1",
                         },
                         {
                           "type": "postback",
-                          "title": "နှစ်ဖက်ပိတ်",
+                          "title": "နှစ်ဖက်ပိတ်ပြတင်း",
                           "payload": "w2",
                         } 
                       ],
@@ -373,53 +373,45 @@ function handlePostback(sender_psid, received_postback) {
         "elements":[
            {
             "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
+            "image_url":"https://www.facebook.com/116284523247459/photos/pcb.128707768671801/128707275338517/?type=3&theater",
             "subtitle":"We have the right hat for everyone.",
             "default_action": {
               "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
+              "url": "https://www.facebook.com/116284523247459/photos/pcb.128707768671801/128707275338517/?type=3&theater",
               "webview_height_ratio": "tall",
             },
             "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
-              },{
+             {
                 "type":"postback",
-                "title":"Start Chatting",
+                "title":"မှာမည်",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
               }              
             ]      
           },
           {
             "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
+            "image_url":"https://www.facebook.com/116284523247459/photos/pcb.128707768671801/128707302005181/?type=3&theater",
             "subtitle":"We have the right hat for everyone.",
             "default_action": {
               "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
+              "url": "https://www.facebook.com/116284523247459/photos/pcb.128707768671801/128707302005181/?type=3&theater",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
-              },{
                 "type":"postback",
-                "title":"Start Chatting",
+                "title":"မှာမည်",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
               }              
             ]      
           },
           {
             "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
+            "image_url":"https://www.facebook.com/116284523247459/photos/pcb.128707768671801/128707342005177/?type=3&theater",
             "subtitle":"We have the right hat for everyone.",
             "default_action": {
               "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
+              "url": "https://www.facebook.com/116284523247459/photos/pcb.128707768671801/128707342005177/?type=3&theater",
               "webview_height_ratio": "tall",
             },
             "buttons":[
@@ -429,7 +421,7 @@ function handlePostback(sender_psid, received_postback) {
                 "title":"View Website"
               },{
                 "type":"postback",
-                "title":"Start Chatting",
+                "title":"မှာမည်",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
               }              
             ]      
