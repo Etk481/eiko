@@ -338,7 +338,7 @@ function handlePostback(sender_psid, received_postback) {
             "buttons":[
               {
                 "type":"postback",
-                "title":"Start Chatting",
+                "title":"မှာမည်",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
               }              
             ]      
@@ -355,7 +355,7 @@ function handlePostback(sender_psid, received_postback) {
             "buttons":[
               {
                 "type":"postback",
-                "title":"Start Chatting",
+                "title":"မှာမည်",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
               }              
             ]      
