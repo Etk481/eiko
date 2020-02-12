@@ -225,8 +225,8 @@ function handleMessage(sender_psid, received_message) {
         "text":'ပို့ပေးရန်တည်နေရာရွေးပါ',
         "quick_replies":[
         {
-          "content_type":"location",
-          "payload":"<POSTBACK_PAYLOAD>"
+          "content_type":"location"
+          
         }
         ]
       }
