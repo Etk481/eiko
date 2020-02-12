@@ -369,7 +369,8 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"Welcome!",
+            "title":"အလျား = 3'
+အနံ      = 1.5'",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84182457_128691888673389_710650163584040960_o.jpg?_nc_cat=103&_nc_ohc=GymUEW-3toAAX-KaT9R&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=a15b8d6a05e4ae0ba2885e52626b64c2&oe=5EBCFE18",
             "default_action": {
               "type": "web_url",
