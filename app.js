@@ -192,6 +192,21 @@ function handleMessage(sender_psid, received_message) {
         }
       }
     }
+  }else if (received_message.text == "1") {
+      response = {
+        "text":'15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ 30000ကျပါမယ်။ မှာယူမှာသေချာပါသလား?',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"yes",
+          "payload":"<POSTBACK_PAYLOAD>"
+        },{
+          "content_type":"text",
+          "title":"no",
+          "payload":"<POSTBACK_PAYLOAD>"
+        }
+      ]
+      }
   }  
   
   // Send the response message
@@ -339,7 +354,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -356,7 +371,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           },
@@ -373,14 +388,14 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                "payload":"ol"
               }              
             ]      
           }
         ]
       }
     }
-  }
+   }
   }else if (payload === 'wk') {
     response = {
     "attachment":{
@@ -442,7 +457,7 @@ function handlePostback(sender_psid, received_postback) {
         ]
       }
     }
-  }
+   }
   }else if (payload === 'w1') {
     response = {
     "attachment":{
@@ -521,7 +536,7 @@ function handlePostback(sender_psid, received_postback) {
         ]
       }
     }
-  }
+   }
   }else if (payload === 'w2') {
     response = {
     "attachment":{
@@ -617,7 +632,7 @@ function handlePostback(sender_psid, received_postback) {
         ]
       }
     }
-  }
+   }
   }else if (payload === 'dk') {
     response = {
     "attachment":{
@@ -687,7 +702,7 @@ function handlePostback(sender_psid, received_postback) {
         ]
       }
     }
-  }
+   }
   }else if (payload === 'd1') {
     response = {
     "attachment":{
@@ -732,7 +747,7 @@ function handlePostback(sender_psid, received_postback) {
         ]
       }
     }
-  }
+   }
   }else if (payload === 'd2') {
     response = {
     "attachment":{
@@ -760,7 +775,9 @@ function handlePostback(sender_psid, received_postback) {
         ]
       }
     }
-  }
+   }
+  } else if (payload === 'ol') {
+    response = { "text": "ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ" }
   }
 
   // Send the message to acknowledge the postback
