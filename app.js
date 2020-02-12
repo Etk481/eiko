@@ -189,14 +189,19 @@ function handleMessage(sender_psid, received_message) {
   }else if (received_message.text == "1") {
       response = {
         "text":'15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ 30000ကျပါမယ်။ မှာယူမှာသေချာပါသလား?',
-         
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"yes",
+          "payload":"<POSTBACK_PAYLOAD>"
+        },{
+          "content_type":"text",
+          "title":"no",
+          "payload":"<POSTBACK_PAYLOAD>"
+        }
+      ]
       }
-  }else if (received_message.text == "2") {
-      response = {
-        "text":'15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ 30000ကျပါမယ်။ မှာယူမှာသေချာပါသလား?',
-         
-      }
-  }   
+  }  
   
   // Send the response message
   callSendAPI(sender_psid, response);    
