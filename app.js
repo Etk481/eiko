@@ -173,12 +173,12 @@ function handleMessage(sender_psid, received_message) {
             "buttons": [
               {
                 "type": "postback",
-                "title": "Yes!",
+                "title": "ဟုတ်ပါတယ်!",
                 "payload": "yes",
               },
               {
                 "type": "postback",
-                "title": "No!",
+                "title": "မဟုတ်ပါ!",
                 "payload": "no",
               }
             ],
@@ -245,9 +245,9 @@ function handlePostback(sender_psid, received_postback) {
 
   // Set the response based on the postback payload
   if (payload === 'yes') {
-    response = { "text": "Thanks!" }
+    response = { "text": "ဟုတ်ကဲ့အတိုင်းပေးပါဦး" }
   } else if (payload === 'no') {
-    response = { "text": "Oops, try sending another image." }
+    response = { "text": "အားးးနောက်တစ်ပုံပြန်ပို့ပေးပါနော်" }
   }else if (payload === 'getstarted') {
     response = { "attachment": {
                   "type": "template",
