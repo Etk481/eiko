@@ -210,6 +210,7 @@ function handleMessage(sender_psid, received_message) {
   }else if (received_message.text && botQuestions.quantity) {
       userAnswers.quantity = parseInt(received_message.text);
       let total = 30000 * userAnswers.quantity;
+      let orderNumber = Math.floor(Math.random() * 100) + 1;
 
       let data = {
         user:"ei thin zar ko",
@@ -217,7 +218,7 @@ function handleMessage(sender_psid, received_message) {
         total: userAnswers.quantity
       }
 
-      db.collection('order').doc().set(data);
+      db.collection('order').doc(orderNumber).set(data);
 
       response = {
         "text":`15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ ${total} ကျပါမယ်။ မှာယူမှာသေချာပါသလား?`,
