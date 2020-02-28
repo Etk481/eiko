@@ -27,13 +27,27 @@ const
   request = require('request'),
   express = require('express'),
   body_parser = require('body-parser'),
+  firebase = require('firebase-admin'),
   app = express().use(body_parser.json()); // creates express http server
+
+  //initialize firebase
+  firebase.initializeApp({
+  credential: firebase.credential.cert({
+    "private_key": process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    "client_email": process.env.FIREBASE_CLIENT_EMAIL,
+    "project_id": process.env.FIREBASE_PROJECT_ID,
+  }),
+  databaseURL: "https://eithinzarbot.firebaseio.com"
+  });
+
+  let db = firebase.firestore();
 
   let botQuestions = {
     quantity:false,
     width:false,
     length:false,
   };
+
   let userAnswers = {};
 
 // Sets server port and logs message on success
@@ -194,8 +208,17 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   }else if (received_message.text && botQuestions.quantity) {
-      userAnswers.quantity = received_message.text;
-      let total = 30000 * parseInt(userAnswers.quantity);
+      userAnswers.quantity = parseInt(received_message.text);
+      let total = 30000 * userAnswers.quantity;
+
+      let data = {
+        user:"ei thin zar ko",
+        date: "28-02-2020",
+        total: userAnswers.quantity
+      }
+
+      db.collection('order').doc().set(data);
+
       response = {
         "text":`15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ ${total} ကျပါမယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
