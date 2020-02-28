@@ -768,6 +768,7 @@ function handlePostback(sender_psid, received_postback) {
    }
   } else if (payload === 'ol') {
     response = { "text": "ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ" }
+    quantity = true;
   }
 
   // Send the message to acknowledge the postback
