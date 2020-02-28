@@ -29,6 +29,7 @@ const
   body_parser = require('body-parser'),
   app = express().use(body_parser.json()); // creates express http server
 
+  let quantity : false;
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
@@ -186,7 +187,7 @@ function handleMessage(sender_psid, received_message) {
         }
       }
     }
-  }else if (received_message.text == "1") {
+  }else if (received_message.text && quantity == true) {
       response = {
         "text":'15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ 30000ကျပါမယ်။ မှာယူမှာသေချာပါသလား?',
          "quick_replies":[
@@ -201,6 +202,7 @@ function handleMessage(sender_psid, received_message) {
         }
       ]
       }
+      quantity = false;
   }else if (received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
