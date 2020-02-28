@@ -215,7 +215,8 @@ function handleMessage(sender_psid, received_message) {
       let data = {
         user:"ei thin zar ko",
         date: "28-02-2020",
-        total: userAnswers.quantity
+        total: userAnswers.quantity,
+        order_number : orderNumber
       }
 
       db.collection('order').doc(orderNumber).set(data);
