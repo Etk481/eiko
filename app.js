@@ -29,8 +29,13 @@ const
   body_parser = require('body-parser'),
   app = express().use(body_parser.json()); // creates express http server
 
-  let quantity : false;
-  let userEnterquantity= {};
+  let botQuestions = {
+    quantity:false,
+    width:false,
+    length:false,
+  };
+  let userAnswers = {};
+
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
@@ -188,10 +193,10 @@ function handleMessage(sender_psid, received_message) {
         }
       }
     }
-  }else if (received_message.text && quantity == true) {
-    userEnterquantity.quantity = received_message.text;
+  }else if (received_message.text && botQuestions.quantity) {
+      userAnswers.quantity = received_message.text;
       response = {
-        "text":'15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ 30000ကျပါမယ်။ မှာယူမှာသေချာပါသလား?',
+        "text":`15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ 30000 x ${userAnswers.quantity} ကျပါမယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
         {
           "content_type":"text",
@@ -768,7 +773,7 @@ function handlePostback(sender_psid, received_postback) {
    }
   } else if (payload === 'ol') {
     response = { "text": "ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ" }
-    quantity = true;
+    botQuestions.quantity = true;
   }
 
   // Send the message to acknowledge the postback
