@@ -209,7 +209,7 @@ function handleMessage(sender_psid, received_message) {
         }
       ]
       }
-      quantity = false;
+      botQuestions.quantity = false;
   }else if (received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
