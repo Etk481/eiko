@@ -195,7 +195,7 @@ function handleMessage(sender_psid, received_message) {
     }
   }else if (received_message.text && botQuestions.quantity) {
       userAnswers.quantity = received_message.text;
-      let total = 30000 x userAnswers.quantity;
+      let total = 30000 * userAnswers.quantity;
       response = {
         "text":`15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ ${total} ကျပါမယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
