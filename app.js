@@ -219,7 +219,7 @@ function handleMessage(sender_psid, received_message) {
         order_number : orderNumber
       }
 
-      db.collection('order').doc(orderNumber).set(data);
+      db.collection('order').doc().set(data);
 
       response = {
         "text":`15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ ${total} ကျပါမယ်။ မှာယူမှာသေချာပါသလား?`,
