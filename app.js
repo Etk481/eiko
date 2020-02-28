@@ -30,6 +30,7 @@ const
   app = express().use(body_parser.json()); // creates express http server
 
   let quantity : false;
+  let userEnterquantity= {};
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
@@ -188,6 +189,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   }else if (received_message.text && quantity == true) {
+    userEnterquantity.quantity = received_message.text;
       response = {
         "text":'15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ 30000ကျပါမယ်။ မှာယူမှာသေချာပါသလား?',
          "quick_replies":[
