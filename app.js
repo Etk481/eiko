@@ -146,7 +146,8 @@ function handleMessage(sender_psid, received_message) {
   let response;
   
   // Checks if the message contains text
-  if (received_message.text == "Hi") {    
+  if (received_message.text == "Hi" || received_message.text == "hi" || received_message.text == "Hello" || received_message.text == "hello" ) { 
+  greetUser (sender_psid);  
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -268,6 +269,14 @@ function handleMessage(sender_psid, received_message) {
         "text":'ဟုတ်ကဲ့ 15.2.2020 ရက်နေ့ကျလာပို့ပါမယ်' 
       }
   }
+
+/*function to greet user*/
+async function greetUser(sender_psid){  
+  let user = await getUserProfile(sender_psid);
+  let response1 = {"text": "မင်္ဂလာပါ "+user.first_name+" "+user.last_name+" ရေ... NS Doors & Windows Shop မှ ကြိုဆိုပါတယ်ခင်ဗျာ"};
+  callSend(sender_psid, response1).then(()=>{
+}
+
   // Send the response message
   callSendAPI(sender_psid, response);    
 }
@@ -831,7 +840,50 @@ function callSendAPI(sender_psid, response) {
   }); 
 }
 
+function callSendAPINew(sender_psid, response) {  
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response
+  }
+  
+  return new Promise(resolve => {
+    request({
+      "uri": "https://graph.facebook.com/v2.6/me/messages",
+      "qs": { "access_token": PAGE_ACCESS_TOKEN },
+      "method": "POST",
+      "json": request_body
+    }, (err, res, body) => {
+      if (!err) {
+        resolve('message sent!')
+      } else {
+        console.error("Unable to send message:" + err);
+      }
+    }); 
+  });
+}
 
+async function callSend(sender_psid, response){
+  let send = await callSendAPINew(sender_psid, response);
+  return 1;
+}
+
+function getUserProfile(sender_psid) {
+  return new Promise(resolve => {
+    request({
+      "url": "https://graph.facebook.com/"+sender_psid+"?fields=first_name,last_name,profile_pic&access_token=EAAC0Amc4MRgBAGR5JMXzFDQBBZCbHRjOkVPeKg3UokgQzZAYlIAZBQoPnwsKo6FZBmSOd5kPm16TUJEFdveL9iZA4IAG2EN1IozqH17jKueHNU2rPObJYjxkL6Kq3WttHxYhaj83SGYNK9ZBEtYXkJTOiXVV9key1xS8WZCpWXoQy3bluiMysR5IYlm1Q9QfVQZD",
+      "method": "GET"
+      }, (err, res, body) => {
+        if (!err) { 
+          let data = JSON.parse(body);  
+          resolve(data);                 
+    } else {
+      console.error("Error:" + err);
+    }
+    });
+  });
+}
 function setupGetStartedButton(res){
         var messageData = {
                 "get_started":{"payload":"getstarted"}                
