@@ -148,37 +148,7 @@ function handleMessage(sender_psid, received_message) {
   // Checks if the message contains text
   if (received_message.text == "Hi" || received_message.text == "hi" || received_message.text == "Hello" || received_message.text == "hello" ) { 
   greetUser (sender_psid);  
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text":"မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ်",
-      "quick_replies":[
-        {
-          "content_type":"text",
-          "title":"Red",
-          "payload":"<POSTBACK_PAYLOAD>",
-          "image_url":"http://example.com/img/red.png"
-        }
-      ]
-    }
   }
-  else if (received_message.text == "Hello") {    
-    // s th payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text":"မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ်"
-    }
-  }
-  else if (received_message.text == "Red") {
-      response = {
-        "text":'You like red color' 
-      }
-  }
-  else if (received_message.text == "Green") {
-      response = {
-        "text":'You like green color' 
-      }
-  }  
 
   else if (received_message.attachments) {
     // Get the URL of the message attachment
