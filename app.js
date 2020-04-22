@@ -269,7 +269,7 @@ function handlePostback(sender_psid, received_postback) {
                           "buttons": [
                             {
                               "type": "postback",
-                              "title": "တံခါးရွက်ဒီဇိုင်းများကြည့်မည်",
+                              "title": "တံခါးရွက်ဒီဇိုင်းများ",
                               "payload": "sstgym",
                             },
                             {
@@ -680,17 +680,17 @@ function handlePostback(sender_psid, received_postback) {
         "elements":[
            {
             "title":"အလျား = ",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
+            "image_url":"https://www.facebook.com/photo.php?fbid=147770143450599&set=a.147770170117263&type=3&theater",
             "subtitle":"အနံ = ",
             "default_action": {
               "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
+              "url": "https://www.facebook.com/photo.php?fbid=147770143450599&set=a.147770170117263&type=3&theater",
               "webview_height_ratio": "tall",
             },
             "buttons":[
               {
                 "type":"postback",
-                "title":"Start Chatting",
+                "title":"မှာမည်",
                 "payload":"ol"
               }              
             ]      
