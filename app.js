@@ -680,11 +680,11 @@ function handlePostback(sender_psid, received_postback) {
         "elements":[
            {
             "title":"အလျား = ",
-            "image_url":"https://www.facebook.com/photo.php?fbid=147770143450599&set=a.147770170117263&type=3&theater",
+            "image_url":"https://www.facebook.com/NS-Doors-Windows-116284523247459/?modal=admin_todo_tour",
             "subtitle":"အနံ = ",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/photo.php?fbid=147770143450599&set=a.147770170117263&type=3&theater",
+              "url": "https://www.facebook.com/NS-Doors-Windows-116284523247459/?modal=admin_todo_tour",
               "webview_height_ratio": "tall",
             },
             "buttons":[
