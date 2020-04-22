@@ -259,13 +259,29 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'no') {
     response = { "text": "အားးးနောက်တစ်ပုံပြန်ပို့ပေးပါနော်" }
   }else if (payload === 'getstarted') {
-  let response 1 = {"text" : "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
-  let response 2 = {
-    "text" : "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"
-  };
-  callSend(sender_psid, response1).then(()=>{
-      return callSend(sender_psid, response2);
-    });
+  response = { "attachment": {
+                      "type": "template",
+                      "payload": {
+                        "template_type": "generic",
+                        "elements": [{
+                          "title": "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ",
+                          "subtitle": "ဘာများအလိုရှိပါသလဲ?",
+                          "buttons": [
+                            {
+                              "type": "postback",
+                              "title": "တံခါးရွက်ဒီဇိုင်းများ",
+                              "payload": "sstgym",
+                            },
+                            {
+                              "type": "postback",
+                              "title": "ဒီဇိုင်းပေးမည်",
+                              "payload": "gd",
+                            }
+                          ],
+                        }]
+                      }
+                    }
+                  }
   }else if (payload === 'gd') {
     response = { "text": "Please sent image." }
   }else if (payload === 'sstgym') {
