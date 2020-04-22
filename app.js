@@ -269,7 +269,7 @@ function handlePostback(sender_psid, received_postback) {
                           "buttons": [
                             {
                               "type": "postback",
-                              "title": "တံခါးရွက်ဒီဇိုင်းများ",
+                              "title": "တံခါးရွက်ဒီဇိုင်းများကြည့်မည်",
                               "payload": "sstgym",
                             },
                             {
