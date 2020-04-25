@@ -837,12 +837,34 @@ function handlePostback(sender_psid, received_postback) {
   callSendAPI(sender_psid, response);
 }
 
-function greetUser(sender_psid){
-  let response1 = {"text": "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
-  let response2 = {"text": "တံခါးရွက်ဒီဇိုင်းများကြည့်လိုလျှင် (သို့) မှာယူလိုပါက "1" ကိုနှိပ်ပါ။ ဆိုင်လိပ်စာကိုသိလိုပါက "2" ကိုနှိပ်ပါ။ ဆိုင်ဖုန်းနံပါတ်ကိုသိလိုပါက "3" ကိုနှိပ်ပါ။"};
-    callSend(sender_psid, response1).then(()=>{
-      return callSend(sender_psid, response2);
-  });  
+/***********************
+FUNCTION TO GREET USER 
+************************/
+async function greetUser(sender_psid){  
+  let user = await getUserProfile(sender_psid);   
+  let response;
+  response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "button",
+          "text": "Hello. "+user.first_name+" "+user.last_name+". It's so nice to meet you.What do you want to do next?",
+          "buttons": [
+              {
+                "type": "postback",
+                "title": "View Tasks",
+                "payload": "view-tasks",
+              },
+              {
+                "type": "postback",
+                "title": "Add Task!",
+                "payload": "add-task",
+              }
+            ]
+        }
+      }
+    }
+  callSendAPI(sender_psid, response);
 }
 
 
