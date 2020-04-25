@@ -46,7 +46,6 @@ const
     quantity:false,
     width:false,
     length:false,
-    userAddress: false,
   };
 
   let userAnswers = {};
@@ -236,17 +235,14 @@ function handleMessage(sender_psid, received_message) {
       response = {
         "text":'ပို့ပေးရန်လိပ်စာပေးပါ'
       }
-    botQuestions.userAddress = true;
   }else if (received_message.text == "ယူမယ်") {
       response = {
         "text":'ဆိုင်မှာတွေ့မယ်နော်' 
       }
-  }else if (received_message.text && botQuestions.userAddress == true) {
-    userAnswers.userAddress = received_message.text;
+  }else if (received_message.text == "1234") {
       response = {
         "text":'ဟုတ်ကဲ့ 15.2.2020 ရက်နေ့ကျလာပို့ပါမယ်' 
       }
-      botQuestions.userAddress = false;
   }
   // Send the response message
   callSendAPI(sender_psid, response);    
@@ -369,7 +365,7 @@ function handlePostback(sender_psid, received_postback) {
    }
 
 
-//For Door
+//For D
   }else if (payload === 'door') {
     response = { "attachment": {
                   "type": "template",
