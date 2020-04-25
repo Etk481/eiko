@@ -833,11 +833,8 @@ function handlePostback(sender_psid, received_postback) {
     botQuestions.quantity = true;
   }
 
-  // Send the message to acknowledge the postback
-  callSendAPI(sender_psid, response);
-}
 
-function greetUser(sender_psid){
+  function greetUser(sender_psid){
   let response1 = {"text": "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
   let response2 = {"text": "လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ..."};
   let response3 = {"text": "To add new task, type 'new'"};   
@@ -850,6 +847,12 @@ function greetUser(sender_psid){
       });
   });  
 }
+
+  // Send the message to acknowledge the postback
+  callSendAPI(sender_psid, response);
+}
+
+
 
 
 
