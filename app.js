@@ -838,8 +838,8 @@ function handlePostback(sender_psid, received_postback) {
 }
 
 function greetUser(sender_psid){
-  let response1 = {"text": "မင်္ဂလာပါ!. "+user.first_name+" "+user.last_name+" ေရ. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
-  let response2 = {"text": "To view tasks, type 'view'"};
+  let response1 = {"text": "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
+  let response2 = {"text": "လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ..."};
   let response3 = {"text": "To add new task, type 'new'"};   
   let response4 = {"text": "If you forget who you are, type 'who am i'"};
     callSend(sender_psid, response1).then(()=>{
