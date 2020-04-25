@@ -202,11 +202,11 @@ function handleMessage(sender_psid, received_message) {
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"yes",
+          "title":"y",
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
-          "title":"no",
+          "title":"n",
           "payload":"<POSTBACK_PAYLOAD>"
         }
       ]
