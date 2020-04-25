@@ -149,9 +149,7 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text == "Hi" || received_message.text == "hi" || received_message.text == "Hello" || received_message.text == "hello") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
-    response = {
-      "text":'မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ'
-    }
+   greetUser (sender_psid);
   }
 
   else if (received_message.attachments) {
@@ -838,6 +836,21 @@ function handlePostback(sender_psid, received_postback) {
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
+
+function greetUser(sender_psid){
+  let response1 = {"text": "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
+  let response2 = {"text": "To view tasks, type 'view'"};
+  let response3 = {"text": "To add new task, type 'new'"};   
+  let response4 = {"text": "If you forget who you are, type 'who am i'"};
+    callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response2).then(()=>{
+        return callSend(sender_psid, response3).then(()=>{
+          return callSend(sender_psid, response4);
+        });
+      });
+  });  
+}
+
 
 
 function callSendAPI(sender_psid, response) {
