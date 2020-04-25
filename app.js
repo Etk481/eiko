@@ -184,8 +184,8 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   }else if (received_message.text && botQuestions.quantity) {
-      userAnswers.quantity = received_message.text;
-      let total = 30000 * parseInt(userAnswers.quantity);
+      userAnswers.quantity = parseInt(received_message.text);
+      let total = 30000 * userAnswers.quantity;
       let orderNumber = Math.floor(Math.random() * 100) + 1;
 
       let data = {
@@ -202,11 +202,11 @@ function handleMessage(sender_psid, received_message) {
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"y",
+          "title":"yes",
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
-          "title":"n",
+          "title":"no",
           "payload":"<POSTBACK_PAYLOAD>"
         }
       ]
