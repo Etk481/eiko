@@ -283,10 +283,9 @@ function handlePostback(sender_psid, received_postback) {
                     }
                   }
 
-
   }else if (payload === 'gd') {
     response = { "text": "Please sent image." }
-////////
+
   }else if (payload === 'sstgym') {
     response = {
     "attachment":{
@@ -367,7 +366,7 @@ function handlePostback(sender_psid, received_postback) {
 
 
 
-////////
+
 
 
 
