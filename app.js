@@ -839,15 +839,9 @@ function handlePostback(sender_psid, received_postback) {
 
 function greetUser(sender_psid){
   let response1 = {"text": "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
-  let response2 = {"text": "To view tasks, type 'view'"};
-  let response3 = {"text": "To add new task, type 'new'"};   
-  let response4 = {"text": "If you forget who you are, type 'who am i'"};
+  let response2 = {"text": "တံခါးရွက်ဒီဇိုင်းများကြည့်လိုလျှင် (သို့) မှာယူလိုပါက "1"ကိုနှိပ်ပါ။ ဆိုင်လိပ်စာကိုသိလိုပါက "2" ကိုနှိပ်ပါ။ ဆိုင်ဖုန်းနံပါတ်ကိုသိလိုပါက "3" ကိုနှိပ်ပါ။"};
     callSend(sender_psid, response1).then(()=>{
-      return callSend(sender_psid, response2).then(()=>{
-        return callSend(sender_psid, response3).then(()=>{
-          return callSend(sender_psid, response4);
-        });
-      });
+      return callSend(sender_psid, response2);
   });  
 }
 
