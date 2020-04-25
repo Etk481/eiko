@@ -304,13 +304,13 @@ function handlePostback(sender_psid, received_postback) {
             "buttons":[
               {
                 "type":"postback",
-                "title":"Yes",
+                "title":"Yes!",
                 "payload":"door"
               }, 
               {
                 "type":"postback",
-                "title":"No",
-                "payload":"sstgym"
+                "title":"No!",
+                "payload":"getstarted"
               }             
             ]      
           },
@@ -326,13 +326,13 @@ function handlePostback(sender_psid, received_postback) {
             "buttons":[
               {
                 "type":"postback",
-                "title":"Yes",
+                "title":"Yes!",
                 "payload":"window"
               }, 
               {
                 "type":"postback",
-                "title":"No",
-                "payload":"sstgym"
+                "title":"No!",
+                "payload":"getstarted"
               }             
             ]      
           },
@@ -348,13 +348,13 @@ function handlePostback(sender_psid, received_postback) {
             "buttons":[
               {
                 "type":"postback",
-                "title":"Yes",
+                "title":"Yes!",
                 "payload":"light"
               },  
               {
                 "type":"postback",
-                "title":"No",
-                "payload":"sstgym"
+                "title":"No!",
+                "payload":"getstarted"
               }                          
             ]      
           }
