@@ -296,6 +296,7 @@ function handlePostback(sender_psid, received_postback) {
         "elements":[
            {
             "title": "တံခါးမကြီး",
+            "subtitle": "တံခါးမကြီးဒီဇိုင်းများစွာကိုဆက်လက်ကြည့်ရှုလိုပါသလား?",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84265124_128731702002741_8643057543540637696_o.jpg?_nc_cat=102&_nc_ohc=fR4ICBk7b60AX-e0uwj&_nc_ht=scontent.fnyt1-1.fna&oh=2c0e0ab8d9c29c2558b44835c2605ebf&oe=5F01FE75",
             "default_action": {
               "type": "web_url",
@@ -305,13 +306,19 @@ function handlePostback(sender_psid, received_postback) {
             "buttons":[
               {
                 "type":"postback",
-                "title":"",
+                "title":"Yes",
                 "payload":"door"
-              }              
+              } 
+              {
+                "type":"postback",
+                "title":"No",
+                "payload":"sstgym"
+              }             
             ]      
           },
           {
             "title":"ပြတင်းပေါက်",
+            "subtitle": "ပြတင်းပေါက်ဒီဇိုင်းများစွာကိုဆက်လက်ကြည့်ရှုလိုပါသလား?",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/85023815_128707408671837_1862269537185955840_o.jpg?_nc_cat=103&_nc_ohc=wTIcFAk9bWAAX8SUotO&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=af2ba927646c94118f5ca728312df4c8&oe=5EBCEFBD",
             "default_action": {
               "type": "web_url",
@@ -321,13 +328,19 @@ function handlePostback(sender_psid, received_postback) {
             "buttons":[
               {
                 "type":"postback",
-                "title":"",
+                "title":"Yes",
                 "payload":"window"
-              }              
+              } 
+              {
+                "type":"postback",
+                "title":"No",
+                "payload":"sstgym"
+              }             
             ]      
           },
           {
             "title":"ရောင်လင်း",
+            "subtitle": "ရောင်လင်းဒီဇိုင်းများစွာကိုဆက်လက်ကြည့်ရှုလိုပါသလား?",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/86346490_128732205336024_3191562516593377280_o.jpg?_nc_cat=108&_nc_ohc=SER5brGx8yIAX9cof8k&_nc_ht=scontent.fnyt1-1.fna&oh=330eaf7750c844e81f14042946c796ee&oe=5F0044D3",
             "default_action": {
               "type": "web_url",
@@ -337,9 +350,14 @@ function handlePostback(sender_psid, received_postback) {
             "buttons":[
               {
                 "type":"postback",
-                "title":"",
+                "title":"Yes",
                 "payload":"light"
-              }              
+              }  
+              {
+                "type":"postback",
+                "title":"No",
+                "payload":"sstgym"
+              }                          
             ]      
           }
         ]
