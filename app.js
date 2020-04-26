@@ -337,7 +337,7 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "Please sent image." }
   }
 
-
+//for door type
   else if (payload === 'sstgym'|| payload === 'look') {
     response = {
     "attachment":{
@@ -407,7 +407,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"No!",
-                "payload":"getstarted"
+                "payload":"dtans1"
               }                          
             ]      
           }
@@ -415,10 +415,40 @@ function handlePostback(sender_psid, received_postback) {
       }
     }
    }
+}
+  else if (payload === 'dtans1') {
+  let response1 = {"text": "ဟုတ်ကဲ့ပါခင်ဗျာ အခုလိုဖြေကြားပေးတဲ့အတွက် ကျွန်တော်တို့ရဲ့ NS Doors & Windows Shop မှ ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ"};
+  let response2 = {"text":'ကျွန်ုပ်တို့ဆိုင်မှာရှိတဲ့ တံခါးပုံများကို   မကြိုက်ပါက လူကြီးမင်း စိတ်ကြိုက်လိုချင်သော တံခါးပုံကိုပေးပို့၍လည်း မှာယူနိုင်ပါသည်ခင်ဗျာ'};
+  let response3 = {
+        "text":'မှာယူလိုပါသလား',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"Yes!",
+          "payload":"dtans2"
+        },{
+          "content_type":"text",
+          "title":"No!",
+          "payload":"dtans3"
+        }
+      ]
+      }
+
+    callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response2).then(()=>{
+          return callSend(sender_psid, response3);
+        });
+      });
+    }
+  }
 
 
-//For D
-  }else if (payload === 'door') {
+
+
+
+
+//For Door
+  else if (payload === 'door') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
