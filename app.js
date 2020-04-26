@@ -187,6 +187,18 @@ function handleMessage(sender_psid, received_message) {
       });
 }
 
+else if (received_message.payload === "dtans2") {
+  response = {"text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'} 
+}
+  
+else if (received_message.payload === "dtans3") {
+  response = "text":{'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ'}
+}
+
+
+
+
+
 else if (received_message.attachments) {
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
@@ -322,7 +334,7 @@ function handlePostback(sender_psid, received_postback) {
                             },
                             {
                               "type": "postback",
-                              "title": "ဒီဇိုင်းပေးမည်",
+                              "title": "ဒီဇိုင်းပေး၍မှာမည်",
                               "payload": "gd",
                             }
                           ],
@@ -334,7 +346,7 @@ function handlePostback(sender_psid, received_postback) {
   }
 
   else if (payload === 'gd') {
-    response = { "text": "Please sent image." }
+    response = { "text": "ကျေးဇူးပြု၍ဘယ်အမျိုးအစားအတွက်မှာယူမှာလဲဆိုတာရွေးပေးပါခင်ဗျာ။ " }
   }
 
 //for door type
