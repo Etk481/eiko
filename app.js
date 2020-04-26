@@ -172,7 +172,7 @@ function handleMessage(sender_psid, received_message) {
 callSend(sender_psid, response1).then(()=>{
       return callSend(sender_psid, response2);
       });   
-}else if (received_message.payload == "s_address") { 
+}else if (received_message.payload === "s_address") { 
   response = { "attachment": {
                       "type": "template",
                       "payload": {
