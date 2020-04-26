@@ -157,6 +157,7 @@ function handleMessage(sender_psid, received_message) {
                     "template_type": "generic",
                     "elements": [{
                       "title": "NS Doors & Windows Shop",
+                      "subtitle": "",
                       "buttons": [
                         {
                           "type": "postback",
@@ -184,7 +185,6 @@ function handleMessage(sender_psid, received_message) {
           return callSend(sender_psid, response3);
         });
       });
- 
 
 
 }else if (payload === 's_address') { 
