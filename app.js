@@ -294,7 +294,13 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)"}
   }
 
-
+else if (received_message.payload === "dtans2") {
+  response = "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်' 
+}
+  
+else if (received_message.payload === "dtans3") {
+  response = "text":'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ' 
+}
 
 
   else if (payload === 'yes') {
@@ -442,13 +448,7 @@ function handlePostback(sender_psid, received_postback) {
         });
       });
     }
-else if (payload === "dtans2") {
-  response = "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်' 
-}
-  
-else if (payload === "dtans3") {
-  response = "text":'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ' 
-}
+
 
 
 
