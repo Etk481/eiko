@@ -230,7 +230,7 @@ else if (received_message.attachments) {
       db.collection('order').doc().set(data);
 
       response = {
-        "text":`15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ ${total} ကျပါမယ်။ မှာယူမှာသေချာပါသလား?`,
+        "text":`15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ ${total} ဝန်းကျင်ကျပါမယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
         {
           "content_type":"text",
@@ -442,6 +442,13 @@ function handlePostback(sender_psid, received_postback) {
         });
       });
     }
+else if (received_message.payload === "dtans2") {
+  response = "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်' 
+}
+  
+else if (received_message.payload === "dtans3") {
+  response = "text":'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ' 
+}
 
 
 
@@ -577,9 +584,9 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"အလျား = ",
+            "title":"အလျား = 4'",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94615637_158424789033432_29034176489455616_o.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGxHptClUWk_FHCiLMMr-OjJgR10uQKP3YmBHXS5Ao_dmu1I4soFzl5myy-bWKP39LtHIrrk65FsJTJHPBef-mj&_nc_ohc=vTAOHDleMNsAX91xieh&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=3350cd0b8d0300ba52154423e815fc8f&oe=5ECBE456",
-            "subtitle":"အနံ = 4'",
+            "subtitle":"အနံ = 3.5'",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94615637_158424789033432_29034176489455616_o.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGxHptClUWk_FHCiLMMr-OjJgR10uQKP3YmBHXS5Ao_dmu1I4soFzl5myy-bWKP39LtHIrrk65FsJTJHPBef-mj&_nc_ohc=vTAOHDleMNsAX91xieh&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=3350cd0b8d0300ba52154423e815fc8f&oe=5ECBE456",
