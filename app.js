@@ -150,28 +150,43 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
   let response1 = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
-  let response2 = {
-          "text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များကိုနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...',
-          "quick_replies":[
-        {
-          "content_type":"text",
-          "title":"ဆိုင်လိပ်စာ",
-          "payload":"s_address"
-        },{
-          "content_type":"text",
-          "title":"ဆိုင်ဖုန်းနံပါတ်",
-          "payload":"s_Ph"
-        },{
-          "content_type":"text",
-          "title":"တံခါးရွက်ဒီဇိုင်းများကြည့်မည်/မှာမည်",
-          "payload":"L&O"
-        }
-      ]
-    };
+  let response2 = {"text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များကိုနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...'};
+  let response3 = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များကိုနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ဆိုင်လိပ်စာ",
+                          "payload": "s_address",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "ဆိုင်ဖုန်းနံပါတ်",
+                          "payload": "s_Ph",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "တံခါးရွက်ဒီဇိုင်းများကြည့်မည်/မှာမည်",
+                          "payload": "L&O",
+                        } 
+                      ],
+                    }]
+                  }
+                }
+              };
 
-callSend(sender_psid, response1).then(()=>{
-      return callSend(sender_psid, response2);
-      });   
+    callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response2).then(()=>{
+          return callSend(sender_psid, response3);
+        });
+      });
+ 
+
+
 }else if (received_message.payload === "s_address") { 
   response = { "attachment": {
                       "type": "template",
@@ -184,7 +199,7 @@ callSend(sender_psid, response1).then(()=>{
                             {
                               "type": "postback",
                               "title": "Back",
-                              "payload": "s_address",
+                              "payload": "",
                             }
                           ],
                         }]
