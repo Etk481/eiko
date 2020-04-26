@@ -836,9 +836,8 @@ function handlePostback(sender_psid, received_postback) {
 /***********************
 FUNCTION TO GREET USER 
 ************************/
-async function greetUser(sender_psid){  
-  let user = await getUserProfile(sender_psid);   
-  let response1 = {"text": "မင်္ဂလာပါ!. "+user.first_name+" "+user.last_name+" ေရ. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
+function greetUser(sender_psid){ 
+  let response1 = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
   let response2 = {"text": "လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ..."};
   let response3 = {
           "text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...',
