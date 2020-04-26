@@ -303,7 +303,7 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "ဟုတ်ကဲ့အတိုင်းပေးပါဦး" }
   } else if (payload === 'no') {
     response = { "text": "အားးးနောက်တစ်ပုံပြန်ပို့ပေးပါနော်" }
-  }else if (payload === 'getstarted' || 'look') {
+  }else if (payload === 'getstarted' || payload === 'look') {
   response = { "attachment": {
                       "type": "template",
                       "payload": {
