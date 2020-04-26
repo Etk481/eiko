@@ -363,7 +363,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"No!",
-                "payload":"getstarted"
+                "payload":"dtans1"
               }             
             ]      
           },
@@ -385,7 +385,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"No!",
-                "payload":"getstarted"
+                "payload":"dtans1"
               }             
             ]      
           },
