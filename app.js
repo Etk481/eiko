@@ -434,7 +434,7 @@ function handlePostback(sender_psid, received_postback) {
           "payload":"dtans3"
         }
       ]
-      }
+      };
 
     callSend(sender_psid, response1).then(()=>{
       return callSend(sender_psid, response2).then(()=>{
@@ -443,7 +443,13 @@ function handlePostback(sender_psid, received_postback) {
       });
     }
 
-
+else if (received_message.payload === "dtans2") {
+  response = "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်' 
+}
+  
+else if (received_message.payload === "dtans3") {
+  response = "text":'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ' 
+}
 
 
 
