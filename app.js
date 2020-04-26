@@ -260,7 +260,7 @@ else if (received_message.attachments) {
         {
           "content_type":"text",
           "title":"အိမ်ပို့ပေး",
-          "payload":"<POSTBACK_PAYLOAD>"
+          "payload":"hhh"
         },{
           "content_type":"text",
           "title":"ယူမယ်",
@@ -268,7 +268,7 @@ else if (received_message.attachments) {
         }
       ]
       }
-  } else if (received_message.text == "အိမ်ပို့ပေး") {
+  } else if (received_message.payload == "hhh") {
       response = {
         "text":'ပို့ပေးရန်လိပ်စာပေးပါ'
       }
