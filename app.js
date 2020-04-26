@@ -187,10 +187,6 @@ function handleMessage(sender_psid, received_message) {
       });
 
 
-}else if (payload === 's_address') { 
-  response = { "text": "ဆိုင်လိပ်စာ             မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။"
-
-  }
 }
 
 else if (received_message.attachments) {
@@ -293,6 +289,16 @@ function handlePostback(sender_psid, received_postback) {
   let payload = received_postback.payload;
 
   // Set the response based on the postback payload
+
+  if (payload === 's_address') { 
+    response = { "text": "ဆိုင်လိပ်စာ             မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။"
+  }
+  }
+
+
+
+
+
   if (payload === 'yes') {
     response = { "text": "ဟုတ်ကဲ့အတိုင်းပေးပါဦး" }
   } else if (payload === 'no') {
