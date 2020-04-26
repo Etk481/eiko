@@ -443,13 +443,6 @@ function handlePostback(sender_psid, received_postback) {
       });
     }
 
-else if (received_message.text === "Yes") {
-  response = {"text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'}
-}
-  
-else if (received_message.text === "No") {
-  response = {"text":'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ'} 
-}
 
 
 
