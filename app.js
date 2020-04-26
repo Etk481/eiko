@@ -416,6 +416,8 @@ function handlePostback(sender_psid, received_postback) {
     }
    }
 }
+
+
   else if (payload === 'dtans1') {
   let response1 = {"text": "ဟုတ်ကဲ့ပါခင်ဗျာ အခုလိုဖြေကြားပေးတဲ့အတွက် ကျွန်တော်တို့ရဲ့ NS Doors & Windows Shop မှ ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ"};
   let response2 = {"text":'ကျွန်ုပ်တို့ဆိုင်မှာရှိတဲ့ တံခါးပုံများကို   မကြိုက်ပါက လူကြီးမင်း စိတ်ကြိုက်လိုချင်သော တံခါးပုံကိုပေးပို့၍လည်း မှာယူနိုင်ပါသည်ခင်ဗျာ'};
@@ -440,8 +442,14 @@ function handlePostback(sender_psid, received_postback) {
         });
       });
     }
-  
 
+else if (received_message.payload === "dtans2") {
+  response = "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်' 
+}
+  
+else if (received_message.payload === "dtans3") {
+  response = "text":'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ' 
+}
 
 
 
