@@ -173,11 +173,6 @@ function handleMessage(sender_psid, received_message) {
                           "type": "postback",
                           "title": "တံခါးပုံများကြည့်မည်",
                           "payload": "look",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "ဒီဇိုင်းပေးမည်",
-                          "payload": "gd",
                         }
                       ],
                     }]
@@ -306,51 +301,32 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "ဟုတ်ကဲ့အတိုင်းပေးပါဦး" }
   } else if (payload === 'no') {
     response = { "text": "အားးးနောက်တစ်ပုံပြန်ပို့ပေးပါနော်" }
-  }
-
-  else if (payload === 'getstarted' ) {
-  let response1 = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
-  let response2 = {"text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များကိုနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...'};
-  let response3 = { "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                      "title": "NS Doors & Windows Shop",
-                      "subtitle": "",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "ဆိုင်လိပ်စာ",
-                          "payload": "s_address",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "ဆိုင်ဖုန်းနံပါတ်",
-                          "payload": "s_Ph",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "တံခါးပုံများကြည့်မည်",
-                          "payload": "look",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "ဒီဇိုင်းပေးမည်",
-                          "payload": "gd",
-                        }
-                      ],
-                    }]
+  }else if (payload === 'getstarted' || payload === 'look') {
+  response = { "attachment": {
+                      "type": "template",
+                      "payload": {
+                        "template_type": "generic",
+                        "elements": [{
+                          "title": "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ",
+                          "subtitle": "ဘာများအလိုရှိပါသလဲ?",
+                          "buttons": [
+                            {
+                              "type": "postback",
+                              "title": "တံခါးပုံများကြည့်မည်",
+                              "payload": "sstgym",
+                            },
+                            {
+                              "type": "postback",
+                              "title": "ဒီဇိုင်းပေးမည်",
+                              "payload": "gd",
+                            }
+                          ],
+                        }]
+                      }
+                    }
                   }
-                }
-              };
 
-    callSend(sender_psid, response1).then(()=>{
-      return callSend(sender_psid, response2).then(()=>{
-          return callSend(sender_psid, response3);
-        });
-      });
-}else if (payload === 'gd'|| payload === 'look') {
+  }else if (payload === 'gd') {
     response = { "text": "Please sent image." }
    }else if (payload === 'sstgym') {
     response = {
