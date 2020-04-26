@@ -301,7 +301,12 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "ဟုတ်ကဲ့အတိုင်းပေးပါဦး" }
   } else if (payload === 'no') {
     response = { "text": "အားးးနောက်တစ်ပုံပြန်ပို့ပေးပါနော်" }
-  }else if (payload === 'getstarted' || payload === 'look') {
+  }
+
+
+
+//for getstarted
+  else if (payload === 'getstarted' ) {
   response = { "attachment": {
                       "type": "template",
                       "payload": {
@@ -326,9 +331,14 @@ function handlePostback(sender_psid, received_postback) {
                     }
                   }
 
-  }else if (payload === 'gd') {
+  }
+
+  else if (payload === 'gd') {
     response = { "text": "Please sent image." }
-   }else if (payload === 'sstgym') {
+  }
+
+
+  else if (payload === 'sstgym'|| payload === 'look') {
     response = {
     "attachment":{
       "type":"template",
