@@ -149,8 +149,8 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text == "Hi" || received_message.text == "hi" || received_message.text == "Hello" || received_message.text == "hello") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
-  response1 = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
-  callSend(sender_psid, response1);
+  response = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"}
+
 }
 else if (received_message.attachments) {
     // Get the URL of the message attachment
