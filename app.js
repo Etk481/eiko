@@ -177,7 +177,6 @@ callSend(sender_psid, response1).then(()=>{
   });  
 }
 
-}
 else if (received_message.attachments) {
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
