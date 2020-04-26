@@ -171,7 +171,7 @@ function handleMessage(sender_psid, received_message) {
                         },
                         {
                           "type": "postback",
-                          "title": "တံခါးပုံများကြည့်မည်/မှာမည်",
+                          "title": "တံခါးပုံများကြည့်မည်",
                           "payload": "L&O",
                         } 
                       ],
@@ -195,6 +195,13 @@ function handleMessage(sender_psid, received_message) {
                         "elements": [{
                           "title": "ဆိုင်လိပ်စာ",
                           "subtitle": "မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။",
+                          "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "",
+                          "payload": "",
+                        } 
+                      ],
                         }]
                       }
                     }
