@@ -156,6 +156,7 @@ function handleMessage(sender_psid, received_message) {
                   "payload": {
                     "template_type": "generic",
                     "elements": [{
+                      "title": "NS Doors & Windows Shop",
                       "buttons": [
                         {
                           "type": "postback",
