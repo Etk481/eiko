@@ -149,9 +149,7 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text == "Hi" || received_message.text == "hi" || received_message.text == "Hello" || received_message.text == "hello") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
-  response = {
-      "text":'မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ'
-    }
+      greetUser (sender_psid);
   }
 else if (received_message.attachments) {
     // Get the URL of the message attachment
@@ -835,8 +833,58 @@ function handlePostback(sender_psid, received_postback) {
   callSendAPI(sender_psid, response);
 }
 
+/***********************
+FUNCTION TO GREET USER 
+************************/
+async function greetUser(sender_psid){  
+  let user = await getUserProfile(sender_psid);   
+  let response1 = {"text": "မင်္ဂလာပါ!. "+user.first_name+" "+user.last_name+" ေရ. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
+  let response2 = {"text": "လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ..."};
+  let response3 = {
+          "text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...',
+          "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"ဆိုင်လိပ်စာ",
+          "payload":"s_address"
+        },{
+          "content_type":"text",
+          "title":"ဆိုင်ဖုန်းနံပါတ်",
+          "payload":"s_Ph"
+        },{
+          "content_type":"text",
+          "title":"တံခါးရွက်ဒီဇိုင်းများကြည့်မည်/မှာမည်",
+          "payload":"L&O"
+        }
+      ]
+    };
 
+callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid,response2).then(()=>{
+      return callSend(sender_psid, response3);
+      });  
+  });  
+}else if (received_message.text == "ဆိုင်လိပ်စာ") { 
+  response = { "attachment": {
+                      "type": "template",
+                      "payload": {
+                        "template_type": "generic",
+                        "elements": [{
+                          "title": "ဆိုင်လိပ်စာ",
+                          "subtitle": "မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။",
+                          "buttons": [
+                            {
+                              "type": "postback",
+                              "title": "Back",
+                              "payload": "greetUser",
+                            }
+                          ],
+                        }]
+                      }
+                    }
+                  }
 
+  }
 
 function callSendAPI(sender_psid, response) {
   // Construct the message body
@@ -860,6 +908,51 @@ function callSendAPI(sender_psid, response) {
       console.error("Unable to send message:" + err);
     }
   }); 
+}
+
+function callSendAPINew(sender_psid, response) {  
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response
+  }
+  
+  return new Promise(resolve => {
+    request({
+      "uri": "https://graph.facebook.com/v2.6/me/messages",
+      "qs": { "access_token": PAGE_ACCESS_TOKEN },
+      "method": "POST",
+      "json": request_body
+    }, (err, res, body) => {
+      if (!err) {
+        resolve('message sent!')
+      } else {
+        console.error("Unable to send message:" + err);
+      }
+    }); 
+  });
+}
+
+async function callSend(sender_psid, response){
+  let send = await callSendAPINew(sender_psid, response);
+  return 1;
+}
+
+function getUserProfile(sender_psid) {
+  return new Promise(resolve => {
+    request({
+      "url": "https://graph.facebook.com/"+sender_psid+"?fields=first_name,last_name,profile_pic&access_token=EAAC0Amc4MRgBAGR5JMXzFDQBBZCbHRjOkVPeKg3UokgQzZAYlIAZBQoPnwsKo6FZBmSOd5kPm16TUJEFdveL9iZA4IAG2EN1IozqH17jKueHNU2rPObJYjxkL6Kq3WttHxYhaj83SGYNK9ZBEtYXkJTOiXVV9key1xS8WZCpWXoQy3bluiMysR5IYlm1Q9QfVQZD",
+      "method": "GET"
+      }, (err, res, body) => {
+        if (!err) { 
+          let data = JSON.parse(body);  
+          resolve(data);                 
+    } else {
+      console.error("Error:" + err);
+    }
+    });
+  });
 }
 
 
