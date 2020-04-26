@@ -149,7 +149,33 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text == "Hi" || received_message.text == "hi" || received_message.text == "Hello" || received_message.text == "hello") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
-  response = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"}
+  let response1 = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
+  let response2 = {"text": "လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ..."};
+  let response3 = {
+          "text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...',
+          "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"ဆိုင်လိပ်စာ",
+          "payload":"s_address"
+        },{
+          "content_type":"text",
+          "title":"ဆိုင်ဖုန်းနံပါတ်",
+          "payload":"s_Ph"
+        },{
+          "content_type":"text",
+          "title":"တံခါးရွက်ဒီဇိုင်းများကြည့်မည်/မှာမည်",
+          "payload":"L&O"
+        }
+      ]
+    };
+
+callSend(sender_psid, response1).then(()=>{
+  return callSend(sender_psid,response2).then(()=>{
+      return callSend(sender_psid, response3);
+      });  
+  });  
+}
 
 }
 else if (received_message.attachments) {
@@ -833,6 +859,8 @@ function handlePostback(sender_psid, received_postback) {
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
+
+
 
 
 function callSendAPI(sender_psid, response) {
