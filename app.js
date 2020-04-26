@@ -151,7 +151,7 @@ function handleMessage(sender_psid, received_message) {
     // will be added to the body of our request to the Send API
   let response1 = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
   let response2 = {
-          "text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...',
+          "text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များကိုနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...',
           "quick_replies":[
         {
           "content_type":"text",
@@ -172,7 +172,28 @@ function handleMessage(sender_psid, received_message) {
 callSend(sender_psid, response1).then(()=>{
       return callSend(sender_psid, response2);
       });   
-}
+}else if (received_message.payload == "s_address") { 
+  response = { "attachment": {
+                      "type": "template",
+                      "payload": {
+                        "template_type": "generic",
+                        "elements": [{
+                          "title": "ဆိုင်လိပ်စာ",
+                          "subtitle": "မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။",
+                          "buttons": [
+                            {
+                              "type": "postback",
+                              "title": "Back",
+                              "payload": "s_address",
+                            }
+                          ],
+                        }]
+                      }
+                    }
+                  }
+
+  }
+
 
 else if (received_message.attachments) {
     // Get the URL of the message attachment
