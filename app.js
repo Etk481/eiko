@@ -150,8 +150,7 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
   let response1 = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
-  let response2 = {"text": "လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ..."};
-  let response3 = {
+  let response2 = {
           "text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...',
           "quick_replies":[
         {
@@ -171,10 +170,8 @@ function handleMessage(sender_psid, received_message) {
     };
 
 callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid,response2).then(()=>{
-      return callSend(sender_psid, response3);
-      });  
-  });  
+      return callSend(sender_psid, response2);
+      });   
 }
 
 else if (received_message.attachments) {
