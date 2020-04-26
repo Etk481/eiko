@@ -833,57 +833,6 @@ function handlePostback(sender_psid, received_postback) {
   callSendAPI(sender_psid, response);
 }
 
-/***********************
-FUNCTION TO GREET USER 
-************************/
-function greetUser(sender_psid){ 
-  let response1 = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
-  let response2 = {"text": "လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ..."};
-  let response3 = {
-          "text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...',
-          "quick_replies":[
-        {
-          "content_type":"text",
-          "title":"ဆိုင်လိပ်စာ",
-          "payload":"s_address"
-        },{
-          "content_type":"text",
-          "title":"ဆိုင်ဖုန်းနံပါတ်",
-          "payload":"s_Ph"
-        },{
-          "content_type":"text",
-          "title":"တံခါးရွက်ဒီဇိုင်းများကြည့်မည်/မှာမည်",
-          "payload":"L&O"
-        }
-      ]
-    };
-
-callSend(sender_psid, response1).then(()=>{
-  return callSend(sender_psid,response2).then(()=>{
-      return callSend(sender_psid, response3);
-      });  
-  });  
-}else if (received_message.text == "ဆိုင်လိပ်စာ") { 
-  response = { "attachment": {
-                      "type": "template",
-                      "payload": {
-                        "template_type": "generic",
-                        "elements": [{
-                          "title": "ဆိုင်လိပ်စာ",
-                          "subtitle": "မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။",
-                          "buttons": [
-                            {
-                              "type": "postback",
-                              "title": "Back",
-                              "payload": "greetUser",
-                            }
-                          ],
-                        }]
-                      }
-                    }
-                  }
-
-  }
 
 function callSendAPI(sender_psid, response) {
   // Construct the message body
