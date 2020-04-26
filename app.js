@@ -192,7 +192,7 @@ else if (received_message.payload === "dtans2") {
 }
   
 else if (received_message.payload === "dtans3") {
-  response = "text":{'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ'}
+  response = {"text":'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ'}
 }
 
 
