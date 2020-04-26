@@ -156,7 +156,6 @@ function handleMessage(sender_psid, received_message) {
                   "payload": {
                     "template_type": "generic",
                     "elements": [{
-                      "title": "လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များကိုနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...",
                       "buttons": [
                         {
                           "type": "postback",
@@ -170,7 +169,7 @@ function handleMessage(sender_psid, received_message) {
                         },
                         {
                           "type": "postback",
-                          "title": "တံခါးရွက်ဒီဇိုင်းများကြည့်မည်/မှာမည်",
+                          "title": "တံခါးပုံများကြည့်မည်/မှာမည်",
                           "payload": "L&O",
                         } 
                       ],
@@ -187,7 +186,7 @@ function handleMessage(sender_psid, received_message) {
  
 
 
-}else if (received_message.payload === "s_address") { 
+}else if (payload === 's_address') { 
   response = { "attachment": {
                       "type": "template",
                       "payload": {
