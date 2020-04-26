@@ -299,7 +299,7 @@ function handlePostback(sender_psid, received_postback) {
 
 
 
-  if (payload === 'yes') {
+  else if (payload === 'yes') {
     response = { "text": "ဟုတ်ကဲ့အတိုင်းပေးပါဦး" }
   } else if (payload === 'no') {
     response = { "text": "အားးးနောက်တစ်ပုံပြန်ပို့ပေးပါနော်" }
