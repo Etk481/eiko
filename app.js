@@ -269,8 +269,7 @@ else if (received_message.attachments) {
   }  
   else if (received_message.text && botQuestions.quantity == true) {
       userAnswers.quantity = parseInt(received_message.text);
-      let total = (4000 * (userAnswers.width * userAnswers.length)) * userAnswers.quantity;
-
+      let total = 4000 * userAnswers.width * userAnswers.length * userAnswers.quantity;
       response = {
         "text":`5"*3" တံခါးမကြီးခွေ  ၏ ကျသင့်‌ငွေမှာ ${total} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
@@ -287,6 +286,7 @@ else if (received_message.attachments) {
       }
       botQuestions.quantity = false;
   }
+
  
 
 
@@ -971,7 +971,7 @@ function handlePostback(sender_psid, received_postback) {
    }
   } else if (payload === 'ol') {
     response = { "text": "ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ" }
-    botQuestions.quantity = true;
+    
   }
 
 
