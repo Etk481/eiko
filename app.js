@@ -973,40 +973,6 @@ function handlePostback(sender_psid, received_postback) {
                 "payload":"ol"
               }              
             ]      
-          },
-          {
-            "title":"အလျား = 1.5'",
-            "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84445199_128731638669414_8788996082672599040_o.jpg?_nc_cat=105&_nc_ohc=B_5XxoqU2V8AX8av3yE&_nc_ht=scontent.fnyt1-1.fna&oh=7c8e5a7d417f8c466f5361e55ef55a40&oe=5EC08340",
-            "subtitle":"အနံ = 6.5'",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84445199_128731638669414_8788996082672599040_o.jpg?_nc_cat=105&_nc_ohc=B_5XxoqU2V8AX8av3yE&_nc_ht=scontent.fnyt1-1.fna&oh=7c8e5a7d417f8c466f5361e55ef55a40&oe=5EC08340",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"postback",
-                "title":"မှာမည်",
-                "payload":"ol"
-              }              
-            ]      
-          },
-          {
-            "title":"အလျား = 1.5'",
-            "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85124252_128731588669419_8225910691752574976_o.jpg?_nc_cat=109&_nc_ohc=Z5dkuSQUQJwAX8kXFSa&_nc_ht=scontent.fnyt1-1.fna&oh=525217a6019e787cdb74108c40b0f42f&oe=5ED07986",
-            "subtitle":"အနံ = 6.5'",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85124252_128731588669419_8225910691752574976_o.jpg?_nc_cat=109&_nc_ohc=Z5dkuSQUQJwAX8kXFSa&_nc_ht=scontent.fnyt1-1.fna&oh=525217a6019e787cdb74108c40b0f42f&oe=5ED07986",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"postback",
-                "title":"မှာမည်",
-                "payload":"ol"
-              }              
-            ]      
           }
         ]
       }
