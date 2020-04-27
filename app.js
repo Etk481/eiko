@@ -220,10 +220,10 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
   botQuestions.length_f52 = true;  
 }
 
-else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်း(သစ်သားဆံ)") {
+else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်း(သစ်ဆံ)") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
-}else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်သားဆံ)") {
+}else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်ဆံ)") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
 }else if (received_message.text == "ရိုးရိုးပြတင်း(မှန်ဆံ)" || received_message.text == "ရောင်လင်း") {
@@ -233,7 +233,6 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
 }
-
 
 else if (received_message.attachments) {
     // Get the URL of the message attachment
@@ -448,7 +447,7 @@ function handlePostback(sender_psid, received_postback) {
           "payload":"gdwf"
         },{
           "content_type":"text",
-          "title":"ရိုးရိုးပြတင်း(သစ်သားဆံ)",
+          "title":"ရိုးရိုးပြတင်း(သစ်ဆံ)",
           "payload":"gdswt"
         },{
           "content_type":"text",
@@ -456,7 +455,7 @@ function handlePostback(sender_psid, received_postback) {
           "payload":"gdswg"
         },{
           "content_type":"text",
-          "title":"ကုံးပြတင်း(သစ်သားဆံ)",
+          "title":"ကုံးပြတင်း(သစ်ဆံ)",
           "payload":"gdhwt"
         },{
           "content_type":"text",
