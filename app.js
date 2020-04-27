@@ -346,6 +346,12 @@ function handlePostback(sender_psid, received_postback) {
 
   }
 
+  else if (payload == "dtans2") {
+  response = {
+    "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
+    } 
+}
+
   else if (payload === 'gd') {
     response = { "text": "ကျေးဇူးပြု၍ဘယ်အမျိုးအစားအတွက်မှာယူမှာလဲဆိုတာရွေးပေးပါခင်ဗျာ။ " }
   }
