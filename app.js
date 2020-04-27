@@ -265,13 +265,11 @@ else if (received_message.attachments) {
         "text":`၁ခုအတွက် ${totalFoot} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
       };
       botQuestions.width = false;
+      botQuestions.quantity = true;
   }  
-  else if (received_message.text && botQuestions.quantity) {
+  else if (received_message.text && botQuestions.quantity == true) {
       userAnswers.quantity = parseInt(received_message.text);
-      let totalFoot = 4000 * userAnswers.width * userAnswers.length;
-      let total = totalFoot * userAnswers.quantity;
-
-
+      let total = (4000 * (userAnswers.width * userAnswers.length)) * userAnswers.quantity;
 
       response = {
         "text":`5"*3" တံခါးမကြီးခွေ  ၏ ကျသင့်‌ငွေမှာ ${total} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
