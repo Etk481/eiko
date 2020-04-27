@@ -144,8 +144,7 @@ app.get('/webhook', (req, res) => {
 
 function handleMessage(sender_psid, received_message) {
   let response;
-  let payload1 = received_message.payload;
-  
+   
   // Checks if the message contains text
   if (received_message.text == "Hi" || received_message.text == "hi" || received_message.text == "Hello" || received_message.text == "hello") {    
     // Create the payload for a basic text message, which
@@ -188,7 +187,7 @@ function handleMessage(sender_psid, received_message) {
       });
 }
 
-else if (payload1 == "dtans2") {
+else if (received_message.payload === "dtans2") {
   response = {
     "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
     } 
