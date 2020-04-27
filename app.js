@@ -352,7 +352,15 @@ else if (received_message.attachments) {
       botQuestions.length_sd515 = false;
       botQuestions.width_sd515 = true;
   }
-
+  else if (received_message.text && botQuestions.width_sd515 == true) {
+      userAnswers.width_sd515 = received_message.text;
+      let totalFoot_sd515 = 4000 * userAnswers.width_sd515 * userAnswers.length_sd515;
+      response = {
+        "text":`၁ခုအတွက် ${totalFoot_sd515} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
+      };
+      botQuestions.width_sd515 = false;
+      botQuestions.quantity_sd515 = true;
+  }   
 
 
 else if (received_message.text == "yes") {
