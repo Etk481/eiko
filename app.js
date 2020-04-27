@@ -52,6 +52,13 @@ const
     cusInfo:false,
   };
 
+let designAttachment = false;
+let bdesignAttachment = false;
+let sharepicAttachment = false;
+
+let userEnteredInfo = {};
+let userSendAttachment = {};
+
   let userAnswers = {};
 
 // Sets server port and logs message on success
@@ -234,27 +241,29 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     }
 }
 
-else if (received_message.attachments) {
-    // Get the URL of the message attachment
+else if (received_message.attachments && designAttachment == true) {
+    console.log('meta data',received_message);
+    designAttachment == false;
     let attachment_url = received_message.attachments[0].payload.url;
+    userSendAttachment.designAttachment = attachment_url;
     response = {
       "attachment": {
         "type": "template",
         "payload": {
           "template_type": "generic",
           "elements": [{
-            "title": "Is this the right picture?",
-            "subtitle": "Tap a button to answer.",
+            "title": "Is this design?",
+            "subtitle": "Wow! this one will totally suits you.I can't wait to sew it.",
             "image_url": attachment_url,
             "buttons": [
               {
                 "type": "postback",
-                "title": "ဟုတ်ပါတယ်!",
+                "title": "Yes, that one. :)",
                 "payload": "yes",
               },
               {
                 "type": "postback",
-                "title": "မဟုတ်ပါ!",
+                "title": "No, sorry. :(",
                 "payload": "no",
               }
             ],
