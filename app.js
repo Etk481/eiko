@@ -242,6 +242,8 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
 }
 
 else if (received_message.attachments && botAttachment.doorwtAttachment == true) {
+  console.log('meta data',received_message);
+    botAttachment.doorwtAttachment = false;
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
     userAttachment.doorwtAttachment = attachment_url;
@@ -269,8 +271,7 @@ else if (received_message.attachments && botAttachment.doorwtAttachment == true)
           }]
         }
       }
-    };
-    botAttachment.doorwtAttachment = false;
+    }
   }
 
 // length, width and price for 53
