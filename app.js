@@ -191,7 +191,7 @@ function handleMessage(sender_psid, received_message) {
 //for get design quick replies
 else if (received_message.text == "တံခါးမကြီးခွေ") {
      response = {
-        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
         {
           "content_type":"text",
@@ -250,14 +250,14 @@ else if (received_message.attachments) {
   }
 
 // for length
-  else if (received_message.text && botQuestions.length) {
+  else if (received_message.text && botQuestions.length == true) {
       userAnswers.length = received_message.text;
       response = {
           "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.1 ဟုပေးပို့ပေးပါ'
       }
       botQuestions.length = false;
       botQuestions.width = true;
-  }else if (received_message.text && botQuestions.width) {
+  }else if (received_message.text && botQuestions.width == true) {
       userAnswers.width = received_message.text;
       response = {
           "text":'sss'
