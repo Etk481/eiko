@@ -50,6 +50,10 @@ const
     width_f52:false,
     length_f52:false,
     cusInfo:false,
+    image_sdwt:false,
+    image_sdwg:false,
+    image_hdw:false,
+    image_hwg:false,
   };
 
   let userAnswers = {};
@@ -207,7 +211,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
           "payload":"DDu2"
         }
       ]
-      }
+    }
 }else if (received_message.text == '5"*3"') {
     response = {
       "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
@@ -221,12 +225,40 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 }
 
 
-
-else if (received_message.text == "ရိုးရိုးတံခါးမကြီး") {
+else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်း(သစ်သားဆံ)" {
     response = {
-        
+      "text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
+  botQuestions.image_sdwt = true;
 }
+else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်သားဆံ)" {
+    response = {
+      "text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
+    }
+  botQuestions.image_hdw = true;
+}
+else if (received_message.text == "ရိုးရိုးပြတင်း(မှန်ဆံ)" || received_message.text == "ရောင်လင်း" {
+    response = {
+      "text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
+    }
+  botQuestions.image_sdwg = true;
+}
+else if (received_message.text == "ကုံးပြတင်း(မှန်ဆံ)" {
+    response = {
+      "text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
+    }
+  botQuestions.image_hwg = true;
+}
+
+
+
+
+
+
+
+
+
+
 
 else if (received_message.attachments) {
     // Get the URL of the message attachment
@@ -334,26 +366,28 @@ else if (received_message.attachments) {
       botQuestions.quantity_f52 = false;
   }
 
+//simple door
+  else if (received_message.text && botQuestions.)
 
 
-  else if (received_message.text == "no") {
-      response = {
-        "text":'ကျေးဇူးတင်ပါတယ်' 
-      }
-  }else if (received_message.text == "yes") {
+else if (received_message.text == "yes") {
      response = {
         "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်းအားဆက်သွယ်နိုင်ရန်အတွက် လူကြီးမင်း၏အမည်နှင့်ဖုန်းနံပါတ်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko, ph: 09785575160) ဆိုင်လိပ်စာ (မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။ ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)'
       }
     botQuestions.cusInfo = true;
-  }else if (received_message.text && botQuestions.cusInfo == true) {
+} else if (received_message.text && botQuestions.cusInfo == true) {
     userAnswers.cusInfo = received_message.text;
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
     callSend(sender_psid, response1).then(()=>{
-          return callSend(sender_psid, response2);
+        return callSend(sender_psid, response2);
     }); 
     botQuestions.cusInfo = false;
-}
+} else if (received_message.text == "no") {
+      response = {
+        "text":'ကျေးဇူးတင်ပါတယ်' 
+      }
+  }
 
         
 
