@@ -229,19 +229,19 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်း(သစ်သားဆံ)") {
     response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
-  botQuestions.image_sdwt = true;
+
 }else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်သားဆံ)") {
     response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
-  botQuestions.image_hdwt = true;
+ 
 }else if (received_message.text == "ရိုးရိုးပြတင်း(မှန်ဆံ)" || received_message.text == "ရောင်လင်း") {
     response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
-  botQuestions.image_swyg = true;
+
 }else if (received_message.text == "ကုံးပြတင်း(မှန်ဆံ)") {
     response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
-  botQuestions.image_hwg = true;
+
 }
 
 
