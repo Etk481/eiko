@@ -187,13 +187,13 @@ function handleMessage(sender_psid, received_message) {
       });
 }
 
-else if (received_message.payload === "dtans2") {
+else if (received_message.payload == "dtans2") {
   response = {
     "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
     } 
 }
   
-else if (received_message.payload === "dtans3") {
+else if (received_message.payload == "dtans3") {
   response = {
     "text":'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ'
     } 
