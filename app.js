@@ -241,36 +241,7 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     }
 }
 
-else if (received_message.attachments && botAttachment.doorwtAttachment == true) {
-    botAttachment.doorwtAttachment = false;
-    // Get the URL of the message attachment
-    let attachment_url = received_message.attachments[0].payload.url;
-    response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "မှာယူမည့်ပုံမှာမှန်ရဲ့လား?",
-            "subtitle": "",
-            "image_url": attachment_url,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "ဟုတ်ပါတယ်!",
-                "payload": "yes",
-              },
-              {
-                "type": "postback",
-                "title": "မဟုတ်ပါ!",
-                "payload": "no",
-              }
-            ],
-          }]
-        }
-      }
-    }
-  }
+
 
 // length, width and price for 53
   else if (received_message.text && botQuestions.length_f53 == true) {
