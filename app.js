@@ -256,6 +256,13 @@ else if (received_message.attachments) {
           "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.1 ဟုပေးပို့ပေးပါ'
       }
       botQuestions.length = false;
+      botQuestions.width = true;
+  }else if (received_message.text && botQuestions.width) {
+      userAnswers.width = received_message.text;
+      response = {
+          "text":'sss'
+      }
+      botQuestions.width = false;
   }
  
 // For quantity
