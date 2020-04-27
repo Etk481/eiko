@@ -190,7 +190,7 @@ function handleMessage(sender_psid, received_message) {
 }
 
 //for get design quick replies
-else if (received_message.text == "တံခါးမကြီးခွေ") {
+else if (received_message.text == "တံခါးမကြီးခွေ" || received_message.text == "ပြတင်းကြီးခွေ") {
      response = {
         "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
