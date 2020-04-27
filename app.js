@@ -241,7 +241,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
       "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
     }
   botQuestions.length_sd415 = true;  
-}else if (received_message.text == '(5"*1.5)"') {
+}else if (received_message.text == '(5"*1.5")') {
     response = {
       "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
     }
@@ -499,7 +499,7 @@ else if (received_message.attachments) {
   }
   else if (received_message.text && botQuestions.width_hd415 == true) {
       userAnswers.width_hd415 = received_message.text;
-      let totalFoot_hd415 = 7500 * userAnswers.width_hd415 * userAnswers.length_hd415;
+      let totalFoot_hd415 = 7500 * (userAnswers.width_hd415 * userAnswers.length_hd415);
       response = {
         "text":`၁ခုအတွက် ${totalFoot_hd415} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
       };
@@ -508,7 +508,7 @@ else if (received_message.attachments) {
   }  
   else if (received_message.text && botQuestions.quantity_hd415 == true) {
       userAnswers.quantity_hd415 = parseInt(received_message.text);
-      let total_hd415 = 7500 * userAnswers.width_hd415 * userAnswers.length_hd415 * userAnswers.quantity_hd415;
+      let total_hd415 = (7500 * (userAnswers.width_hd415 * userAnswers.length_hd415)) * userAnswers.quantity_hd415;
       response = {
         "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total_hd415} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
