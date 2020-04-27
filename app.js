@@ -589,7 +589,7 @@ function handlePostback(sender_psid, received_postback) {
                     "template_type": "generic",
                     "elements": [{
                       "title": "တံခါးမကြီးများ",
-                      "subtitle": "ပုံစံ",
+                      "subtitle": "မှာယူလိုသောအမျိုးအစားကိုရွေးပါ",
                       "buttons": [
                         {
                           "type": "postback",
@@ -598,12 +598,12 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "type": "postback",
-                          "title": "တစ်ဖက်ပိတ်တံခါးမ",
+                          "title": "ရိုးရိုးတံခါးမကြီး",
                           "payload": "d1",
                         },
                         {
                           "type": "postback",
-                          "title": "နှစ်ဖက်ပိတ်တံခါးမ",
+                          "title": "ကုံးတံခါးမကြီး",
                           "payload": "d2",
                         } 
                       ],
