@@ -341,33 +341,10 @@ else if (received_message.attachments) {
       }
   }else if (received_message.text == "yes") {
      response = {
-        "text":'လာယူမှာလား?',
-         "quick_replies":[
-        {
-          "content_type":"text",
-          "title":"အိမ်ပို့ပေး",
-          "payload":"<POSTBACK_PAYLOAD>"
-        },{
-          "content_type":"text",
-          "title":"ယူမယ်",
-          "payload":"<POSTBACK_PAYLOAD>"
-        }
-      ]
+        "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်းအားဆက်သွယ်နိုင်ရန်အတွက် လူကြီးမင်း၏အမည်နှင့်ဖုန်းနံပါတ်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko, ph: 09785575160) ဆိုင်လိပ်စာ (မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။ ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)',
       }
-  } else if (received_message.text == "အိမ်ပို့ပေး") {
-      response = {
-        "text":'ပို့ပေးရန်လိပ်စာပေးပါ'
-      }
-  }else if (received_message.text == "ယူမယ်") {
-      response = {
-        "text":'ဆိုင်မှာတွေ့မယ်နော်' 
-      }
-  }else if (received_message.text == "1234") {
-      response = {
-        "text":'ဟုတ်ကဲ့ 15.2.2020 ရက်နေ့ကျလာပို့ပါမယ်' 
-      }
-  }
-
+  } 
+        
 
   // Send the response message
   callSendAPI(sender_psid, response);    
