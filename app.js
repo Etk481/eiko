@@ -221,6 +221,12 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
   botQuestions.length_f52 = true;  
 }
 
+else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်း(သစ်သားဆံ)") {
+    response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
+    }
+
+}
+
 
 
 
