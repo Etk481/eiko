@@ -188,9 +188,23 @@ function handleMessage(sender_psid, received_message) {
       });
 }
 
-
-
-
+//for get design quick replies
+else if (received_message.text == "တံခါးမကြီးခွေ") {
+     response = {
+        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေမှာလား (5"*2")နဲ့ခွေမှာလား ရွေးပေးပါဦးခင်ဗျာ။',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":'5"*3"',
+          "payload":"DDu1"
+        },{
+          "content_type":"text",
+          "title":'5"*2"',
+          "payload":"DDu2"
+        }
+      ]
+      }
+}
 
 else if (received_message.attachments) {
     // Get the URL of the message attachment
