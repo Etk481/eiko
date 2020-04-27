@@ -344,7 +344,7 @@ else if (received_message.attachments) {
      response = {
         "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်းအားဆက်သွယ်နိုင်ရန်အတွက် လူကြီးမင်း၏အမည်နှင့်ဖုန်းနံပါတ်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko, ph: 09785575160) ဆိုင်လိပ်စာ (မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။ ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)'
       }
-    botQuestions.cusInfo = false;
+    botQuestions.cusInfo = true;
   }else if (received_message.text && botQuestions.cusInfo == true) {
     userAnswers.cusInfo = received_message.text;
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
