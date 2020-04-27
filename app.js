@@ -268,7 +268,7 @@ else if (received_message.attachments) {
         }
       ]
       }
-  } else if (received_message.text == "အိမ်ပို့ပေး") {
+  } else if (received_message.payload == "အိမ်ပို့ပေး") {
       response = {
         "text":'ပို့ပေးရန်လိပ်စာပေးပါ'
       }
@@ -281,7 +281,13 @@ else if (received_message.attachments) {
         "text":'ဟုတ်ကဲ့ 15.2.2020 ရက်နေ့ကျလာပို့ပါမယ်' 
       }
   }
-
+  else if (received_message.payload === "dtans2") {
+  response = {"text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'} 
+}
+  
+else if (received_message.payload === "dtans3") {
+  response = {"text":'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ'}
+}
 
   // Send the response message
   callSendAPI(sender_psid, response);    
