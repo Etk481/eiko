@@ -268,6 +268,7 @@ else if (received_message.attachments) {
   }  
   else if (received_message.text && botQuestions.quantity) {
       userAnswers.quantity = parseInt(received_message.text);
+      let quantity = userAnswers.quantity;
       let total = 30000 * userAnswers.quantity;
       let orderNumber = Math.floor(Math.random() * 100) + 1;
 
@@ -281,7 +282,7 @@ else if (received_message.attachments) {
       db.collection('order').doc().set(data);
 
       response = {
-        "text":`5"*3" တံခါးမကြီးခွေ ${userAnswers.quantity} ၏ ကျသင့်‌ငွေမှာ ${total} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
+        "text":`5"*3" တံခါးမကြီးခွေ ${quantity} ၏ ကျသင့်‌ငွေမှာ ${total} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
         {
           "content_type":"text",
