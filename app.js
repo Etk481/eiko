@@ -455,11 +455,11 @@ function handlePostback(sender_psid, received_postback) {
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"yes",
+          "title":"yes!",
           "payload":"dtans2"
         },{
           "content_type":"text",
-          "title":"no",
+          "title":"no!",
           "payload":"dtans3"
         }
       ]
