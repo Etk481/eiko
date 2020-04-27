@@ -188,17 +188,6 @@ function handleMessage(sender_psid, received_message) {
       });
 }
 
-else if (received_message.payload === "dtans2") {
-  let response1 = {
-    "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
-    };
-  let response2 = {
-    "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
-    };
-    callSend(sender_psid, response1).then(()=>{
-      return callSend(sender_psid, response3);
-    });      
-}
 
 
 
@@ -356,14 +345,50 @@ function handlePostback(sender_psid, received_postback) {
 
   }
 
-  else if (payload == "dtans2") {
-  response = {
-    "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
-    } 
-}
-
+//get design
   else if (payload === 'gd') {
-    response = { "text": "ကျေးဇူးပြု၍ဘယ်အမျိုးအစားအတွက်မှာယူမှာလဲဆိုတာရွေးပေးပါခင်ဗျာ။ " }
+    response = { 
+        "text":'ကျေးဇူးပြု၍ဘယ်အမျိုးအစားအတွက်မှာယူမှာလဲဆိုတာရွေးပေးပါခင်ဗျာ။',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"တံခါးမကြီးခွေ",
+          "payload":"gddf"
+        },{
+          "content_type":"text",
+          "title":"ရိုးရိုးတံခါးမကြီး",
+          "payload":"gdsd"
+        },{
+          "content_type":"text",
+          "title":"ကုံးတံခါးမကြီး",
+          "payload":"gdkf"
+        },{
+          "content_type":"text",
+          "title":"ပြတင်းကြီးခွေ",
+          "payload":"gdwf"
+        },{
+          "content_type":"text",
+          "title":"ရိုးရိုးပြတင်း(သစ်သားဆံ)",
+          "payload":"gdswt"
+        },{
+          "content_type":"text",
+          "title":"ရိုးရိုးပြတင်း(မှန်ဆံ)",
+          "payload":"gdswg"
+        },{
+          "content_type":"text",
+          "title":"ကုံးပြတင်း(သစ်သားဆံ)",
+          "payload":"gdhwt"
+        },{
+          "content_type":"text",
+          "title":"ကုံးပြတင်း(မှန်ဆံ)",
+          "payload":"gdhwg"
+        },{
+          "content_type":"text",
+          "title":"ရောင်လင်း",
+          "payload":"gdyl"
+        }
+      ]
+    }
   }
 
 //for door type
