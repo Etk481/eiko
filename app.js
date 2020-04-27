@@ -933,7 +933,22 @@ function handlePostback(sender_psid, received_postback) {
       }
     }
    }
-  }
+  }else if (payload ==  'dkCh' || payload ==  'wkCh') {
+     response = {
+        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":'5"*3"',
+          "payload":"DDu1"
+        },{
+          "content_type":"text",
+          "title":'5"*2"',
+          "payload":"DDu2"
+        }
+      ]
+    }
+}
 
   else if (payload === 'd1') {
     response = {
