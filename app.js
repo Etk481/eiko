@@ -188,7 +188,7 @@ function handleMessage(sender_psid, received_message) {
       });
 }
 
-else if (received_message.payload == "dtans2") {
+else if (payload1 == "dtans2") {
   response = {
     "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
     } 
