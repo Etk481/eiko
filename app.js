@@ -258,13 +258,43 @@ else if (received_message.attachments) {
       botQuestions.length = false;
       botQuestions.width = true;
   }
-    else if (received_message.text && botQuestions.width == true) {
+  else if (received_message.text && botQuestions.width == true) {
       userAnswers.width = received_message.text;
       let totalFoot = 4000 * userAnswers.width * userAnswers.length;
       response = {
         "text":`၁ခုအတွက် ${totalFoot} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
       };
       botQuestions.width = false;
+  }  
+  else if (received_message.text && botQuestions.quantity) {
+      userAnswers.quantity = parseInt(received_message.text);
+      let total = 30000 * userAnswers.quantity;
+      let orderNumber = Math.floor(Math.random() * 100) + 1;
+
+      let data = {
+        user:"ei thin zar ko",
+        date: "28-02-2020",
+        total: userAnswers.quantity,
+        order_number : orderNumber
+      }
+
+      db.collection('order').doc().set(data);
+
+      response = {
+        "text":`5"*3" တံခါးမကြီးခွေ ${userAnswers.quantity} ၏ ကျသင့်‌ငွေမှာ ${total} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"yes",
+          "payload":"<POSTBACK_PAYLOAD>"
+        },{
+          "content_type":"text",
+          "title":"no",
+          "payload":"<POSTBACK_PAYLOAD>"
+        }
+      ]
+      }
+      botQuestions.quantity = false;
   }
  
 // For quantity
