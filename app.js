@@ -144,6 +144,7 @@ app.get('/webhook', (req, res) => {
 
 function handleMessage(sender_psid, received_message) {
   let response;
+  let payload1 = received_message.payload;
   
   // Checks if the message contains text
   if (received_message.text == "Hi" || received_message.text == "hi" || received_message.text == "Hello" || received_message.text == "hello") {    
@@ -187,7 +188,11 @@ function handleMessage(sender_psid, received_message) {
       });
 }
 
-
+else if (received_message.payload == "dtans2") {
+  response = {
+    "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
+    } 
+}
 
 
 
@@ -268,7 +273,7 @@ else if (received_message.attachments) {
         }
       ]
       }
-  } else if (received_message.payload == "အိမ်ပို့ပေး") {
+  } else if (received_message.text == "အိမ်ပို့ပေး") {
       response = {
         "text":'ပို့ပေးရန်လိပ်စာပေးပါ'
       }
@@ -298,6 +303,7 @@ function handlePostback(sender_psid, received_postback) {
    let response;
   // Get the payload for the postback
   let payload = received_postback.payload;
+  
 
   // Set the response based on the postback payload
 
@@ -315,6 +321,10 @@ function handlePostback(sender_psid, received_postback) {
   } else if (payload === 'no') {
     response = { "text": "အားးးနောက်တစ်ပုံပြန်ပို့ပေးပါနော်" }
   }
+
+
+
+
 
 
 
@@ -445,12 +455,12 @@ function handlePostback(sender_psid, received_postback) {
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"Yes",
-          "payload":"dtans2"
+          "title":"Yes!",
+          "payload":"dtYes!"
         },{
           "content_type":"text",
-          "title":"No",
-          "payload":"dtans3"
+          "title":"No!",
+          "payload":"dtNo!"
         }
       ]
       };
