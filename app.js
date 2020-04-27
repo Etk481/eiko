@@ -223,7 +223,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 
 
 else if (received_message.text == 'ရောင်လင်း') {
-    response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
+    response = {"text" : 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
 
 }
