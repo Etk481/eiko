@@ -209,6 +209,8 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
         }
       ]
     }
+}else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်း(သစ်သားဆံ)") {
+    response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'}
 }else if (received_message.text == '5"*3"') {
     response = {
       "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
@@ -221,9 +223,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
   botQuestions.length_f52 = true;  
 }
 
-else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်း(သစ်သားဆံ)") {
-    response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'}
-}
+
 
 
 
