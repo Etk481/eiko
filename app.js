@@ -352,34 +352,7 @@ else if (received_message.attachments) {
       botQuestions.length_sd515 = false;
       botQuestions.width_sd515 = true;
   }
-  else if (received_message.text && botQuestions.width_sd515 == true) {
-      userAnswers.width_sd515 = received_message.text;
-      let totalFoot_sd515 = 7000 * userAnswers.width_sd515 * userAnswers.length_sd515;
-      response = {
-        "text":`၁ခုအတွက် ${totalFoot_sd515} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
-      };
-      botQuestions.width_sd515 = false;
-      botQuestions.quantity_sd515 = true;
-  }  
-  else if (received_message.text && botQuestions.quantity_sd515 == true) {
-      userAnswers.quantity_sd515 = parseInt(received_message.text);
-      let total_sd515 = 7000 * userAnswers.width_sd515 * userAnswers.length_sd515 * userAnswers.quantity_sd515;
-      response = {
-        "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total_sd515} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
-         "quick_replies":[
-        {
-          "content_type":"text",
-          "title":"yes",
-          "payload":"<POSTBACK_PAYLOAD>"
-        },{
-          "content_type":"text",
-          "title":"no",
-          "payload":"<POSTBACK_PAYLOAD>"
-        }
-      ]
-      }
-      botQuestions.quantity_sd515 = false;
-  }
+
 
 
 else if (received_message.text == "yes") {
