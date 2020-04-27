@@ -43,9 +43,9 @@ const
   let db = firebase.firestore();
 
   let botQuestions = {
-    quantity:false,
-    width:false,
-    length_f53:false
+    quantity_f53:false,
+    width_f53:false,
+    length_f53:false,
     length_f52: false,
   };
 
@@ -262,22 +262,22 @@ else if (received_message.attachments) {
           "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.5 ဟုပေးပို့ပေးပါ'
       };
       botQuestions.length_f53 = false;
-      botQuestions.width = true;
+      botQuestions.width_f53 = true;
   }
-  else if (received_message.text && botQuestions.width == true) {
-      userAnswers.width = received_message.text;
-      let totalFoot = 4000 * userAnswers.width * userAnswers.length_f53;
+  else if (received_message.text && botQuestions.width_f53 == true) {
+      userAnswers.width_f53 = received_message.text;
+      let totalFoot_f53 = 4000 * userAnswers.width_f53 * userAnswers.length_f53;
       response = {
-        "text":`၁ခုအတွက် ${totalFoot} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
+        "text":`၁ခုအတွက် ${totalFoot_f53} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
       };
-      botQuestions.width = false;
-      botQuestions.quantity = true;
+      botQuestions.width_f53 = false;
+      botQuestions.quantity_f53 = true;
   }  
-  else if (received_message.text && botQuestions.quantity == true) {
-      userAnswers.quantity = parseInt(received_message.text);
-      let total = 4000 * userAnswers.width * userAnswers.length * userAnswers.quantity;
+  else if (received_message.text && botQuestions.quantity_f53 == true) {
+      userAnswers.quantity_f53 = parseInt(received_message.text);
+      let total_f53 = 4000 * userAnswers.width_f53 * userAnswers.length_f53 * userAnswers.quantity_f53;
       response = {
-        "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
+        "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total_f53} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
         {
           "content_type":"text",
@@ -290,7 +290,7 @@ else if (received_message.attachments) {
         }
       ]
       }
-      botQuestions.quantity = false;
+      botQuestions.quantity_f53 = false;
   }
 
  
