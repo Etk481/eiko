@@ -187,7 +187,17 @@ function handleMessage(sender_psid, received_message) {
       });
 }
 
-
+else if (received_message.payload === "dtans2") {
+  response = {
+    "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
+    } 
+}
+  
+else if (received_message.payload === "dtans3") {
+  response = {
+    "text":'ယခုလိုထပ်မံဖြေကြားပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်ခင်ဗျာ'
+    } 
+}
 
 
 
@@ -260,7 +270,7 @@ else if (received_message.attachments) {
         {
           "content_type":"text",
           "title":"အိမ်ပို့ပေး",
-          "payload":"hhh"
+          "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
           "title":"ယူမယ်",
@@ -268,7 +278,7 @@ else if (received_message.attachments) {
         }
       ]
       }
-  } else if (received_message.payload == "hhh") {
+  } else if (received_message.payload == "အိမ်ပို့ပေး") {
       response = {
         "text":'ပို့ပေးရန်လိပ်စာပေးပါ'
       }
