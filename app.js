@@ -45,7 +45,8 @@ const
   let botQuestions = {
     quantity:false,
     width:false,
-    length:false,
+    length_f53:false
+    length_f52: false,
   };
 
   let userAnswers = {};
@@ -208,7 +209,12 @@ else if (received_message.text == "တံခါးမကြီးခွေ") {
     response = {
       "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
     }
-  botQuestions.length = true;  
+  botQuestions.length_f53 = true;  
+}else if (received_message.text == '5"*2"') {
+    response = {
+      "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
+    }
+  botQuestions.length_f52 = true;  
 }
 
 
@@ -249,13 +255,13 @@ else if (received_message.attachments) {
     }
   }
 
-// for length and width
-  else if (received_message.text && botQuestions.length == true) {
-      userAnswers.length = received_message.text;
+// length, width and price for 53
+  else if (received_message.text && botQuestions.length_f53 == true) {
+      userAnswers.length_f53 = received_message.text;
       response = {
           "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.5 ဟုပေးပို့ပေးပါ'
       };
-      botQuestions.length = false;
+      botQuestions.length_f53 = false;
       botQuestions.width = true;
   }
   else if (received_message.text && botQuestions.width == true) {
@@ -271,7 +277,7 @@ else if (received_message.attachments) {
       userAnswers.quantity = parseInt(received_message.text);
       let total = 4000 * userAnswers.width * userAnswers.length * userAnswers.quantity;
       response = {
-        "text":`5"*3" တံခါးမကြီးခွေ  ၏ ကျသင့်‌ငွေမှာ ${total} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
+        "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
         {
           "content_type":"text",
