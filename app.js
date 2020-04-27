@@ -425,7 +425,7 @@ else if (received_message.attachments) {
       userAnswers.width_sd415 = received_message.text;
       let totalFoot_sd415 = 6800 * userAnswers.width_sd415 * userAnswers.length_sd415;
       response = {
-        "text":`၁ခုအတွက် ${totalFoot_hd415} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
+        "text":`၁ခုအတွက် ${totalFoot_sd415} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
       };
       botQuestions.width_sd415 = false;
       botQuestions.quantity_sd415 = true;
@@ -449,7 +449,6 @@ else if (received_message.attachments) {
       }
       botQuestions.quantity_sd415 = false;
   }
-
 
 // length, width and price for hd515
   else if (received_message.text && botQuestions.length_hd515 == true) {
