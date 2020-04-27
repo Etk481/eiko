@@ -913,7 +913,7 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"",
+            "title":"တံခါးမကြီးခွေ",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/p720x720/94175970_156934145849163_4235363062716039168_o.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeGwZr1sxCssfFG142tSuaws-1dW0oNQHaj7V1bSg1AdqPF9cF1E6WAiBQ30Xg0pPYloMQmjuvBYbrGvgX5KJl20&_nc_ohc=sOzWS-JgkuYAX959Pla&_nc_ht=scontent.fmdl2-2.fna&_nc_tp=6&oh=5ead94ca219e641bb96fc89ca646f1df&oe=5EC69ACF",
             "subtitle":"",
             "default_action": {
