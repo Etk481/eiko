@@ -191,7 +191,7 @@ function handleMessage(sender_psid, received_message) {
 //for get design quick replies
 else if (received_message.text == "တံခါးမကြီးခွေ") {
      response = {
-        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေမှာလား (5"*2")နဲ့ခွေမှာလား ရွေးပေးပါဦးခင်ဗျာ။',
+        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
         {
           "content_type":"text",
@@ -204,6 +204,18 @@ else if (received_message.text == "တံခါးမကြီးခွေ") {
         }
       ]
       }
+}else if (received_message.text == '5"*3"') {
+    response = {
+      "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
+    }
+}
+
+
+
+else if (received_message.text == "ရိုးရိုးတံခါးမကြီး") {
+    response = {
+        
+    }
 }
 
 else if (received_message.attachments) {
@@ -237,7 +249,7 @@ else if (received_message.attachments) {
   }else if (received_message.text && botQuestions.quantity) {
       userAnswers.quantity = parseInt(received_message.text);
       let total = 30000 * userAnswers.quantity;
-      let orderNumber = Math.floor(Math.random() * 100) + 1;
+      let orderNumber = Math.floor(Math.random() * 100) + 0.5;
 
       let data = {
         user:"ei thin zar ko",
