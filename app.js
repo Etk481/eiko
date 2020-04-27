@@ -245,7 +245,7 @@ else if (received_message.attachments && botAttachment.doorwtAttachment == true)
     botAttachment.doorwtAttachment = false;
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
-    userAttachment.doorwtAttachment = attachment_url;
+    userAttachment.doorwtAttachment = received_message.attachment;
     response = {
       "attachment": {
         "type": "template",
