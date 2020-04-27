@@ -51,14 +51,8 @@ const
     length_f52:false,
     cusInfo:false,
   };
-  
-  let botAttachment = {
-    doorwtAttachment:false;
-  };
 
   let userAnswers = {};
-  let userAttachment = {};
-
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -229,7 +223,6 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်းသစ်ဆံ") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
-    userAttachment.doorwtAttachment = true;
 }else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်ဆံ)") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
@@ -241,7 +234,35 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     }
 }
 
-
+else if (received_message.attachments) {
+    // Get the URL of the message attachment
+    let attachment_url = received_message.attachments[0].payload.url;
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Is this the right picture?",
+            "subtitle": "Tap a button to answer.",
+            "image_url": attachment_url,
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "ဟုတ်ပါတယ်!",
+                "payload": "yes",
+              },
+              {
+                "type": "postback",
+                "title": "မဟုတ်ပါ!",
+                "payload": "no",
+              }
+            ],
+          }]
+        }
+      }
+    }
+  }
 
 // length, width and price for 53
   else if (received_message.text && botQuestions.length_f53 == true) {
@@ -360,6 +381,14 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)"}
   }
 
+
+
+
+  else if (payload === 'yes') {
+    response = { "text": "ဟုတ်ကဲ့အတိုင်းပေးပါဦး" }
+  } else if (payload === 'no') {
+    response = { "text": "အားးးနောက်တစ်ပုံပြန်ပို့ပေးပါနော်" }
+  }
 
 
 
