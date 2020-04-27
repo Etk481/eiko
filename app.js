@@ -222,9 +222,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 }
 
 else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်း(သစ်သားဆံ)") {
-    response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
-    }
-
+    response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'}
 }
 
 
