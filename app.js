@@ -268,7 +268,7 @@ else if (received_message.attachments) {
   }  
   else if (received_message.text && botQuestions.quantity) {
       userAnswers.quantity = parseInt(received_message.text);
-      let total = ${totalFoot} * userAnswers.quantity;
+      let total = $totalFoot * userAnswers.quantity;
       let orderNumber = Math.floor(Math.random() * 100) + 1;
 
       let data = {
