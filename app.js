@@ -250,11 +250,11 @@ else if (received_message.attachments) {
   }
 
 // for length
-  else if (received_message.text && botQuestions.length == true) {
-      userAnswers.length = parseDec(received_message.text) || parseInt(received_message.text);
+  else if (received_message.text && botQuestions.length) {
+      userAnswers.length = received_message.text;
       response = {
           "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.1 ဟုပေးပို့ပေးပါ'
-      };
+      }
       botQuestions.length = false;
   }
  
