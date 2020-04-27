@@ -52,6 +52,9 @@ const
     quantity_sd515:false,
     width_sd515:false,
     length_sd515:false,
+    quantity_hd515:false,
+    width_hd515:false,
+    length_hd515:false,
     cusInfo:false,
   };
 
@@ -230,7 +233,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
     response = {
       "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
     }
-  botQuestions.length_sd515 = true;  
+  botQuestions.length_hd515 = true;  
 }
 
 
@@ -392,6 +395,43 @@ else if (received_message.attachments) {
       botQuestions.quantity_sd515 = false;
   }   
 
+// length, width and price for hd515
+  else if (received_message.text && botQuestions.length_hd515 == true) {
+      userAnswers.length_hd515 = received_message.text;
+      response = {
+          "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.5 ဟုပေးပို့ပေးပါ'
+      };
+      botQuestions.length_hd515 = false;
+      botQuestions.width_hd515 = true;
+  }
+  else if (received_message.text && botQuestions.width_hd515 == true) {
+      userAnswers.width_hd515 = received_message.text;
+      let totalFoot_hd515 = 6700 * userAnswers.width_hd515 * userAnswers.length_hd515;
+      response = {
+        "text":`၁ခုအတွက် ${totalFoot_hd515} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
+      };
+      botQuestions.width_hd515 = false;
+      botQuestions.quantity_hd515 = true;
+  }  
+  else if (received_message.text && botQuestions.quantity_hd515 == true) {
+      userAnswers.quantity_hd515 = parseInt(received_message.text);
+      let total_hd515 = 6700 * userAnswers.width_hd515 * userAnswers.length_hd515 * userAnswers.quantity_hd515;
+      response = {
+        "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total_hd515} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"yes",
+          "payload":"<POSTBACK_PAYLOAD>"
+        },{
+          "content_type":"text",
+          "title":"no",
+          "payload":"<POSTBACK_PAYLOAD>"
+        }
+      ]
+      }
+      botQuestions.quantity_hd515 = false;
+  }
 
 else if (received_message.text == "yes") {
      response = {
