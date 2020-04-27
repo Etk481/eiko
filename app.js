@@ -352,6 +352,7 @@ else if (received_message.attachments) {
     callSend(sender_psid, response1).then(()=>{
           return callSend(sender_psid, response2);
     }); 
+    botQuestions.cusInfo = false;
 }
 
         
