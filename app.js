@@ -260,7 +260,7 @@ else if (received_message.attachments) {
   }
     else if (received_message.text && botQuestions.width == true) {
       userAnswers.width = received_message.text;
-      let totalFoot = 4000 * userAnswers.width;
+      let totalFoot = 4000 * userAnswers.width * userAnswers.length;
       response = {
         "text":`၁ခုအတွက် ${totalFoot} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
       };
