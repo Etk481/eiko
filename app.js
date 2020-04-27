@@ -589,7 +589,7 @@ function handlePostback(sender_psid, received_postback) {
                     "template_type": "generic",
                     "elements": [{
                       "title": "တံခါးမကြီးများ",
-                      "subtitle": "ပုံစံ",
+                      "subtitle": "မှာယူလိုသည့်အမျိုးအစားကိုရွေးပါ",
                       "buttons": [
                         {
                           "type": "postback",
@@ -598,12 +598,12 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "type": "postback",
-                          "title": "တစ်ဖက်ပိတ်တံခါးမ",
+                          "title": "ရိုးရိုးတံခါးမကြီး",
                           "payload": "d1",
                         },
                         {
                           "type": "postback",
-                          "title": "နှစ်ဖက်ပိတ်တံခါးမ",
+                          "title": "ကုံးတံခါးမကြီး",
                           "payload": "d2",
                         } 
                       ],
@@ -710,9 +710,9 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"အလျား = 4'",
+            "title":"ပြတင်းကြီးခွေ",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94615637_158424789033432_29034176489455616_o.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGxHptClUWk_FHCiLMMr-OjJgR10uQKP3YmBHXS5Ao_dmu1I4soFzl5myy-bWKP39LtHIrrk65FsJTJHPBef-mj&_nc_ohc=vTAOHDleMNsAX91xieh&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=3350cd0b8d0300ba52154423e815fc8f&oe=5ECBE456",
-            "subtitle":"အနံ = 3.5'",
+            "subtitle":"",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94615637_158424789033432_29034176489455616_o.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGxHptClUWk_FHCiLMMr-OjJgR10uQKP3YmBHXS5Ao_dmu1I4soFzl5myy-bWKP39LtHIrrk65FsJTJHPBef-mj&_nc_ohc=vTAOHDleMNsAX91xieh&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=3350cd0b8d0300ba52154423e815fc8f&oe=5ECBE456",
@@ -942,30 +942,13 @@ function handlePostback(sender_psid, received_postback) {
       "payload":{
         "template_type":"generic",
         "elements":[
-           {
-            "title":"အလျား = 1.5'",
-            "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84445199_128731638669414_8788996082672599040_o.jpg?_nc_cat=105&_nc_ohc=B_5XxoqU2V8AX8av3yE&_nc_ht=scontent.fnyt1-1.fna&oh=7c8e5a7d417f8c466f5361e55ef55a40&oe=5EC08340",
-            "subtitle":"အနံ = 6.5'",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84445199_128731638669414_8788996082672599040_o.jpg?_nc_cat=105&_nc_ohc=B_5XxoqU2V8AX8av3yE&_nc_ht=scontent.fnyt1-1.fna&oh=7c8e5a7d417f8c466f5361e55ef55a40&oe=5EC08340",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"postback",
-                "title":"မှာမည်",
-                "payload":"ol"
-              }              
-            ]      
-          },
           {
-            "title":"အလျား = 1.5'",
-            "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85124252_128731588669419_8225910691752574976_o.jpg?_nc_cat=109&_nc_ohc=Z5dkuSQUQJwAX8kXFSa&_nc_ht=scontent.fnyt1-1.fna&oh=525217a6019e787cdb74108c40b0f42f&oe=5ED07986",
-            "subtitle":"အနံ = 6.5'",
+            "title":"အလျား =1.5'",
+            "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/85059093_128707345338510_7829820041687203840_o.jpg?_nc_cat=105&_nc_ohc=kBtUdkbsRJMAX_QYOsS&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=e6001d29d75b70d61b6a853f1d9eab80&oe=5ECC791D",
+            "subtitle":"အနံ = 4'",
             "default_action": {
               "type": "web_url",
-              "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85124252_128731588669419_8225910691752574976_o.jpg?_nc_cat=109&_nc_ohc=Z5dkuSQUQJwAX8kXFSa&_nc_ht=scontent.fnyt1-1.fna&oh=525217a6019e787cdb74108c40b0f42f&oe=5ED07986",
+              "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/85059093_128707345338510_7829820041687203840_o.jpg?_nc_cat=105&_nc_ohc=kBtUdkbsRJMAX_QYOsS&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=e6001d29d75b70d61b6a853f1d9eab80&oe=5ECC791D",
               "webview_height_ratio": "tall",
             },
             "buttons":[
@@ -987,10 +970,44 @@ function handlePostback(sender_psid, received_postback) {
       "payload":{
         "template_type":"generic",
         "elements":[
+          {
+            "title":"ရိုးရိုးတံခါးမကြီး",
+            "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84445199_128731638669414_8788996082672599040_o.jpg?_nc_cat=105&_nc_ohc=B_5XxoqU2V8AX8av3yE&_nc_ht=scontent.fnyt1-1.fna&oh=7c8e5a7d417f8c466f5361e55ef55a40&oe=5EC08340",
+            "subtitle":"၁ရွက်၁ပေါက်",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84445199_128731638669414_8788996082672599040_o.jpg?_nc_cat=105&_nc_ohc=B_5XxoqU2V8AX8av3yE&_nc_ht=scontent.fnyt1-1.fna&oh=7c8e5a7d417f8c466f5361e55ef55a40&oe=5EC08340",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"postback",
+                "title":"မှာမည်",
+                "payload":"ol"
+              }              
+            ]      
+          },
+          {
+            "title":"ကုံးတံခါးမကြီး",
+            "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85124252_128731588669419_8225910691752574976_o.jpg?_nc_cat=109&_nc_ohc=Z5dkuSQUQJwAX8kXFSa&_nc_ht=scontent.fnyt1-1.fna&oh=525217a6019e787cdb74108c40b0f42f&oe=5ED07986",
+            "subtitle":"၁ရွက်၁ပေါက်",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85124252_128731588669419_8225910691752574976_o.jpg?_nc_cat=109&_nc_ohc=Z5dkuSQUQJwAX8kXFSa&_nc_ht=scontent.fnyt1-1.fna&oh=525217a6019e787cdb74108c40b0f42f&oe=5ED07986",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"postback",
+                "title":"မှာမည်",
+                "payload":"ol"
+              }              
+            ]      
+          }
            {
-            "title":"အလျား = 3'",
+            "title":"ကုံးတံခါးမကြီး",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84265124_128731702002741_8643057543540637696_o.jpg?_nc_cat=102&_nc_ohc=fR4ICBk7b60AX-e0uwj&_nc_ht=scontent.fnyt1-1.fna&oh=2c0e0ab8d9c29c2558b44835c2605ebf&oe=5F01FE75",
-            "subtitle":"အနံ = 6.5'",
+            "subtitle":"၂ရွက်၁ပေါက်",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84265124_128731702002741_8643057543540637696_o.jpg?_nc_cat=102&_nc_ohc=fR4ICBk7b60AX-e0uwj&_nc_ht=scontent.fnyt1-1.fna&oh=2c0e0ab8d9c29c2558b44835c2605ebf&oe=5F01FE75",
