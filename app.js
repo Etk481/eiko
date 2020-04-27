@@ -254,7 +254,7 @@ else if (received_message.attachments && botAttachment.doorwtAttachment == true)
           "template_type": "generic",
           "elements": [{
             "title": "မှာယူမည့်ပုံမှာမှန်ရဲ့လား?",
-            "subtitle": "Tap a button to answer.",
+            "subtitle": "",
             "image_url": attachment_url,
             "buttons": [
               {
