@@ -271,14 +271,7 @@ else if (received_message.attachments) {
       let total = totalFoot * userAnswers.quantity;
       let orderNumber = Math.floor(Math.random() * 100) + 1;
 
-      let data = {
-        user:"ei thin zar ko",
-        date: "28-02-2020",
-        total: userAnswers.quantity,
-        order_number : orderNumber
-      }
 
-      db.collection('order').doc().set(data);
 
       response = {
         "text":`5"*3" တံခါးမကြီးခွေ  ၏ ကျသင့်‌ငွေမှာ ${total} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
@@ -297,37 +290,10 @@ else if (received_message.attachments) {
       botQuestions.quantity = false;
   }
  
-// For quantity
-  else if (received_message.text && botQuestions.quantity) {
-      userAnswers.quantity = parseInt(received_message.text);
-      let total = 30000 * userAnswers.quantity;
-      let orderNumber = Math.floor(Math.random() * 100) + 1;
 
-      let data = {
-        user:"ei thin zar ko",
-        date: "28-02-2020",
-        total: userAnswers.quantity,
-        order_number : orderNumber
-      }
 
-      db.collection('order').doc().set(data);
 
-      response = {
-        "text":`15.2.2020 မှာရမယ်။ တန်ဖိုးကတော့ ${total} ဝန်းကျင်ကျပါမယ်။ မှာယူမှာသေချာပါသလား?`,
-         "quick_replies":[
-        {
-          "content_type":"text",
-          "title":"yes",
-          "payload":"<POSTBACK_PAYLOAD>"
-        },{
-          "content_type":"text",
-          "title":"no",
-          "payload":"<POSTBACK_PAYLOAD>"
-        }
-      ]
-      }
-      botQuestions.quantity = false;
-  }else if (received_message.text == "no") {
+  else if (received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
       }
