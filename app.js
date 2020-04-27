@@ -423,7 +423,7 @@ else if (received_message.attachments) {
   }
   else if (received_message.text && botQuestions.width_sd415 == true) {
       userAnswers.width_sd415 = received_message.text;
-      let totalFoot_sd415 = 6800 * userAnswers.width_sd415 * userAnswers.length_sd415;
+      let totalFoot_sd415 = 6700 * userAnswers.width_sd415 * userAnswers.length_sd415;
       response = {
         "text":`၁ခုအတွက် ${totalFoot_sd415} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
       };
@@ -432,7 +432,7 @@ else if (received_message.attachments) {
   }  
   else if (received_message.text && botQuestions.quantity_sd415 == true) {
       userAnswers.quantity_sd415 = parseInt(received_message.text);
-      let total_sd415 = 6800 * userAnswers.width_sd415 * userAnswers.length_sd415 * userAnswers.quantity_sd415;
+      let total_sd415 = 6700 * userAnswers.width_sd415 * userAnswers.length_sd415 * userAnswers.quantity_sd415;
       response = {
         "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total_sd415} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
