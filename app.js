@@ -188,7 +188,7 @@ function handleMessage(sender_psid, received_message) {
       });
 }
 
-else if (payload === "dtYes") {
+else if (payload === "dtans2") {
   response = {
     "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
     } 
@@ -450,11 +450,11 @@ function handlePostback(sender_psid, received_postback) {
         {
           "content_type":"text",
           "title":"Yes!",
-          "payload":"dtYes!"
+          "payload":"dtans2"
         },{
           "content_type":"text",
           "title":"No!",
-          "payload":"dtNo!"
+          "payload":"dtans3"
         }
       ]
       };
