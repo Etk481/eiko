@@ -222,10 +222,10 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 
 
 
-else if (received_message.text == "ရိုးရိုးတံခါးမကြီး") {
+else if (received_message.text == 'ရောင်လင်း') {
     response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
-  
+
 }
 
 else if (received_message.attachments) {
