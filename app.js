@@ -208,6 +208,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ") {
     response = {
       "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
     }
+  botQuestions.length = true;  
 }
 
 
@@ -246,7 +247,19 @@ else if (received_message.attachments) {
         }
       }
     }
-  }else if (received_message.text && botQuestions.quantity) {
+  }
+
+// for length
+  else if (received_message.text && botQuestions.length) {
+      userAnswers.length = parseDec(received_message.text);
+      response = {
+          "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.1 ဟုပေးပို့ပေးပါ'
+      }
+      botQuestions.length = false;
+  }
+ 
+// For quantity
+  else if (received_message.text && botQuestions.quantity) {
       userAnswers.quantity = parseInt(received_message.text);
       let total = 30000 * userAnswers.quantity;
       let orderNumber = Math.floor(Math.random() * 100) + 1;
