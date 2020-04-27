@@ -270,7 +270,6 @@ else if (received_message.attachments) {
       userAnswers.quantity = parseInt(received_message.text);
       let totalFoot = 4000 * userAnswers.width * userAnswers.length;
       let total = totalFoot * userAnswers.quantity;
-      let orderNumber = Math.floor(Math.random() * 100) + 1;
 
 
 
