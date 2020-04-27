@@ -214,16 +214,12 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
         }
       ]
     }
-}else if (received_message.text == '5"*3"') {
+}else if (received_message.text == '5"*3"' || received_message.text == '5"*2"') {
     response = {
       "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
     }
-  botQuestions.length_f53 = true;  
-}else if (received_message.text == '5"*2"') {
-    response = {
-      "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
-    }
-  botQuestions.length_f52 = true;  
+  botQuestions.length_f53 = true;
+  botQuestions.length_f52 = true;    
 }else if (received_message.text == '5"*1.5"') {
     response = {
       "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
