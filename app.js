@@ -251,15 +251,15 @@ else if (received_message.attachments) {
 
 // for length and width
   else if (received_message.text && botQuestions.length == true) {
-      userAnswers.length = parseFloat(received_message.text);
+      userAnswers.length = string(received_message.text);
       response = {
-          "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.1 ဟုပေးပို့ပေးပါ'
+          "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.5 ဟုပေးပို့ပေးပါ'
       };
       botQuestions.length = false;
       botQuestions.width = true;
   }
     else if (received_message.text && botQuestions.width == true) {
-      userAnswers.width = parseFloat(received_message.text);
+      userAnswers.width = string(received_message.text);
       let totalFoot = 4000 * (userAnswers.length * userAnswers.width);
       response = {
         "text":`၁ခုအတွက် ${totalFoot} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
