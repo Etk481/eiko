@@ -50,10 +50,7 @@ const
     width_f52:false,
     length_f52:false,
     cusInfo:false,
-    image_sdwt:false,
-    image_hdwt:false,
-    image_swyg:false,
-    image_hwg:false,
+    image: false,
   };
 
   let userAnswers = {};
@@ -226,30 +223,6 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 
 
 
-else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်း(သစ်သားဆံ)") {
-    response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
-    }
-
-}else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်သားဆံ)") {
-    response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
-    }
- 
-}else if (received_message.text == "ရိုးရိုးပြတင်း(မှန်ဆံ)" || received_message.text == "ရောင်လင်း") {
-    response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
-    }
-
-}else if (received_message.text == "ကုံးပြတင်း(မှန်ဆံ)") {
-    response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
-    }
-
-}
-
-
-
-
-
-
-
 
 else if (received_message.attachments) {
     // Get the URL of the message attachment
@@ -357,8 +330,7 @@ else if (received_message.attachments) {
       botQuestions.quantity_f52 = false;
   }
 
-//simple door
-  else if (received_message.text && botQuestions.)
+
 
 
 else if (received_message.text == "yes") {
