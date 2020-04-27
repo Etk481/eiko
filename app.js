@@ -249,7 +249,7 @@ else if (received_message.attachments) {
   }else if (received_message.text && botQuestions.quantity) {
       userAnswers.quantity = parseDec(received_message.text);
       let total = 30000 * userAnswers.quantity;
-      let orderNumber = Math.floor(Math.random() * 100) + 0.5;
+      let orderNumber = Math.floor(Math.random() * 100) + 1;
 
       let data = {
         user:"ei thin zar ko",
