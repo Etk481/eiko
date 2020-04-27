@@ -49,6 +49,7 @@ const
     quantity_f52:false,
     width_f52:false,
     length_f52:false,
+    cusInfo:false,
   };
 
   let userAnswers = {};
@@ -341,9 +342,18 @@ else if (received_message.attachments) {
       }
   }else if (received_message.text == "yes") {
      response = {
-        "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်းအားဆက်သွယ်နိုင်ရန်အတွက် လူကြီးမင်း၏အမည်နှင့်ဖုန်းနံပါတ်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko, ph: 09785575160) ဆိုင်လိပ်စာ (မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။ ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)',
+        "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်းအားဆက်သွယ်နိုင်ရန်အတွက် လူကြီးမင်း၏အမည်နှင့်ဖုန်းနံပါတ်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko, ph: 09785575160) ဆိုင်လိပ်စာ (မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။ ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)'
       }
-  } 
+    botQuestions.cusInfo = false;
+  }else if (received_message.text && botQuestions.cusInfo == true) {
+    userAnswers.cusInfo = received_message.text;
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
+    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    callSend(sender_psid, response1).then(()=>{
+          return callSend(sender_psid, response2);
+    }); 
+}
+
         
 
   // Send the response message
