@@ -50,7 +50,6 @@ const
     width_f52:false,
     length_f52:false,
     cusInfo:false,
-    image: false,
   };
 
   let userAnswers = {};
@@ -223,8 +222,11 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 
 
 
-
-
+else if (received_message.text == "ရိုးရိုးတံခါးမကြီး") {
+    response = {"text" = 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
+    }
+  
+}
 
 else if (received_message.attachments) {
     // Get the URL of the message attachment
@@ -331,8 +333,6 @@ else if (received_message.attachments) {
       }
       botQuestions.quantity_f52 = false;
   }
-
-
 
 
 else if (received_message.text == "yes") {
