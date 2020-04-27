@@ -189,9 +189,15 @@ function handleMessage(sender_psid, received_message) {
 }
 
 else if (received_message.payload === "dtans2") {
-  let response = {
+  let response1 = {
     "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
-    } 
+    };
+  let response2 = {
+    "text":'ဟုတ်ကဲ့ လူကြီးမင်းမှာယူလိုတဲ့ပုံလေးပို့ပေးပါနော်'
+    };
+    callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response3);
+    });      
 }
 
 
@@ -449,11 +455,11 @@ function handlePostback(sender_psid, received_postback) {
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"Yes!",
+          "title":"yes",
           "payload":"dtans2"
         },{
           "content_type":"text",
-          "title":"No!",
+          "title":"no",
           "payload":"dtans3"
         }
       ]
