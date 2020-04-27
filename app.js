@@ -52,13 +52,6 @@ const
     cusInfo:false,
   };
 
-let designAttachment = false;
-let bdesignAttachment = false;
-let sharepicAttachment = false;
-
-let userEnteredInfo = {};
-let userSendAttachment = {};
-
   let userAnswers = {};
 
 // Sets server port and logs message on success
@@ -230,7 +223,6 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်းသစ်ဆံ") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
-    designAttachment == true;
 }else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်ဆံ)") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
@@ -242,29 +234,27 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     }
 }
 
-else if (received_message.attachments && designAttachment == true) {
-    console.log('meta data',received_message);
-    designAttachment == false;
+else if (received_message.attachments) {
+    // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
-    userSendAttachment.designAttachment = attachment_url;
     response = {
       "attachment": {
         "type": "template",
         "payload": {
           "template_type": "generic",
           "elements": [{
-            "title": "Is this design?",
-            "subtitle": "Wow! this one will totally suits you.I can't wait to sew it.",
+            "title": "Is this the right picture?",
+            "subtitle": "Tap a button to answer.",
             "image_url": attachment_url,
             "buttons": [
               {
                 "type": "postback",
-                "title": "Yes, that one. :)",
+                "title": "ဟုတ်ပါတယ်!",
                 "payload": "yes",
               },
               {
                 "type": "postback",
-                "title": "No, sorry. :(",
+                "title": "မဟုတ်ပါ!",
                 "payload": "no",
               }
             ],
