@@ -243,10 +243,8 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
 
 else if (received_message.attachments && botAttachment.doorwtAttachment == true) {
     // Get the URL of the message attachment
-    console.log('meta data',received_message);
     botAttachment.doorwtAttachment == false;
-    let attachment_url = received_message.attachments[0].payload.url;
-    userAttachment.doorwtAttachment = attachment_url;
+    let botAttachment.doorwtAttachment = received_message.attachments[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -255,7 +253,7 @@ else if (received_message.attachments && botAttachment.doorwtAttachment == true)
           "elements": [{
             "title": "မှာယူမည့်ပုံမှာမှန်ရဲ့လား?",
             "subtitle": "",
-            "image_url": attachment_url,
+            "image_url": botAttachment.doorwtAttachment,
             "buttons": [
               {
                 "type": "postback",
@@ -271,7 +269,8 @@ else if (received_message.attachments && botAttachment.doorwtAttachment == true)
           }]
         }
       }
-    }
+    };
+    userAttachment.doorwtAttachment = false;
   }
 
 // length, width and price for 53
