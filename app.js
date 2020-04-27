@@ -52,9 +52,16 @@ const
     quantity_sd515:false,
     width_sd515:false,
     length_sd515:false,
+    quantity_sd415:false,
+    width_sd415:false,
+    length_sd415:false,
     quantity_hd515:false,
     width_hd515:false,
     length_hd515:false,
+    quantity_hd415:false,
+    width_hd415:false,
+    length_hd415:false,
+
     cusInfo:false,
   };
 
@@ -233,7 +240,17 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
     response = {
       "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
     }
+  botQuestions.length_sd415 = true;  
+}else if (received_message.text == '(5"*1.5)"') {
+    response = {
+      "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
+    }
   botQuestions.length_hd515 = true;  
+}else if (received_message.text == '(4"*1.5")') {
+    response = {
+      "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
+    }
+  botQuestions.length_hd415 = true;  
 }
 
 
@@ -393,7 +410,46 @@ else if (received_message.attachments) {
       ]
       }
       botQuestions.quantity_sd515 = false;
-  }   
+  } 
+
+// length, width and price for sd415
+  else if (received_message.text && botQuestions.length_sd415 == true) {
+      userAnswers.length_sd415 = received_message.text;
+      response = {
+          "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.5 ဟုပေးပို့ပေးပါ'
+      };
+      botQuestions.length_sd415 = false;
+      botQuestions.width_sd415 = true;
+  }
+  else if (received_message.text && botQuestions.width_sd415 == true) {
+      userAnswers.width_sd415 = received_message.text;
+      let totalFoot_sd415 = 6800 * userAnswers.width_sd415 * userAnswers.length_sd415;
+      response = {
+        "text":`၁ခုအတွက် ${totalFoot_hd415} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
+      };
+      botQuestions.width_sd415 = false;
+      botQuestions.quantity_sd415 = true;
+  }  
+  else if (received_message.text && botQuestions.quantity_sd415 == true) {
+      userAnswers.quantity_sd415 = parseInt(received_message.text);
+      let total_sd415 = 6800 * userAnswers.width_sd415 * userAnswers.length_sd415 * userAnswers.quantity_sd415;
+      response = {
+        "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total_sd415} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"yes",
+          "payload":"<POSTBACK_PAYLOAD>"
+        },{
+          "content_type":"text",
+          "title":"no",
+          "payload":"<POSTBACK_PAYLOAD>"
+        }
+      ]
+      }
+      botQuestions.quantity_sd415 = false;
+  }
+
 
 // length, width and price for hd515
   else if (received_message.text && botQuestions.length_hd515 == true) {
@@ -406,7 +462,7 @@ else if (received_message.attachments) {
   }
   else if (received_message.text && botQuestions.width_hd515 == true) {
       userAnswers.width_hd515 = received_message.text;
-      let totalFoot_hd515 = 6700 * userAnswers.width_hd515 * userAnswers.length_hd515;
+      let totalFoot_hd515 = 8000 * userAnswers.width_hd515 * userAnswers.length_hd515;
       response = {
         "text":`၁ခုအတွက် ${totalFoot_hd515} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
       };
@@ -415,7 +471,7 @@ else if (received_message.attachments) {
   }  
   else if (received_message.text && botQuestions.quantity_hd515 == true) {
       userAnswers.quantity_hd515 = parseInt(received_message.text);
-      let total_hd515 = 6700 * userAnswers.width_hd515 * userAnswers.length_hd515 * userAnswers.quantity_hd515;
+      let total_hd515 = 8000 * userAnswers.width_hd515 * userAnswers.length_hd515 * userAnswers.quantity_hd515;
       response = {
         "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total_hd515} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
@@ -432,6 +488,45 @@ else if (received_message.attachments) {
       }
       botQuestions.quantity_hd515 = false;
   }
+
+// length, width and price for hd415
+  else if (received_message.text && botQuestions.length_hd415 == true) {
+      userAnswers.length_hd415 = received_message.text;
+      response = {
+          "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.5 ဟုပေးပို့ပေးပါ'
+      };
+      botQuestions.length_hd415 = false;
+      botQuestions.width_hd415 = true;
+  }
+  else if (received_message.text && botQuestions.width_hd415 == true) {
+      userAnswers.width_hd415 = received_message.text;
+      let totalFoot_hd415 = 7500 * userAnswers.width_hd415 * userAnswers.length_hd415;
+      response = {
+        "text":`၁ခုအတွက် ${totalFoot_hd415} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
+      };
+      botQuestions.width_hd415 = false;
+      botQuestions.quantity_hd415 = true;
+  }  
+  else if (received_message.text && botQuestions.quantity_hd415 == true) {
+      userAnswers.quantity_hd415 = parseInt(received_message.text);
+      let total_hd415 = 7500 * userAnswers.width_hd415 * userAnswers.length_hd415 * userAnswers.quantity_hd415;
+      response = {
+        "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total_hd415} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"yes",
+          "payload":"<POSTBACK_PAYLOAD>"
+        },{
+          "content_type":"text",
+          "title":"no",
+          "payload":"<POSTBACK_PAYLOAD>"
+        }
+      ]
+      }
+      botQuestions.quantity_hd415 = false;
+  }
+
 
 else if (received_message.text == "yes") {
      response = {
@@ -1159,11 +1254,11 @@ else if (payload ==  'd2Ch') {
          "quick_replies":[
         {
           "content_type":"text",
-          "title":'5"*1.5"',
+          "title":'(5"*1.5")',
           "payload":"d1Ch1"
         },{
           "content_type":"text",
-          "title":'4"*1.5"',
+          "title":'(4"*1.5")',
           "payload":"d1Ch2"
         }
       ]
