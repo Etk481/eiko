@@ -46,7 +46,9 @@ const
     quantity_f53:false,
     width_f53:false,
     length_f53:false,
-    length_f52: false,
+    quantity_f52:false,
+    width_f52:false,
+    length_f52:false,
   };
 
   let userAnswers = {};
@@ -293,7 +295,43 @@ else if (received_message.attachments) {
       botQuestions.quantity_f53 = false;
   }
 
- 
+// length, width and price for 52
+  else if (received_message.text && botQuestions.length_f52 == true) {
+      userAnswers.length_f52 = received_message.text;
+      response = {
+          "text":'ဟုတ်ကဲ့အနံလေးပြောပြပေးပါ။ ဥပမာ - အနံ၃ပေရှိပါက 3 ၊ ၁ပေခွဲရှိပါက 1.5 ဟုပေးပို့ပေးပါ'
+      };
+      botQuestions.length_f52 = false;
+      botQuestions.width_f52 = true;
+  }
+  else if (received_message.text && botQuestions.width_f52 == true) {
+      userAnswers.width_f52 = received_message.text;
+      let totalFoot_f52 = 3000 * userAnswers.width_f52 * userAnswers.length_f52;
+      response = {
+        "text":`၁ခုအတွက် ${totalFoot_f52} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
+      };
+      botQuestions.width_f52 = false;
+      botQuestions.quantity_f52 = true;
+  }  
+  else if (received_message.text && botQuestions.quantity_f52 == true) {
+      userAnswers.quantity_f52 = parseInt(received_message.text);
+      let total_f52 = 3000 * userAnswers.width_f52 * userAnswers.length_f52 * userAnswers.quantity_f52;
+      response = {
+        "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total_f52} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"yes",
+          "payload":"<POSTBACK_PAYLOAD>"
+        },{
+          "content_type":"text",
+          "title":"no",
+          "payload":"<POSTBACK_PAYLOAD>"
+        }
+      ]
+      }
+      botQuestions.quantity_f52 = false;
+  }
 
 
 
