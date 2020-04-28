@@ -213,6 +213,7 @@ function handleMessage(sender_psid, received_message) {
                 }
               };
 
+
     callSend(sender_psid, response1).then(()=>{
       return callSend(sender_psid, response2).then(()=>{
         return callSend(sender_psid, response3).then(()=>{
@@ -661,6 +662,15 @@ function handlePostback(sender_psid, received_postback) {
   
 
   // Set the response based on the postback payload
+
+  if (payload === 's_address') {
+    response = { "text": "ဆိုင်လိပ်စာ (မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။)"}
+  }else if (payload === 's_Ph') { 
+    response = { "text": "ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)"}
+  }
+
+
+
 
   else if (payload === 'yes') {
     response = { "text": "ဟုတ်ကဲ့အတိုင်းပေးပါဦး" }
