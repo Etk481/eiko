@@ -804,7 +804,7 @@ function handlePostback(sender_psid, received_postback) {
                     "template_type": "generic",
                     "elements": [{
                       "title": "ပြတင်းပေါက်များ",
-                      "subtitle": "ပုံစံ",
+                      "subtitle": "မှာယူလိုသောအမျိုးအစားကိုရွေးပါ",
                       "buttons": [
                         {
                           "type": "postback",
@@ -813,12 +813,12 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "type": "postback",
-                          "title": "တစ်ဖက်ပိတ်ပြတင်း",
+                          "title": "ရိုးရိုးပြတင်းပေါက်",
                           "payload": "w1",
                         },
                         {
                           "type": "postback",
-                          "title": "နှစ်ဖက်ပိတ်ပြတင်း",
+                          "title": "ကုံးပြတင်းပေါက်",
                           "payload": "w2",
                         } 
                       ],
@@ -834,8 +834,8 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"အလျား = 3'",
-            "subtitle":"အနံ = 1.5'",
+            "title":"ကုံးရောင်လင်း ",
+            "subtitle":"",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84182457_128691888673389_710650163584040960_o.jpg?_nc_cat=103&_nc_ohc=GymUEW-3toAAX-KaT9R&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=a15b8d6a05e4ae0ba2885e52626b64c2&oe=5EBCFE18",
             "default_action": {
               "type": "web_url",
@@ -851,9 +851,9 @@ function handlePostback(sender_psid, received_postback) {
             ]      
           },
           {
-            "title":"အလျား = 2'",
+            "title":"ရိုးရိုးရောင်လင်း",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84114239_128691935340051_6444479401219325952_o.jpg?_nc_cat=110&_nc_ohc=UeQOG9MaKT8AX-U9GjJ&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=08d806478f9c31aee658300c2089da63&oe=5ED177E0",
-            "subtitle":"အနံ = 1.5'",
+            "subtitle":"",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84114239_128691935340051_6444479401219325952_o.jpg?_nc_cat=110&_nc_ohc=UeQOG9MaKT8AX-U9GjJ&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=08d806478f9c31aee658300c2089da63&oe=5ED177E0",
@@ -868,9 +868,9 @@ function handlePostback(sender_psid, received_postback) {
             ]      
           },
           {
-            "title":"အလျား = 3'",
+            "title":"ကုံးရောင်လင်း",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/86346490_128732205336024_3191562516593377280_o.jpg?_nc_cat=108&_nc_ohc=SER5brGx8yIAX9cof8k&_nc_ht=scontent.fnyt1-1.fna&oh=330eaf7750c844e81f14042946c796ee&oe=5F0044D3",
-            "subtitle":"အနံ = 1.5'",
+            "subtitle":"",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/86346490_128732205336024_3191562516593377280_o.jpg?_nc_cat=108&_nc_ohc=SER5brGx8yIAX9cof8k&_nc_ht=scontent.fnyt1-1.fna&oh=330eaf7750c844e81f14042946c796ee&oe=5F0044D3",
