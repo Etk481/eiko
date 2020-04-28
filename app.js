@@ -748,7 +748,7 @@ function handlePostback(sender_psid, received_postback) {
   }
 
 //for door type
-  else if (payload === 'sstgym') {
+  else if (payload === 'sstgym'|| payload === 'look') {
     response = {
     "attachment":{
       "type":"template",
