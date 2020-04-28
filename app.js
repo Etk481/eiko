@@ -833,7 +833,24 @@ function handlePostback(sender_psid, received_postback) {
       "payload":{
         "template_type":"generic",
         "elements":[
-           {
+          {
+            "title":"ကုံးရောင်လင်း ",
+            "subtitle":"",
+            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/p720x720/94711581_158969742312270_9113621345970683904_o.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeHsZXXbx1JBZRRjenqWrFFb2CqZXXXW4KrYKpldddbgqod6JeeDPX3Kom7dmzYdBtzyq0rMFdZSciMBjvciaLPg&_nc_ohc=BoP9sso-QTQAX_gy-mn&_nc_ht=scontent.fmdl2-2.fna&_nc_tp=6&oh=c530b426301b1515428c8df21719ec30&oe=5ECB444E",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/p720x720/94711581_158969742312270_9113621345970683904_o.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeHsZXXbx1JBZRRjenqWrFFb2CqZXXXW4KrYKpldddbgqod6JeeDPX3Kom7dmzYdBtzyq0rMFdZSciMBjvciaLPg&_nc_ohc=BoP9sso-QTQAX_gy-mn&_nc_ht=scontent.fmdl2-2.fna&_nc_tp=6&oh=c530b426301b1515428c8df21719ec30&oe=5ECB444E",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"postback",
+                "title":"မှာမည်",
+                "payload":"ol"
+              }              
+            ]      
+          },
+          {
             "title":"ကုံးရောင်လင်း ",
             "subtitle":"",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84182457_128691888673389_710650163584040960_o.jpg?_nc_cat=103&_nc_ohc=GymUEW-3toAAX-KaT9R&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=a15b8d6a05e4ae0ba2885e52626b64c2&oe=5EBCFE18",
@@ -926,7 +943,7 @@ function handlePostback(sender_psid, received_postback) {
           {
             "title":"ရိုးရိုးပြတင်းပေါက်",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84516484_128707305338514_4909051974701285376_o.jpg?_nc_cat=103&_nc_ohc=ZEf538L72_oAX8wsJqy&_nc_ht=scontent.fnyt1-1.fna&oh=2b9bcfc820440c59704ca4eb143da255&oe=5EBA7D91",
-            "subtitle":"မှန်ဆံ",
+            "subtitle":"(မှန်ဆံ)",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84516484_128707305338514_4909051974701285376_o.jpg?_nc_cat=103&_nc_ohc=ZEf538L72_oAX8wsJqy&_nc_ht=scontent.fnyt1-1.fna&oh=2b9bcfc820440c59704ca4eb143da255&oe=5EBA7D91",
@@ -971,7 +988,7 @@ function handlePostback(sender_psid, received_postback) {
           {
             "title":"ကုံးပြတင်းပေါက်(မှန်ဆံ)",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/86261970_128707278671850_951335569596612608_o.jpg?_nc_cat=104&_nc_ohc=m_2wLarJytIAX_Z6vy_&_nc_ht=scontent.fnyt1-1.fna&oh=daa8cb40f609749cd9cd30d338d961ee&oe=5ED57961",
-            "subtitle":"",
+            "subtitle":"၁ရွက်၁ပေါက်",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/86261970_128707278671850_951335569596612608_o.jpg?_nc_cat=104&_nc_ohc=m_2wLarJytIAX_Z6vy_&_nc_ht=scontent.fnyt1-1.fna&oh=daa8cb40f609749cd9cd30d338d961ee&oe=5ED57961",
@@ -988,7 +1005,7 @@ function handlePostback(sender_psid, received_postback) {
           {
             "title":"ကုံးပြတင်းပေါက်(မှန်ဆံ)",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/85059093_128707345338510_7829820041687203840_o.jpg?_nc_cat=105&_nc_ohc=kBtUdkbsRJMAX_QYOsS&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=e6001d29d75b70d61b6a853f1d9eab80&oe=5ECC791D",
-            "subtitle":"အနံ = 4'",
+            "subtitle":"၁ရွက်၁ပေါက်",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/85059093_128707345338510_7829820041687203840_o.jpg?_nc_cat=105&_nc_ohc=kBtUdkbsRJMAX_QYOsS&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=e6001d29d75b70d61b6a853f1d9eab80&oe=5ECC791D",
@@ -1005,7 +1022,7 @@ function handlePostback(sender_psid, received_postback) {
           {
             "title":"ကုံးပြတင်းပေါက်(မှန်ဆံ)",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94883695_158969765645601_2020624594842419200_o.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeHo7midlrxG2VEOOww29cLWGX7c1yqev3YZftzXKp6_dhs7aLJkuAWme0PLpO12lLDh5Cynm0LqtifYrcXj6mwv&_nc_ohc=4EvsDzTxX3sAX8k92u1&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=c361e9ce7bdba8f299a01ea6db0070d7&oe=5ECC38F8",
-            "subtitle":"အနံ = 4'",
+            "subtitle":"၁ရွက်၁ပေါက်",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94883695_158969765645601_2020624594842419200_o.jpg?_nc_cat=100&_nc_sid=110474&_nc_eui2=AeHo7midlrxG2VEOOww29cLWGX7c1yqev3YZftzXKp6_dhs7aLJkuAWme0PLpO12lLDh5Cynm0LqtifYrcXj6mwv&_nc_ohc=4EvsDzTxX3sAX8k92u1&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=c361e9ce7bdba8f299a01ea6db0070d7&oe=5ECC38F8",
@@ -1022,7 +1039,7 @@ function handlePostback(sender_psid, received_postback) {
           {
             "title":"ကုံးပြတင်းပေါက်(မှန်ဆံ)",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/85023815_128707408671837_1862269537185955840_o.jpg?_nc_cat=103&_nc_ohc=wTIcFAk9bWAAX8SUotO&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=af2ba927646c94118f5ca728312df4c8&oe=5EBCEFBD",
-            "subtitle":"အနံ = 4'",
+            "subtitle":"၂ရွက်၁ပေါက်",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/85023815_128707408671837_1862269537185955840_o.jpg?_nc_cat=103&_nc_ohc=wTIcFAk9bWAAX8SUotO&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=af2ba927646c94118f5ca728312df4c8&oe=5EBCEFBD",
@@ -1038,11 +1055,11 @@ function handlePostback(sender_psid, received_postback) {
           },
           {
             "title":"ကုံးပြတင်းပေါက်(မှန်ဆံ)",
-            "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84482301_128707435338501_3270701025643724800_o.jpg?_nc_cat=109&_nc_ohc=al6vnhdG-4kAX-pBUlq&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=29de43cc8573a2fb24ec6a59789b796b&oe=5EB4FAAF",
-            "subtitle":"အနံ = 4'",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94934046_158969882312256_5243515363102031872_o.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEqOirDo-iF4wYZ89M1Az2EbvDCZmMNLBNu8MJmYw0sE-FdrbH6BaEiHzpQV1FJVsIDj2qfunyLo2c-bhTfRKwk&_nc_ohc=0zeGPvxQ0qUAX9DX_Yb&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=16cd87d44f6cd6d802d29342ee84cca2&oe=5ECB7CE3",
+            "subtitle":"၃ပွင့်ဆိုင်",
             "default_action": {
               "type": "web_url",
-              "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84482301_128707435338501_3270701025643724800_o.jpg?_nc_cat=109&_nc_ohc=al6vnhdG-4kAX-pBUlq&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=29de43cc8573a2fb24ec6a59789b796b&oe=5EB4FAAF",
+              "url": "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94934046_158969882312256_5243515363102031872_o.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEqOirDo-iF4wYZ89M1Az2EbvDCZmMNLBNu8MJmYw0sE-FdrbH6BaEiHzpQV1FJVsIDj2qfunyLo2c-bhTfRKwk&_nc_ohc=0zeGPvxQ0qUAX9DX_Yb&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=16cd87d44f6cd6d802d29342ee84cca2&oe=5ECB7CE3",
               "webview_height_ratio": "tall",
             },
             "buttons":[
@@ -1055,7 +1072,7 @@ function handlePostback(sender_psid, received_postback) {
           },          {
             "title":"ကုံးပြတင်းပေါက်(မှန်ဆံ)",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84482301_128707435338501_3270701025643724800_o.jpg?_nc_cat=109&_nc_ohc=al6vnhdG-4kAX-pBUlq&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=29de43cc8573a2fb24ec6a59789b796b&oe=5EB4FAAF",
-            "subtitle":"အနံ = 4'",
+            "subtitle":"၂ရွက်၁ပေါက်",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/p720x720/84482301_128707435338501_3270701025643724800_o.jpg?_nc_cat=109&_nc_ohc=al6vnhdG-4kAX-pBUlq&_nc_ht=scontent.fnyt1-1.fna&_nc_tp=6&oh=29de43cc8573a2fb24ec6a59789b796b&oe=5EB4FAAF",
@@ -1072,7 +1089,7 @@ function handlePostback(sender_psid, received_postback) {
           {
             "title":"ကုံးပြတင်းပေါက်(သစ်ဆံ)",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84353475_128707478671830_2425593354625482752_o.jpg?_nc_cat=110&_nc_ohc=mlYuYO7C55cAX848IYT&_nc_ht=scontent.fnyt1-1.fna&oh=0207efe0b84d3f432b35c7f52346cdc6&oe=5EB8AC7A",
-            "subtitle":"အနံ = 4'",
+            "subtitle":"၂ရွက်၁ပေါက်",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84353475_128707478671830_2425593354625482752_o.jpg?_nc_cat=110&_nc_ohc=mlYuYO7C55cAX848IYT&_nc_ht=scontent.fnyt1-1.fna&oh=0207efe0b84d3f432b35c7f52346cdc6&oe=5EB8AC7A",
@@ -1089,7 +1106,7 @@ function handlePostback(sender_psid, received_postback) {
           {
             "title":"ကုံးပြတင်းပေါက်(သစ်ဆံ)",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85145127_128707675338477_5778662326769025024_o.jpg?_nc_cat=100&_nc_ohc=T2fDm1dMklMAX9zwjN5&_nc_ht=scontent.fnyt1-1.fna&oh=f46c2aec1ea73b75ae684736bb25a3d7&oe=5ECAA092",
-            "subtitle":"အနံ = 4'",
+            "subtitle":"၂ရွက်၁ပေါက်",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85145127_128707675338477_5778662326769025024_o.jpg?_nc_cat=100&_nc_ohc=T2fDm1dMklMAX9zwjN5&_nc_ht=scontent.fnyt1-1.fna&oh=f46c2aec1ea73b75ae684736bb25a3d7&oe=5ECAA092",
@@ -1106,7 +1123,7 @@ function handlePostback(sender_psid, received_postback) {
           {
             "title":"ကုံးပြတင်းပေါက်(သစ်ဆံ)",
             "image_url":"https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85106340_128707742005137_7266967579728543744_o.jpg?_nc_cat=105&_nc_ohc=U-PKOqC73h0AX-0SIlS&_nc_ht=scontent.fnyt1-1.fna&oh=30e2deaf28b3f0533f5a81140ef8fcf7&oe=5EBC4CFA",
-            "subtitle":"အနံ = 4'",
+            "subtitle":"၂ရွက်၁ပေါက်",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85106340_128707742005137_7266967579728543744_o.jpg?_nc_cat=105&_nc_ohc=U-PKOqC73h0AX-0SIlS&_nc_ht=scontent.fnyt1-1.fna&oh=30e2deaf28b3f0533f5a81140ef8fcf7&oe=5EBC4CFA",
