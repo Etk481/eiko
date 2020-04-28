@@ -185,33 +185,34 @@ function handleMessage(sender_psid, received_message) {
   let response2 = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
   let response3 = {"text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များကိုနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...'};
   let response4 = { "attachment": {
-                      "type": "template",
-                      "payload": {
-                        "template_type": "generic",
-                        "elements": [{
-                          "title": "မင်္ဂလာပါ! NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ",
-                          "subtitle": "ဘာများအလိုရှိပါသလဲ?",
-                          "buttons": [
-                            {
-                              "type": "postback",
-                              "title": "တံခါးပုံများကြည့်မည်",
-                              "payload": "sstgym",
-                            },
-                            {
-                              "type": "postback",
-                              "title": "ဒီဇိုင်းပေး၍မှာမည်",
-                              "payload": "gd",
-                            },
-                            {
-                              "type": "postback",
-                              "title": "View Order",
-                              "payload": "VO",
-                            }
-                          ],
-                        }]
-                      }
-                    }
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "NS Doors & Windows Shop",
+                      "subtitle": "",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ဆိုင်လိပ်စာ",
+                          "payload": "s_address",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "ဆိုင်ဖုန်းနံပါတ်",
+                          "payload": "s_Ph",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "တံခါးပုံများကြည့်မည်",
+                          "payload": "look",
+                        }
+                      ],
+                    }]
+                  }
+                }
               };
+
     callSend(sender_psid, response1).then(()=>{
       return callSend(sender_psid, response2).then(()=>{
         return callSend(sender_psid, response3).then(()=>{
@@ -660,6 +661,16 @@ function handlePostback(sender_psid, received_postback) {
   
 
   // Set the response based on the postback payload
+
+  if (payload === 's_address') {
+    response = { "text": "ဆိုင်လိပ်စာ (မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။)"}
+  }else if (payload === 's_Ph') { 
+    response = { "text": "ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)"}
+  }
+
+
+
+
   else if (payload === 'yes') {
     response = { "text": "ဟုတ်ကဲ့အတိုင်းပေးပါဦး" }
   } else if (payload === 'no') {
