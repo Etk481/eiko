@@ -182,7 +182,7 @@ function handleMessage(sender_psid, received_message) {
             }
           }
     };
-  let response2 = {"text": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
+  let response2 = {"title": "မင်္ဂလာပါ!. NS Doors & Windows Shop မှကြိုဆိုပါတယ် ခင်ဗျာ"};
   let response3 = {"text":'လူကြီးမင်းသိလိုသည်များကို အောက်ပါခလုတ်များကိုနှိပ်၍ သိရှိနိုင်ပါတယ်...NS Doors & Windows Shop မှ ကျေးဇူးအထူးတင်ရှိပါတယ်ခင်ဗျာ...'};
   let response4 = { "attachment": {
                   "type": "template",
@@ -190,7 +190,7 @@ function handleMessage(sender_psid, received_message) {
                     "template_type": "generic",
                     "elements": [{
                       "title": "NS Doors & Windows Shop",
-                      "subtitle": "",
+                      "subtitle": "ရွေးပါ",
                       "buttons": [
                         {
                           "type": "postback",
@@ -692,7 +692,7 @@ function handlePostback(sender_psid, received_postback) {
                     "template_type": "generic",
                     "elements": [{
                       "title": "NS Doors & Windows Shop",
-                      "subtitle": "",
+                      "subtitle": "ရွေးပါ",
                       "buttons": [
                         {
                           "type": "postback",
