@@ -694,17 +694,17 @@ function handlePostback(sender_psid, received_postback) {
                             {
                               "type": "postback",
                               "title": "တံခါးပုံများကြည့်မည်",
-                              "payload": "sstgym1",
+                              "payload": "sstgym",
                             },
                             {
                               "type": "postback",
                               "title": "ဒီဇိုင်းပေး၍မှာမည်",
-                              "payload": "gd1",
+                              "payload": "gd",
                             },
                             {
                               "type": "postback",
                               "title": "View Order",
-                              "payload": "VO1",
+                              "payload": "VO",
                             }
                       ],
                     }]
