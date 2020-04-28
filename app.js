@@ -592,7 +592,7 @@ else if (received_message.attachments) {
       userAnswers.width_wl415 = received_message.text;
       let totalFoot_wl415 = 6800 * (userAnswers.width_wl415 * userAnswers.length_wl415);
       response = {
-        "text":`၁ခုအတွက် ${totalFoot_hd415} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
+        "text":`၁ခုအတွက် ${totalFoot_wl415} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
       };
       botQuestions.width_wl415 = false;
       botQuestions.quantity_wl415 = true;
