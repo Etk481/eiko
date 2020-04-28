@@ -195,17 +195,17 @@ function handleMessage(sender_psid, received_message) {
                         {
                           "type": "postback",
                           "title": "တံခါးပုံများကြည့်မည်",
-                          "payload": "look",
+                          "payload": "s_address",
                         },
                         {
                           "type": "postback",
                           "title": "ဒီဇိုင်းပေး၍မှာမည်",
-                          "payload": "gde",
+                          "payload": "s_Ph",
                         },
                         {
                           "type": "postback",
                           "title": "View Order",
-                          "payload": "viewO",
+                          "payload": "look",
                         }
                       ],
                     }]
@@ -663,6 +663,14 @@ function handlePostback(sender_psid, received_postback) {
 
   // Set the response based on the postback payload
 
+  if (payload === 's_address') {
+    response = { "text": "ဆိုင်လိပ်စာ (မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။)"}
+  }else if (payload === 's_Ph') { 
+    response = { "text": "ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)"}
+  }
+
+
+
 
   else if (payload === 'yes') {
     response = { "text": "ဟုတ်ကဲ့အတိုင်းပေးပါဦး" }
@@ -706,7 +714,7 @@ function handlePostback(sender_psid, received_postback) {
   }
 
 //get design
-  else if (payload === 'gd' || payload === 'gde') {
+  else if (payload === 'gd') {
     response = { 
         "text":'ကျေးဇူးပြု၍ဘယ်အမျိုးအစားအတွက်မှာယူမှာလဲဆိုတာရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
