@@ -203,12 +203,23 @@ function handleMessage(sender_psid, received_message) {
                   }
                 }
               };
+  let response2 = {
+      "attachment":{
+            "type":"image", 
+            "payload":{
+              "url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/95343236_159098555632722_5076561458796429312_o.jpg?_nc_cat=104&_nc_sid=dd9801&_nc_ohc=EiAZlpTH--4AX9Xr-DE&_nc_ht=scontent.fmdl2-2.fna&oh=11e5f4fcbae26ddb14b16c726bd6c4c4&oe=5ECDE947", 
+              "is_reusable":true
+            }
+          }
+    };
 
     callSend(sender_psid, response1).then(()=>{
       return callSend(sender_psid, response2).then(()=>{
-          return callSend(sender_psid, response3);
+        return callSend(sender_psid, response3).then(()=>{
+          return callSend(sender_psid, response4);
         });
       });
+    });
 }
 
 //for get design quick replies
@@ -687,6 +698,11 @@ function handlePostback(sender_psid, received_postback) {
                               "type": "postback",
                               "title": "ဒီဇိုင်းပေး၍မှာမည်",
                               "payload": "gd",
+                            },
+                            {
+                              "type": "postback",
+                              "title": "View Order",
+                              "payload": "VO",
                             }
                           ],
                         }]
