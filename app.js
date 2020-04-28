@@ -42,6 +42,18 @@ const
 
   let db = firebase.firestore();
 
+        let orderNumber = Math.floor(Math.random() * 100) + 1;
+
+      let data = {
+        user:"ei thin zar ko",
+        ph-no: "09799117890"
+        date: "28-02-2020",
+        total: userAnswers.quantity,
+        order_number : orderNumber
+      }
+
+      db.collection('order').doc().set(data);
+
   let botQuestions = {
     quantity_f53:false,
     width_f53:false,
@@ -212,8 +224,6 @@ function handleMessage(sender_psid, received_message) {
                   }
                 }
               };
-
-
     callSend(sender_psid, response1).then(()=>{
       return callSend(sender_psid, response2).then(()=>{
         return callSend(sender_psid, response3).then(()=>{
