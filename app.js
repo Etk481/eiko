@@ -190,23 +190,23 @@ function handleMessage(sender_psid, received_message) {
                     "template_type": "generic",
                     "elements": [{
                       "title": "NS Doors & Windows Shop",
-                      "subtitle": "",
+                      "subtitle": "",                          
                       "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "ဆိုင်လိပ်စာ",
-                          "payload": "s_address",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "ဆိုင်ဖုန်းနံပါတ်",
-                          "payload": "s_Ph",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "တံခါးပုံများကြည့်မည်",
-                          "payload": "look",
-                        }
+                            {
+                              "type": "postback",
+                              "title": "တံခါးပုံများကြည့်မည်",
+                              "payload": "sstgym",
+                            },
+                            {
+                              "type": "postback",
+                              "title": "ဒီဇိုင်းပေး၍မှာမည်",
+                              "payload": "gd",
+                            },
+                            {
+                              "type": "postback",
+                              "title": "View Order",
+                              "payload": "VO",
+                            }
                       ],
                     }]
                   }
@@ -661,15 +661,6 @@ function handlePostback(sender_psid, received_postback) {
   
 
   // Set the response based on the postback payload
-
-  if (payload === 's_address') {
-    response = { "text": "ဆိုင်လိပ်စာ (မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။)"}
-  }else if (payload === 's_Ph') { 
-    response = { "text": "ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)"}
-  }
-
-
-
 
   else if (payload === 'yes') {
     response = { "text": "ဟုတ်ကဲ့အတိုင်းပေးပါဦး" }
