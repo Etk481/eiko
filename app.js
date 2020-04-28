@@ -42,7 +42,6 @@ const
 
   let db = firebase.firestore();
 
-
   let botQuestions = {
     quantity_f53:false,
     width_f53:false,
@@ -1511,8 +1510,6 @@ else if (payload ==  'wChg' || payload ==  'lCh') {
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
-
-
 
 
 function callSendAPI(sender_psid, response) {
