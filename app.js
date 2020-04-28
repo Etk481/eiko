@@ -190,23 +190,23 @@ function handleMessage(sender_psid, received_message) {
                     "template_type": "generic",
                     "elements": [{
                       "title": "NS Doors & Windows Shop",
-                      "subtitle": "",                          
+                      "subtitle": "",
                       "buttons": [
-                            {
-                              "type": "postback",
-                              "title": "တံခါးပုံများကြည့်မည်",
-                              "payload": "sstgym1",
-                            },
-                            {
-                              "type": "postback",
-                              "title": "ဒီဇိုင်းပေး၍မှာမည်",
-                              "payload": "gd1",
-                            },
-                            {
-                              "type": "postback",
-                              "title": "View Order",
-                              "payload": "VO1",
-                            }
+                        {
+                          "type": "postback",
+                          "title": "ဆိုင်လိပ်စာ",
+                          "payload": "s_address",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "ဆိုင်ဖုန်းနံပါတ်",
+                          "payload": "s_Ph",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "တံခါးပုံများကြည့်မည်",
+                          "payload": "look",
+                        }
                       ],
                     }]
                   }
@@ -704,14 +704,14 @@ function handlePostback(sender_psid, received_postback) {
   }
 
 //get design
-  else if (payload === 'gd' || payload === 'gd1') {
+  else if (payload === 'gd') {
     response = { 
         "text":'ကျေးဇူးပြု၍ဘယ်အမျိုးအစားအတွက်မှာယူမှာလဲဆိုတာရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
         {
           "content_type":"text",
           "title":"တံခါးမကြီးခွေ",
-          "payload":"gddf" 
+          "payload":"gddf"
         },{
           "content_type":"text",
           "title":"ရိုးရိုးတံခါးမကြီး",
@@ -750,7 +750,7 @@ function handlePostback(sender_psid, received_postback) {
   }
 
 //for door type
-  else if (payload === 'sstgym'|| payload === 'sstgym1') {
+  else if (payload === 'sstgym'|| payload === 'look') {
     response = {
     "attachment":{
       "type":"template",
