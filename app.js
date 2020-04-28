@@ -846,7 +846,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"lCh"
               }              
             ]      
           },
@@ -863,7 +863,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"lCh"
               }              
             ]      
           },
@@ -880,7 +880,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"lCh"
               }              
             ]      
           },
@@ -897,7 +897,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"lCh"
               }              
             ]      
           }
@@ -953,7 +953,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"wChg"
               }              
             ]      
           },
@@ -998,7 +998,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"wChg"
               }              
             ]      
           },
@@ -1015,7 +1015,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"wChg"
               }              
             ]      
           },
@@ -1032,7 +1032,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"wChg"
               }              
             ]      
           },
@@ -1049,7 +1049,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"wChg"
               }              
             ]      
           },
@@ -1082,7 +1082,7 @@ function handlePostback(sender_psid, received_postback) {
              {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"wChg"
               }              
             ]      
           },
@@ -1371,23 +1371,32 @@ else if (payload ==  'd2Ch' || payload ==  'w2Ch') {
         {
           "content_type":"text",
           "title":'(5"*1.5")',
-          "payload":"d1Ch1"
+          "payload":"d2Ch1"
         },{
           "content_type":"text",
           "title":'(4"*1.5")',
-          "payload":"d1Ch2"
+          "payload":"d2Ch2"
         }
       ]
     }
 }
 
-
-  else if (payload === 'ol') {
-    response = { "text": "ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ" }
-    
-  }
-
-
+else if (payload ==  'wChg' || payload ==  'lCh') {
+     response = {
+        "text":'ဟုတ်ကဲ့ (5"*1.5")နဲ့ခွေရင် ၁ပေဈေးကတော့ 5200ကျပ်ဖြစ်ပါတယ်။ (4"*1.5")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 6800ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*1.5")နဲ့ခွေမှာလား? (4"*1.5")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":'<5"*1.5">',
+          "payload":"lCh1"
+        },{
+          "content_type":"text",
+          "title":'(<4"*1.5">',
+          "payload":"lCh2"
+        }
+      ]
+    }
+}
 
 
   // Send the message to acknowledge the postback
