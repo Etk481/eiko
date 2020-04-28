@@ -834,7 +834,7 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
           {
-            "title":"ကုံးရောင်လင်း ",
+            "title":"ရိုးရိုးရောင်လင်း ",
             "subtitle":"",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/p720x720/94711581_158969742312270_9113621345970683904_o.jpg?_nc_cat=108&_nc_sid=110474&_nc_eui2=AeHsZXXbx1JBZRRjenqWrFFb2CqZXXXW4KrYKpldddbgqod6JeeDPX3Kom7dmzYdBtzyq0rMFdZSciMBjvciaLPg&_nc_ohc=BoP9sso-QTQAX_gy-mn&_nc_ht=scontent.fmdl2-2.fna&_nc_tp=6&oh=c530b426301b1515428c8df21719ec30&oe=5ECB444E",
             "default_action": {
@@ -953,7 +953,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"w1Ch"
               }              
             ]      
           },
@@ -970,7 +970,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"w1ch"
               }              
             ]      
           }
@@ -1099,7 +1099,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"w2Ch"
               }              
             ]      
           },
@@ -1116,7 +1116,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"w2Ch"
               }              
             ]      
           },
@@ -1133,7 +1133,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"w2Ch"
               }              
             ]      
           }
@@ -1347,7 +1347,7 @@ else if (payload ==  'dkCh' || payload ==  'wkCh') {
     }
 }
 
-else if (payload ==  'd1Ch') {
+else if (payload ==  'd1Ch' || payload ==  'w1Ch') {
      response = {
         "text":'ဟုတ်ကဲ့ (5"*1.5")နဲ့ခွေရင် ၁ပေဈေးကတော့ 7000ကျပ်ဖြစ်ပါတယ်။ (4"*1.5")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 6700ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*1.5")နဲ့ခွေမှာလား? (4"*1.5")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
@@ -1364,7 +1364,7 @@ else if (payload ==  'd1Ch') {
     }
 }
 
-else if (payload ==  'd2Ch') {
+else if (payload ==  'd2Ch' || payload ==  'w2Ch') {
      response = {
         "text":'ဟုတ်ကဲ့ (5"*1.5")နဲ့ခွေရင် ၁ပေဈေးကတော့ 8000ကျပ်ဖြစ်ပါတယ်။ (4"*1.5")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 7500ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*1.5")နဲ့ခွေမှာလား? (4"*1.5")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
