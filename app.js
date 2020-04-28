@@ -668,10 +668,6 @@ function handlePostback(sender_psid, received_postback) {
 
 
 
-
-
-
-
 //for getstarted
   else if (payload === 'getstarted' ) {
   response = { "attachment": {
@@ -851,9 +847,6 @@ function handlePostback(sender_psid, received_postback) {
         });
       });
     }
-
-
-
 
 
 
