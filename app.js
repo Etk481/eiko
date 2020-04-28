@@ -953,7 +953,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"w1Ch"
+                "payload":"ol"
               }              
             ]      
           },
@@ -970,7 +970,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"w1ch"
+                "payload":"w1Ch"
               }              
             ]      
           }
@@ -1054,7 +1054,7 @@ function handlePostback(sender_psid, received_postback) {
             ]      
           },
           {
-            "title":"ကုံးပြတင်းပေါက်(မှန်ဆံ)",
+            "title":"ကုံးပြတင်းပေါက်(သစ်ဆံ)",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94934046_158969882312256_5243515363102031872_o.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEqOirDo-iF4wYZ89M1Az2EbvDCZmMNLBNu8MJmYw0sE-FdrbH6BaEiHzpQV1FJVsIDj2qfunyLo2c-bhTfRKwk&_nc_ohc=0zeGPvxQ0qUAX9DX_Yb&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=16cd87d44f6cd6d802d29342ee84cca2&oe=5ECB7CE3",
             "subtitle":"၃ပွင့်ဆိုင်",
             "default_action": {
@@ -1066,7 +1066,7 @@ function handlePostback(sender_psid, received_postback) {
              {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"ol"
+                "payload":"w2Ch"
               }              
             ]      
           },          {
