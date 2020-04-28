@@ -203,7 +203,7 @@ function handleMessage(sender_psid, received_message) {
                   }
                 }
               };
-  let response2 = {
+  let response4 = {
       "attachment":{
             "type":"image", 
             "payload":{
