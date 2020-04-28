@@ -195,17 +195,17 @@ function handleMessage(sender_psid, received_message) {
                         {
                           "type": "postback",
                           "title": "တံခါးပုံများကြည့်မည်",
-                          "payload": "s_address",
+                          "payload": "look",
                         },
                         {
                           "type": "postback",
                           "title": "ဒီဇိုင်းပေး၍မှာမည်",
-                          "payload": "s_Ph",
+                          "payload": "gde",
                         },
                         {
                           "type": "postback",
                           "title": "View Order",
-                          "payload": "look",
+                          "payload": "vd",
                         }
                       ],
                     }]
