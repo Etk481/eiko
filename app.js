@@ -197,11 +197,7 @@ function handleMessage(sender_psid, received_message) {
                           "type": "postback",
                           "title": "တံခါးပုံများကြည့်မည်",
                           "payload": "look",
-                        },{
-                          "type": "postback",
-                          "title": "ဆိုင်ဖုန်းနံပါတ်",
-                          "payload": "ss",
-                        },
+                        }
                       ],
                     }]
                   }
