@@ -292,39 +292,37 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     }
 }
 
-
-
   else if (received_message.attachments && botQuestions.image == true) {
-    console.log('meta data',received_message);
     // Get the URL of the message attachment
-    let attachment_url = received_message.attachment[0].payload.url;
+    let attachment_url = received_message.attachments[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
         "payload": {
           "template_type": "generic",
           "elements": [{
-            "title": "I received your photos. Do you want to send more?",
-            "subtitle": "",
+            "title": "Is this the right picture?",
+            "subtitle": "Tap a button to answer.",
             "image_url": attachment_url,
             "buttons": [
               {
                 "type": "postback",
-                "title": "Yes",
-                "payload": "torenthou2yesyes_asldld",
+                "title": "ဟုတ်ပါတယ်!",
+                "payload": "yes",
               },
               {
                 "type": "postback",
-                "title": "No",
-                "payload": "torenthou2nono_asldld",
+                "title": "မဟုတ်ပါ!",
+                "payload": "no",
               }
             ],
           }]
         }
       }
     }
-    botQuestions.image = false;
+  botQuestions.image = false;
   }
+
 
 // length, width and price for 53
   else if (received_message.text && botQuestions.length_f53 == true) {
