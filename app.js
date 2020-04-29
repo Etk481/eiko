@@ -641,7 +641,6 @@ else if (received_message.text == "yes") {
         "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
     cusInfo.cusName = true;
-    cusInfo.cusPh = false;
 } 
 else if (received_message.text == && cusInfo.cusName == true) {
     userAnswersInfo.cusName = received_message.text;
@@ -649,6 +648,7 @@ else if (received_message.text == && cusInfo.cusName == true) {
         "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
       }
     cusInfo.cusName = false;
+    cusPh.cusPh = true;
 } 
 
 else if (received_message.text && cusInfo.cusPh == true) {
