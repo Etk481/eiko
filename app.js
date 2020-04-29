@@ -293,6 +293,7 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
 }
 
   else if (received_message.attachments && botQuestions.image == true) {
+    userAnswers.image = received_message.attachment;
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
     response = {
