@@ -67,9 +67,10 @@ const
     quantity_wl415:false,
     width_wl415:false,
     length_wl415:false,
-    image : false,
+    image: false,
     cusInfo:false,
   };
+  
 
   let userAnswers = {};
 
@@ -296,7 +297,7 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     console.log('meta data',received_message);
     botQuestions.image = false;
     // Get the URL of the message attachment
-    let attachment_url = userAnswers.image[0].payload.url;
+    let attachment_url = received_message.attachments[0].payload.url;
     userAnswers.image = attachment_url;
     response = {
       "attachment": {
