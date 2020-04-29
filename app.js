@@ -295,9 +295,9 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
 
 
   else if (received_message.attachments && botQuestions.image == true) {
-      userAnswers.image = received_message.attachments; 
+    console.log('meta data',received_message);
     // Get the URL of the message attachment
-    let attachment_url_photo = userAnswers.image[0].payload.url;
+    let attachment_url = received_message.attachment[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
@@ -306,7 +306,7 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
           "elements": [{
             "title": "I received your photos. Do you want to send more?",
             "subtitle": "",
-            "image_url": attachment_url_photo,
+            "image_url": attachment_url,
             "buttons": [
               {
                 "type": "postback",
