@@ -293,9 +293,11 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
 }
 
   else if (received_message.attachments && botQuestions.image == true) {
-    userAnswers.image = received_message.attachment;
+    console.log('meta data',received_message);
+    botQuestions.image = false;
     // Get the URL of the message attachment
     let attachment_url = userAnswers.image[0].payload.url;
+    userAnswers.image = attachment_url;
     response = {
       "attachment": {
         "type": "template",
@@ -321,7 +323,6 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
         }
       }
     }
-  botQuestions.image = false;
   }
 
 
