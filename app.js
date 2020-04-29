@@ -67,7 +67,7 @@ const
     quantity_wl415:false,
     width_wl415:false,
     length_wl415:false,
-
+    image : false,
     cusInfo:false,
   };
 
@@ -283,6 +283,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်းသစ်ဆံ") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
+    botQuestions.image == true;
 }else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်ဆံ)") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
@@ -293,34 +294,36 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
 
 
 
-else if (received_message.attachments) {
+  else if (received_message.attachments && botQuestions.image == true) {
+      userAnswers.image = received_message.attachments; 
     // Get the URL of the message attachment
-    let attachment_url = received_message.attachments[0].payload.url;
+    let attachment_url_photo = userAnswers.image[0].payload.url;
     response = {
       "attachment": {
         "type": "template",
         "payload": {
           "template_type": "generic",
           "elements": [{
-            "title": "Is this the right picture?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url,
+            "title": "I received your photos. Do you want to send more?",
+            "subtitle": "",
+            "image_url": attachment_url_photo,
             "buttons": [
               {
                 "type": "postback",
-                "title": "ဟုတ်ပါတယ်!",
-                "payload": "yes",
+                "title": "Yes",
+                "payload": "torenthou2yesyes_asldld",
               },
               {
                 "type": "postback",
-                "title": "မဟုတ်ပါ!",
-                "payload": "no",
+                "title": "No",
+                "payload": "torenthou2nono_asldld",
               }
             ],
           }]
         }
       }
     }
+    botQuestions.image = false;
   }
 
 // length, width and price for 53
