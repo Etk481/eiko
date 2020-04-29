@@ -644,6 +644,7 @@ else if (received_message.text && botQuestions.cusName == true) {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
     }
     botQuestions.cusName = false;
+    botQuestions.cusPh == true;
 }
 
 else if (received_message.text && botQuestions.cusPh == true) {
