@@ -68,11 +68,16 @@ const
     width_wl415:false,
     length_wl415:false,
     image: false,
-    cusInfo:false,
+  };
+
+  let cusInfo = {
+    cusName:false,
+    cusPh:false,
   };
 
 
   let userAnswers = {};
+  let userAnswersInfo = {};
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -633,17 +638,27 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
 
 else if (received_message.text == "yes") {
      response = {
-        "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်းအားဆက်သွယ်နိုင်ရန်အတွက် လူကြီးမင်း၏အမည်နှင့်ဖုန်းနံပါတ်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko, ph: 09785575160) ဆိုင်လိပ်စာ (မ/၂၃၉၊ လမ်းမတော်လမ်း၊ ဗိုလ်မင်းရောင်ရပ်ကွက်၊ ‌တပ်ကုန်းမြို့နယ်၊ နေပြည်တော်။ ဆိုင်ဖုန်းနံပါတ် (09-799119488, 09-420762842, 09796900093)'
+        "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
-    botQuestions.cusInfo = true;
-} else if (received_message.text && botQuestions.cusInfo == true) {
-    userAnswers.cusInfo = received_message.text;
+    cusInfo.cusName = true;
+    cusInfo.cusPh = false;
+} 
+else if (received_message.text == && cusInfo.cusName == true) {
+    userAnswersInfo.cusName = received_message.text;
+     response = {
+        "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
+      }
+    cusInfo.cusName = false;
+} 
+
+else if (received_message.text && cusInfo.cusPh == true) {
+    userAnswersInfo.cusPh = received_message.text;
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
-    botQuestions.cusInfo = false;
+    cusInfo.cusPh = false;
 } else if (received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
