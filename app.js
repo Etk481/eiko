@@ -68,16 +68,12 @@ const
     width_wl415:false,
     length_wl415:false,
     image: false,
-  };
-
-  let cusInfo = {
     cusName:false,
     cusPh:false,
   };
 
 
   let userAnswers = {};
-  let userAnswersInfo = {};
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -637,28 +633,27 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
   }
 
 else if (received_message.text == "yes") {
-     response = {
-        "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
-    cusInfo.cusName = true;
+    botQuestions.cusName = true;
 } 
-else if (received_message.text == && cusInfo.cusName == true) {
-    userAnswersInfo.cusName = received_message.text;
-     response = {
-        "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
-      }
-    cusInfo.cusName = false;
-    cusPh.cusPh = true;
-} 
+else if (received_message.text && botQuestions.cusName == true) {
+    userAnswers.cusName = received_message.text;
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
+    }
+    botQuestions.cusName = false;
+}
 
-else if (received_message.text && cusInfo.cusPh == true) {
-    userAnswersInfo.cusPh = received_message.text;
+else if (received_message.text && botQuestions.cusPh == true) {
+    userAnswers.cusPh = received_message.text;
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
-    cusInfo.cusPh = false;
+    botQuestions.cusPh = false;
 } else if (received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
