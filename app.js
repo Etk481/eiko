@@ -423,7 +423,6 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
       botQuestions.quantity_sd515 = true;
   }  
   else if (received_message.text && botQuestions.quantity_sd515 == true) {
-     saveData (sender_psid);
       userAnswers.quantity_sd515 = parseInt(received_message.text);
       let total_sd515 = 7000 * userAnswers.width_sd515 * userAnswers.length_sd515 * userAnswers.quantity_sd515;
       response = {
@@ -1527,18 +1526,6 @@ else if (payload ==  'wChg' || payload ==  'lCh') {
   callSendAPI(sender_psid, response);
 }
 
-/*function function save data to firebase*/
-function saveData(sender_psid) {
-  const info = {
-    id : sender_psid,
-    Name : userAnswers.cusName,
-    Phone No : userAnswers.cusPh,
-    Length : userAnswers.length_f53,
-    Width : userAnswers.width_f53,
-    Quantity : userAnswers.width_f53,
-    }
-  db.collection('user_information').add(info);
-}
 
 
 
