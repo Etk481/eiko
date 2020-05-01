@@ -72,12 +72,11 @@ const
   };
 
   let shareimageAttachment = false;
-  let shareimagehdwtAttachment = false;
   
 
   let userAnswers = {};
   let userSendAttachment = [];
-  let userSendhdwtAttachment = [];
+
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -346,11 +345,10 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     shareimageAttachment = true;
   }
 
-//share picture ကုံးတံခါးမကြီး, ကုံးပြတင်း(သစ်ဆံ)
+//share picture ကုံးတံခါးမကြီး,ကုံးပြတင်း(သစ်ဆံ)
 else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်ဆံ)") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
-    
 }
 
 
