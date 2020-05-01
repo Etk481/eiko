@@ -327,7 +327,7 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
   callSend(sender_psid, response1).then(()=>{
       return callSend(sender_psid, response2);
     });   
-
+}
 
 // length, width and price for 53
   else if (received_message.text && botQuestions.length_f53 == true) {
