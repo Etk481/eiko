@@ -77,7 +77,7 @@ const
 
   let userAnswers = {};
   let userSendAttachment = [];
-  
+
 
 
 // Sets server port and logs message on success
@@ -342,14 +342,16 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
       ]
     }
   }else if (received_message.text == "မဟုတ်ပါ!") {
-    response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပြန်ပို့ပေးပါနော်'   
+    response = {
+      "text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပြန်ပို့ပေးပါနော်'   
     }
     shareimageAttachment = true;
   }
 
 //share picture ကုံးတံခါးမကြီး,ကုံးပြတင်း(သစ်ဆံ)
 else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်ဆံ)") {
-    response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
+    response = {
+      "text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
     shareimagehdwtAttachment = true;
 }else if (received_message.attachments && shareimagehdwtAttachment == true) {
