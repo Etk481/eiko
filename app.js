@@ -73,6 +73,7 @@ const
 
   let shareimageAttachment = false;
   let shareimagehdwtAttachment = false;
+  let shareimagehwlgAttachment = false;
   
 
   let userAnswers = {};
@@ -287,10 +288,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 }
 
 
-else if (received_message.text == "ရိုးရိုးပြတင်းမှန်ဆံ" || received_message.text == "ရောင်လင်း" || received_message.text == "ကုံးပြတင်း(မှန်ဆံ)") {
-    response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
-    }
-}
+
 
 //share picture (ရိုးရိုးတံခါးမကြီး,ရိုးရိုးပြတင်းသစ်ဆံ)
 else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်းသစ်ဆံ") {
@@ -348,6 +346,7 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     shareimageAttachment = true;
   }
 
+
 //share picture ကုံးတံခါးမကြီး,ကုံးပြတင်း(သစ်ဆံ)
 else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်ဆံ)") {
     response = {
@@ -404,6 +403,62 @@ else if (received_message.text == "ကုံးတံခါးမကြီး" |
     shareimagehdwtAttachment = true;
   }
 
+
+//share picture ရိုးရိုးပြတင်းမှန်ဆံ,ရောင်လင်း,ကုံးပြတင်း(မှန်ဆံ)
+else if (received_message.text == "ရိုးရိုးပြတင်းမှန်ဆံ" || received_message.text == "ရောင်လင်း" || received_message.text == "ကုံးပြတင်း(မှန်ဆံ)") {
+    response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
+    }
+    shareimagehwlgAttachment = true;
+}else if (received_message.attachments && shareimagehwlgAttachment == true) {
+    shareimagehwlgAttachment == false;
+    // Get the URL of the message attachment
+    let attachment_url3 = received_message.attachments[0].payload.url;
+    userSendAttachment.shareimagehwlgAttachment = attachment_url3;
+    let response1 = {
+      "attachment":{
+            "type":"image", 
+            "payload":{
+              "url":attachment_url3, 
+              "is_reusable":true
+            }
+          }
+    };
+    let response2 = {"text": "ဤပုံက လူကြီးမင်းမှာယူလိုတဲ့ပုံမှန်ပါသလား။",
+                    "quick_replies":[
+                                      {
+                                        "content_type":"text",
+                                        "title":"ဟုတ်ပါတယ်။",
+                                        "payload":"shareYes.."
+                                      },{
+                                        "content_type":"text",
+                                        "title":"မဟုတ်ပါ။",
+                                        "payload":"shareNo.."
+                                      }]
+  };
+  callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response2);
+    });   
+  }else if (received_message.text == "ဟုတ်ပါတယ်။") {
+    response = {
+        "text":'ဟုတ်ကဲ့ (5"*1.5")နဲ့ခွေရင် ၁ပေဈေးကတော့ 5200ကျပ်ဖြစ်ပါတယ်။ (4"*1.5")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 6800ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*1.5")နဲ့ခွေမှာလား? (4"*1.5")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":'{5"*1.5"}',
+          "payload":"lCh1g"
+        },{
+          "content_type":"text",
+          "title":'{4"*1.5"}',
+          "payload":"lCh2g"
+        }
+      ]
+    }
+  }else if (received_message.text == "မဟုတ်ပါ။") {
+    response = {
+      "text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပြန်ပို့ပေးပါနော်'   
+    }
+    shareimagehwlgAttachment = true;
+  }
 
 
 // length, width and price for 53
