@@ -67,13 +67,16 @@ const
     quantity_wl415:false,
     width_wl415:false,
     length_wl415:false,
-    image: false,
     cusName:false,
     cusPh:false,
   };
 
+  let sharepicAttachment = false;
+  
 
   let userAnswers = {};
+  let userSendAttachment = [];
+
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -295,37 +298,36 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
 }
 
 
-  else if (received_message.attachments && botQuestions.image == true) {
-    botQuestions.image = false;
+  else if (received_message.attachments && sharepicAttachment == true) {
+    console.log('meta data',received_message);
+    sharepicAttachment == false;
     // Get the URL of the message attachment
-    let attachment_url = received_message.attachments[0].payload.url;
-    userAnswers.image = attachment_url;
-    response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "Is this the right picture?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "ဟုတ်ပါတယ်!",
-                "payload": "yes",
-              },
-              {
-                "type": "postback",
-                "title": "မဟုတ်ပါ!",
-                "payload": "no",
-              }
-            ],
-          }]
-        }
-      }
-    }
-  }
+    let attachment_url1 = received_message.attachments[0].payload.url;
+    userSendAttachment.sharepicAttachment = attachment_url1;
+    let response1 = {
+      "attachment":{
+            "type":"image", 
+            "payload":{
+              "url":attachment_url1, 
+              "is_reusable":true
+            }
+          }
+    };
+    let response2 = {"text": "ဤပုံက လူကြီးမင်းမှာယူလိုတဲ့ပုံမှန်ပါသလား။)",
+                    "quick_replies":[
+                                      {
+                                        "content_type":"text",
+                                        "title":"ဟုတ်ပါတယ်! ",
+                                        "payload":"shareYes"
+                                      },{
+                                        "content_type":"text",
+                                        "title":"မဟုတ်ပါ!",
+                                        "payload":"shareNo"
+                                      }]
+  };
+  callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response2);
+    });   
 
 
 // length, width and price for 53
