@@ -71,7 +71,7 @@ const
     cusPh:false,
   };
 
-  let sharepicAttachment = false;
+  let shareimageAttachment = false;
   
 
   let userAnswers = {};
@@ -288,7 +288,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်းသစ်ဆံ") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
-    sharepicAttachment = true;
+    shareimageAttachment = true;
 }else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်ဆံ)") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
@@ -298,11 +298,11 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
 }
 
 
-  else if (received_message.attachments && sharepicAttachment == true) {
-    sharepicAttachment == false;
+  else if (received_message.attachments && shareimageAttachment == true) {
+    shareimageAttachment == false;
     // Get the URL of the message attachment
     let attachment_url1 = received_message.attachments[0].payload.url;
-    userSendAttachment.sharepicAttachment = attachment_url1;
+    userSendAttachment.shareimageAttachment = attachment_url1;
     let response1 = {
       "attachment":{
             "type":"image", 
