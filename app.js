@@ -405,7 +405,7 @@ else if (received_message.text == "ကုံးတံခါးမကြီး" |
 
 
 //share picture ရိုးရိုးပြတင်းမှန်ဆံ,ရောင်လင်း,ကုံးပြတင်း(မှန်ဆံ)
-else if (received_message.text == "ရိုးရိုးပြတင်းမှန်ဆံ" || received_message.text == "ရောင်လင်း" || received_message.text == "ကုံးပြတင်း(မှန်ဆံ)") {
+else if (received_message.text == "ရိုးပြတင်းမှန်ဆံ" || received_message.text == "ရောင်လင်း" || received_message.text == "ကုံးပြတင်း(မှန်ဆံ)") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
     shareimagehwlgAttachment = true;
