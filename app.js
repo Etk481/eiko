@@ -342,7 +342,6 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
         }
       ]
     }
-  received_message.payload == false; 
 }
 
 
