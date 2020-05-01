@@ -72,11 +72,12 @@ const
   };
 
   let shareimageAttachment = false;
+  let shareimagehdwtAttachment = false;
   
 
   let userAnswers = {};
   let userSendAttachment = [];
-
+  let userSendhdwtAttachment = [];
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -285,20 +286,17 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
 }
 
 
-else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်းသစ်ဆံ") {
-    response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
-    }
-    shareimageAttachment = true;
-}else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်ဆံ)") {
-    response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
-    }
-}else if (received_message.text == "ရိုးရိုးပြတင်းမှန်ဆံ" || received_message.text == "ရောင်လင်း" || received_message.text == "ကုံးပြတင်း(မှန်ဆံ)") {
+else if (received_message.text == "ရိုးရိုးပြတင်းမှန်ဆံ" || received_message.text == "ရောင်လင်း" || received_message.text == "ကုံးပြတင်း(မှန်ဆံ)") {
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
 }
 
-
-  else if (received_message.attachments && shareimageAttachment == true) {
+//share picture (ရိုးရိုးတံခါးမကြီး,ရိုးရိုးပြတင်းသစ်ဆံ)
+else if (received_message.text == "ရိုးရိုးတံခါးမကြီး" || received_message.text == "ရိုးရိုးပြတင်းသစ်ဆံ") {
+    response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
+    }
+    shareimageAttachment = true;
+}else if (received_message.attachments && shareimageAttachment == true) {
     shareimageAttachment == false;
     // Get the URL of the message attachment
     let attachment_url1 = received_message.attachments[0].payload.url;
@@ -348,7 +346,60 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     shareimageAttachment = true;
   }
 
-
+//share picture ကုံးတံခါးမကြီး, ကုံးပြတင်း(သစ်ဆံ)
+else if (received_message.text == "ကုံးတံခါးမကြီး" || received_message.text == "ကုံးပြတင်း(သစ်ဆံ)") {
+    response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
+    }
+    shareimagehdwtAttachment = true;
+}else if (received_message.attachments && shareimagehdwtAttachment == true) {
+    shareimagehdwtAttachment == false;
+    // Get the URL of the message attachment
+    let attachment_url2 = received_message.attachments[0].payload.url;
+    userSendhdwtAttachment.shareimageAttachment = attachment_url1;
+    let response1 = {
+      "attachment":{
+            "type":"image", 
+            "payload":{
+              "url":attachment_url2, 
+              "is_reusable":true
+            }
+          }
+    };
+    let response2 = {"text": "ဤပုံက လူကြီးမင်းမှာယူလိုတဲ့ပုံမှန်ပါသလား။",
+                    "quick_replies":[
+                                      {
+                                        "content_type":"text",
+                                        "title":"ဟုတ်ပါတယ်",
+                                        "payload":"shareYes1"
+                                      },{
+                                        "content_type":"text",
+                                        "title":"မဟုတ်ပါ",
+                                        "payload":"shareNo2"
+                                      }]
+  };
+  callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response2);
+    });   
+  }else if (received_message.text == "ဟုတ်ပါတယ်") {
+    response = {
+        "text":'ဟုတ်ကဲ့ (5"*1.5")နဲ့ခွေရင် ၁ပေဈေးကတော့ 8000ကျပ်ဖြစ်ပါတယ်။ (4"*1.5")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 7500ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*1.5")နဲ့ခွေမှာလား? (4"*1.5")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":'(5"*1.5")',
+          "payload":"d2Ch1t"
+        },{
+          "content_type":"text",
+          "title":'(4"*1.5")',
+          "payload":"d2Ch2t"
+        }
+      ]
+    }
+  }else if (received_message.text == "မဟုတ်ပါ") {
+    response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပြန်ပို့ပေးပါနော်'   
+    }
+    shareimagehdwtAttachment = true;
+  }
 
 
 
