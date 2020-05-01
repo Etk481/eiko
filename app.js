@@ -355,7 +355,7 @@ else if (received_message.text == "ကုံးတံခါးမကြီး" |
     shareimagehdwtAttachment == false;
     // Get the URL of the message attachment
     let attachment_url2 = received_message.attachments[0].payload.url;
-    userSendhdwtAttachment.shareimageAttachment = attachment_url1;
+    userSendhdwtAttachment.shareimageAttachment = attachment_url2;
     let response1 = {
       "attachment":{
             "type":"image", 
