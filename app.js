@@ -316,7 +316,7 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
                     "quick_replies":[
                                       {
                                         "content_type":"text",
-                                        "title":"ဟုတ်ပါတယ်! ",
+                                        "title":"ဟုတ်ပါတယ်!",
                                         "payload":"shareYes"
                                       },{
                                         "content_type":"text",
@@ -327,7 +327,26 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
   callSend(sender_psid, response1).then(()=>{
       return callSend(sender_psid, response2);
     });   
-}
+  }else if (received_message.text == "ဟုတ်ပါတယ်!") {
+      response = {
+        "text":'ဟုတ်ကဲ့ (5"*1.5")နဲ့ခွေရင် ၁ပေဈေးကတော့ 7000ကျပ်ဖြစ်ပါတယ်။ (4"*1.5")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 6700ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*1.5")နဲ့ခွေမှာလား? (4"*1.5")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":'5"*1.5"',
+          "payload":"d1Ch1t"
+        },{
+          "content_type":"text",
+          "title":'4"*1.5"',
+          "payload":"d1Ch2t"
+        }
+      ]
+    }
+  }else if (received_message.text == "မဟုတ်ပါ!") {
+    response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပြန်ပို့ပေးပါနော်'   
+    }
+    shareimageAttachment = true;
+  }
 
 
 
