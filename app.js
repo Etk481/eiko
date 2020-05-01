@@ -299,11 +299,10 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
 
 
   else if (received_message.attachments && sharepicAttachment == true) {
-    console.log('meta data',received_message);
     sharepicAttachment == false;
     // Get the URL of the message attachment
     let attachment_url1 = received_message.attachments[0].payload.url;
-    let userSendAttachment.sharepicAttachment = attachment_url1;
+    userSendAttachment.sharepicAttachment = attachment_url1;
     let response1 = {
       "attachment":{
             "type":"image", 
