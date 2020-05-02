@@ -794,12 +794,11 @@ else if (received_message.text && botQuestions.cusPh == true) {
       }
   }
 
+        
+
   // Send the response message
   callSendAPI(sender_psid, response);    
 }
-
-
-
 
 function handlePostback(sender_psid, received_postback) {
   console.log('ok')
