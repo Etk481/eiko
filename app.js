@@ -771,7 +771,7 @@ else if (received_message.text == "yes") {
       let data = {
         user:"ei thin zar ko",
         date: "28-02-2020",
-        total: userAnswers.quantity,
+        total: userAnswers.quantity_f53,
         order_number : orderNumber
       }
 
