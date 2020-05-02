@@ -775,7 +775,7 @@ else if (received_message.text == "yes") {
         order_number : orderNumber
       }
 
-      db.collection('order').doc().set(data);
+      db.collection('orders').doc().set(data);
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
