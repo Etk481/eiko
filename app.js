@@ -789,7 +789,7 @@ else if (received_message.text && botQuestions.cusPh == true) {
         quantity_k53: userAnswers.quantity_f53,
         length_k53: userAnswers.length_f53,
         width_k53: userAnswers.width_f53,
-        order_number : ,
+        order_number : "",
       }
 
       db.collection('orders').doc().set(data);
