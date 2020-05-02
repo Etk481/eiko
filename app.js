@@ -772,7 +772,7 @@ else if (received_message.text == "yes") {
         name:"ei thin zar ko",
         phone_no: "",
         date: "28-02-2020",
-        quantity_k53: userAnswers.quantity_f53,
+        quantity: userAnswers.quantity_f53,
         total: "",
         order_number : "",
       }
