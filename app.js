@@ -766,18 +766,6 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
   }
 
 else if (received_message.text == "yes") {
-
-      let data = {
-        id : sender_psid,
-        name:"ei thin zar ko",
-        phone_no: "",
-        date: "28-02-2020",
-        quantity: "",
-        total: "",
-        order_number : "",
-      }
-
-      db.collection('orders').doc().set(data);
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
@@ -793,6 +781,20 @@ else if (received_message.text && botQuestions.cusName == true) {
 }
 
 else if (received_message.text && botQuestions.cusPh == true) {
+        let data = {
+        id : sender_psid,
+        name:userAnswers.cusName,
+        phone_no: userAnswers.cusPh,
+        
+        quantity_k53: userAnswers.quantity_f53,
+        length_k53: userAnswers.length_f53,
+        width_f53: userAnswers.width_f53,
+        total: "",
+        order_number : "",
+      }
+
+      db.collection('orders').doc().set(data);
+
     userAnswers.cusPh = received_message.text;
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
