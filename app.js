@@ -785,10 +785,9 @@ else if (received_message.text && botQuestions.cusPh == true) {
         id : sender_psid,
         name:userAnswers.cusName,
         phone_no: userAnswers.cusPh,
-        quantity: "",
         quantity_k53: userAnswers.quantity_f53,
         length_k53: userAnswers.length_f53,
-        width_f53: userAnswers.width_f53,
+        width_k53: userAnswers.width_f53,
         total: "",
         order_number : "",
       }
