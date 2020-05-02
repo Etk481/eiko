@@ -768,7 +768,8 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
 else if (received_message.text == "yes") {
 
       let data = {
-        user:"ei thin zar ko",
+        user:userSendAttachment.cusName,
+        phone_no: userAnswers.cusPh,
         date: "28-02-2020",
         total: "",
         order_number : "",
