@@ -773,7 +773,6 @@ else if (received_message.text == "yes") {
         phone_no: "",
         date: "28-02-2020",
         quantity_k53: userAnswers.quantity_f53,
-        quantity_k52: userAnswers.quantity_f52,
         total: "",
         order_number : "",
       }
