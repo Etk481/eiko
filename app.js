@@ -789,8 +789,11 @@ else if (received_message.text && botQuestions.cusPh == true) {
         quantity_k53: userAnswers.quantity_f53,
         length_k53: userAnswers.length_f53,
         width_k53: userAnswers.width_f53,
-        total: "",
-        order_number : "",
+        
+        quantity_k52: userAnswers.quantity_f52,
+        length_k52: userAnswers.length_f52,
+        width_k52: userAnswers.width_f52,
+        order_number : ,
       }
 
       db.collection('orders').doc().set(data);
