@@ -766,7 +766,16 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
   }
 
 else if (received_message.text == "yes") {
-    saveData (sender_psid);
+      let orderNumber = Math.floor(Math.random() * 100) + 1;
+
+      let data = {
+        user:"ei thin zar ko",
+        date: "28-02-2020",
+        total: userAnswers.quantity,
+        order_number : orderNumber
+      }
+
+      db.collection('order').doc().set(data);
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
@@ -1661,16 +1670,7 @@ else if (payload ==  'wChg' || payload ==  'lCh') {
   callSendAPI(sender_psid, response);
 }
 
-/*function function save data to firebase*/
-function saveData(sender_psid) {
-  const order_info = {
-    id : sender_psid,
-    name : userAnswers.cusName,
-    phone_no : userAnswers.cusPh,
-    send_design: userSendAttachment.shareimageAttachment && userSendAttachment.shareimagehdwtAttachment && userSendAttachment.shareimagehwlgAttachment,
-  }
-  db.collection('order_information').add(order_info);
-}
+
 
 
 function callSendAPI(sender_psid, response) {
