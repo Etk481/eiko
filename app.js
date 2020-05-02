@@ -768,9 +768,11 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
 else if (received_message.text == "yes") {
 
       let data = {
+        id : sender_psid,
         name:"ei thin zar ko",
         phone_no: "",
         date: "28-02-2020",
+        quantity: userAnswers.quantity_f53,
         total: "",
         order_number : "",
       }
