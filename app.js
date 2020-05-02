@@ -781,6 +781,7 @@ else if (received_message.text && botQuestions.cusName == true) {
 }
 
 else if (received_message.text && botQuestions.cusPh == true) {
+      userAnswers.cusPh = received_message.text;
         let data = {
         id : sender_psid,
         name:userAnswers.cusName,
@@ -794,7 +795,7 @@ else if (received_message.text && botQuestions.cusPh == true) {
 
       db.collection('orders').doc().set(data);
 
-    userAnswers.cusPh = received_message.text;
+    
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
     callSend(sender_psid, response1).then(()=>{
