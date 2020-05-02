@@ -766,6 +766,15 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
   }
 
 else if (received_message.text == "yes") {
+
+      let data = {
+        user:"ei thin zar ko",
+        date: "28-02-2020",
+        total: "",
+        order_number : "",
+      }
+
+      db.collection('orders').doc().set(data);
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
