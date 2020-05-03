@@ -86,12 +86,12 @@ const
     cusPh:false,
   };
 
-  let sdwt515 = {
+  let sdwt415 = {
     cusName:false,
     cusPh:false,
   };
 
-  let hdwt415 = {
+  let hdwt515 = {
     cusName:false,
     cusPh:false,
   };
