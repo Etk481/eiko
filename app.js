@@ -71,6 +71,11 @@ const
     cusPh:false,
   };
 
+  let frame = {
+    cusName:false,
+    cusPh:false,
+  };
+
   let shareimageAttachment = false;
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
@@ -78,6 +83,7 @@ const
   
 
   let userAnswers = {};
+  let frameAnswers = {};
   let userSendAttachment = [];
 
 
@@ -811,16 +817,16 @@ if (received_message.text == "Yes") {
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
-    botQuestions.cusName = true;
-} else if (received_message.text && botQuestions.cusName == true) {
-    userAnswers.cusName = received_message.text;
+    frame.cusName = true;
+} else if (received_message.text && frame.cusName == true) {
+    frameAnswers.cusName = received_message.text;
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
     }
-    botQuestions.cusName = false;
-    botQuestions.cusPh = true;
-} else if (received_message.text && botQuestions.cusPh == true) {
-      userAnswers.cusPh = received_message.text;
+    frame.cusName = false;
+    frame.cusPh = true;
+} else if (received_message.text && frame.cusPh == true) {
+      frameAnswers.cusPh = received_message.text;
       let price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53;
       let total_price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53 * userAnswers.quantity_f53;
       let data = {
@@ -842,12 +848,8 @@ if (received_message.text == "Yes") {
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
-    botQuestions.cusPh = false;
-} else if (received_message.text == "no") {
-      response = {
-        "text":'ကျေးဇူးတင်ပါတယ်' 
-      }
-  }
+    frame.cusPh = false;
+} 
 
 
 if (received_message.text == "yes") {
@@ -872,6 +874,12 @@ if (received_message.text == "yes") {
     }); 
     botQuestions.cusPh = false;
 }
+
+else if (received_message.text == "No" || received_message.text == "no") {
+      response = {
+        "text":'ကျေးဇူးတင်ပါတယ်' 
+      }
+  }
 
         
 
