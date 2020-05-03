@@ -91,8 +91,6 @@ const
     cusPh:false,
   };
 
-
-
   let shareimageAttachment = false;
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
@@ -104,7 +102,6 @@ const
   let frame52Answers = {};
   let sdwt515Answers = {};
   let sdwt415Answers = {};
-
   let userSendAttachment = [];
 
 
@@ -684,7 +681,7 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
       botQuestions.quantity_sd415 = false;
   }
 
-// length, width and price for hdwt515
+// length, width and price for hd515
   else if (received_message.text && botQuestions.length_hd515 == true) {
       userAnswers.length_hd515 = received_message.text;
       response = {
@@ -710,11 +707,11 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"yes..",
+          "title":"yes",
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
-          "title":"no..",
+          "title":"no",
           "payload":"<POSTBACK_PAYLOAD>"
         }
       ]
@@ -931,18 +928,18 @@ if (received_message.text == "Yes!") {
 } else if (received_message.text && sdwt515.cusPh == true) {
       sdwt515Answers.cusPh = received_message.text;
 
-      let price_515 = 7000 * userAnswers.length_sd515 * userAnswers.width_sd515;
-      let total_price_515 = 7000 * userAnswers.length_sd515 * userAnswers.width_sd515 * userAnswers.quantity_sd515;
+      let price_sdwt515 = 7000 * userAnswers.length_sd515 * userAnswers.width_sd515;
+      let total_sdwtprice_515 = 7000 * userAnswers.length_sd515 * userAnswers.width_sd515 * userAnswers.quantity_sd515;
       let data = {
         id : sender_psid,
         name:sdwt515Answers.cusName,
         phone_no: sdwt515Answers.cusPh,
-        quantity_515: userAnswers.quantity_sd515,
-        length_515: userAnswers.length_sd515,
-        width_515: userAnswers.width_sd515,
-        image_515: userSendAttachment.shareimageAttachment,
-        price_515: price_515,
-        total_price_515: total_price_515,
+        quantity_sdwt515: userAnswers.quantity_sd515,
+        length_sdwt515: userAnswers.length_sd515,
+        width_sdwt515: userAnswers.width_sd515,
+        image_sdwt515: userSendAttachment.shareimageAttachment,
+        price_sdwt515: price_sdwt515,
+        total_price_sdwt515: total_price_sdwt515,
       }
 
       db.collection('order_dw_wood515').doc().set(data);
@@ -971,18 +968,18 @@ if (received_message.text == "yes.") {
 } else if (received_message.text && sdwt415.cusPh == true) {
       sdwt415Answers.cusPh = received_message.text;
 
-      let price_415 = 6700 * userAnswers.length_sd415 * userAnswers.width_sd415;
-      let total_price_415 = 6700 * userAnswers.length_sd415 * userAnswers.width_sd415 * userAnswers.quantity_sd415;
+      let price_sdwt415 = 6700 * userAnswers.length_sd415 * userAnswers.width_sd415;
+      let total_price_sdwt415 = 6700 * userAnswers.length_sd415 * userAnswers.width_sd415 * userAnswers.quantity_sd415;
       let data = {
         id : sender_psid,
         name:sdwt415Answers.cusName,
         phone_no: sdwt415Answers.cusPh,
-        quantity_415: userAnswers.quantity_sd415,
-        length_415: userAnswers.length_sd415,
-        width_415: userAnswers.width_sd415,
-        image_415: userSendAttachment.shareimageAttachment,
-        price_415: price_415,
-        total_price_415: total_price_415,
+        quantity_sdwt415: userAnswers.quantity_sd415,
+        length_sdwt415: userAnswers.length_sd415,
+        width_sdwt415: userAnswers.width_sd415,
+        image_sdwt415: userSendAttachment.shareimageAttachment,
+        price_sdwt415: price_sdwt415,
+        total_price_sdwt415: total_price_sdwt415,
       }
 
       db.collection('order_dw_wood415').doc().set(data);
@@ -997,7 +994,30 @@ if (received_message.text == "yes.") {
 
 
 
-else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no.." || received_message.text == "no") {
+if (received_message.text == "yes") {
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
+      }
+    botQuestions.cusName = true;
+} else if (received_message.text && botQuestions.cusName == true) {
+    userAnswers.cusName = received_message.text;
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
+    }
+    botQuestions.cusName = false;
+    botQuestions.cusPh = true;
+} else if (received_message.text && botQuestions.cusPh == true) {
+      userAnswers.cusPh = received_message.text;
+
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
+    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    callSend(sender_psid, response1).then(()=>{
+        return callSend(sender_psid, response2);
+    }); 
+    botQuestions.cusPh = false;
+}
+
+else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
       }
