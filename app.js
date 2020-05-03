@@ -833,12 +833,28 @@ else if (received_message.text && botQuestions.cusPh == true) {
         quantity_k53: userAnswers.quantity_f53,
         length_k53: userAnswers.length_f53,
         width_k53: userAnswers.width_f53,
-        image_frame: userSendAttachment.shareimagedwkAttachment,
+        image_frame53: userSendAttachment.shareimagedwkAttachment,
         price_frame53: price_frame53,
         total_price_frame53: total_price_frame53,
       }
 
       db.collection('order_frame_53').doc().set(data);
+
+      let price_frame52 = 3000 * userAnswers.length_f52 * userAnswers.width_f52;
+      let total_price_frame52 = 3000 * userAnswers.length_f52 * userAnswers.width_f52 * userAnswers.quantity_f52;
+        let data = {
+        id : sender_psid,
+        name:userAnswers.cusName,
+        phone_no: userAnswers.cusPh,
+        quantity_k52: userAnswers.quantity_f52,
+        length_k52: userAnswers.length_f52,
+        width_k52: userAnswers.width_f52,
+        image_frame52: userSendAttachment.shareimagedwkAttachment,
+        price_frame52: price_frame52,
+        total_price_frame52: total_price_frame52,
+      }
+
+      db.collection('order_frame_52').doc().set(data);
 
 
 
