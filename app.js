@@ -539,7 +539,7 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
-          "title":"no",
+          "title":"No",
           "payload":"<POSTBACK_PAYLOAD>"
         }
       ]
@@ -831,8 +831,8 @@ if (received_message.text == "Yes") {
       let total_price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53 * userAnswers.quantity_f53;
       let data = {
         id : sender_psid,
-        name:userAnswers.cusName,
-        phone_no: userAnswers.cusPh,
+        name:frameAnswers.cusName,
+        phone_no: frameAnswers.cusPh,
         quantity_k53: userAnswers.quantity_f53,
         length_k53: userAnswers.length_f53,
         width_k53: userAnswers.width_f53,
