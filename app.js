@@ -844,7 +844,7 @@ if (received_message.text == "Yes") {
         quantity_k53: userAnswers.quantity_f53,
         length_k53: userAnswers.length_f53,
         width_k53: userAnswers.width_f53,
-        image_frame: userSendAttachment.shareimagedwkAttachment,
+        image_frame53: userSendAttachment.shareimagedwkAttachment,
         price_frame53: price_frame53,
         total_price_frame53: total_price_frame53,
       }
@@ -884,10 +884,10 @@ if (received_message.text == "Yes.") {
         width_k52: userAnswers.width_f52,
         image_frame52: userSendAttachment.shareimagedwkAttachment,
         price_frame52: price_frame52,
-        total_price_frame52: total_price_frame53,
+        total_price_frame52: total_price_frame52,
       }
 
-      db.collection('order_frame_53').doc().set(data);
+      db.collection('order_frame_52').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
