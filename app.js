@@ -96,6 +96,11 @@ const
     cusPh:false,
   };
 
+  let hdwt415 = {
+    cusName:false,
+    cusPh:false,
+  };
+
   let shareimageAttachment = false;
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
@@ -108,6 +113,7 @@ const
   let sdwt515Answers = {};
   let sdwt415Answers = {};
   let hdwt515Answers = {};
+  let hdwt415Answers = {};  
   let userSendAttachment = [];
 
 
@@ -687,7 +693,7 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
       botQuestions.quantity_sd415 = false;
   }
 
-// length, width and price for hd515
+// length, width and price for hdwt515
   else if (received_message.text && botQuestions.length_hd515 == true) {
       userAnswers.length_hd515 = received_message.text;
       response = {
@@ -725,7 +731,7 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
       botQuestions.quantity_hd515 = false;
   }
 
-// length, width and price for hd415
+// length, width and price for hdwt415
   else if (received_message.text && botQuestions.length_hd415 == true) {
       userAnswers.length_hd415 = received_message.text;
       response = {
@@ -751,11 +757,11 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"yes",
+          "title":"yes!",
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
-          "title":"no",
+          "title":"no!",
           "payload":"<POSTBACK_PAYLOAD>"
         }
       ]
@@ -763,7 +769,7 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
       botQuestions.quantity_hd415 = false;
   }
 
-// length, width and price for hd515
+// length, width and price for wlg515
   else if (received_message.text && botQuestions.length_wl515 == true) {
       userAnswers.length_wl515 = received_message.text;
       response = {
@@ -801,7 +807,7 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
       botQuestions.quantity_wl515 = false;
   }
 
-// length, width and price for hd415
+// length, width and price for wlg415
   else if (received_message.text && botQuestions.length_wl415 == true) {
       userAnswers.length_wl415 = received_message.text;
       response = {
@@ -1038,6 +1044,46 @@ if (received_message.text == "yes..") {
     hdwt515.cusPh = false;
 }
 
+//db hdwt415
+if (received_message.text == "yes!") {
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
+      }
+    hdwt415.cusName = true;
+} else if (received_message.text && hdwt415.cusName == true) {
+    hdwt415Answers.cusName = received_message.text;
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
+    }
+    hdwt415.cusName = false;
+    hdwt415.cusPh = true;
+} else if (received_message.text && hdwt415.cusPh == true) {
+      hdwt415Answers.cusPh = received_message.text;
+
+      let price_hdwt415 = 7500 * userAnswers.length_hd415 * userAnswers.width_hd415;
+      let total_price_hdwt415 = 7500 * userAnswers.length_hd415 * userAnswers.width_hd415 * userAnswers.quantity_hd415;
+      let data = {
+        id : sender_psid,
+        name:hdwt415Answers.cusName,
+        phone_no: hdwt415Answers.cusPh,
+        quantity_hdwt415: userAnswers.quantity_hd415,
+        length_hdwt415: userAnswers.length_hd415,
+        width_hdwt415: userAnswers.width_hd415,
+        image_hdwt415: userSendAttachment.shareimagehdwtAttachment,
+        price_hdwt415: price_hdwt515,
+        total_price_hdwt415: total_price_hdwt415,
+      }
+
+      db.collection('order_hdw_wood415').doc().set(data);
+
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
+    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    callSend(sender_psid, response1).then(()=>{
+        return callSend(sender_psid, response2);
+    }); 
+    hdwt415.cusPh = false;
+}
+
 if (received_message.text == "yes") {
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
@@ -1061,7 +1107,7 @@ if (received_message.text == "yes") {
     botQuestions.cusPh = false;
 }
 
-else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no") {
+else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no.." || received_message.text == "no!" || received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
       }
