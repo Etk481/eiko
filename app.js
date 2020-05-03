@@ -625,11 +625,11 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"Yes!",
+          "title":"Yes..",
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
-          "title":"No!",
+          "title":"No..",
           "payload":"<POSTBACK_PAYLOAD>"
         }
       ]
@@ -907,7 +907,7 @@ if (received_message.text == "Yes.") {
 } 
 
 //db sdwt515
-if (received_message.text == "Yes!") {
+if (received_message.text == "Yes..") {
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
@@ -936,7 +936,7 @@ if (received_message.text == "Yes!") {
         total_price_515: total_price_515,
       }
 
-      db.collection('order_DW_wood515').doc().set(data);
+      db.collection('order_dw_wood515').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
@@ -970,7 +970,7 @@ if (received_message.text == "yes") {
     botQuestions.cusPh = false;
 }
 
-else if (received_message.text == "No" || received_message.text == "No." ||received_message.text == "Yes!" || received_message.text == "no") {
+else if (received_message.text == "No" || received_message.text == "No." ||received_message.text == "Yes.." || received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
       }
