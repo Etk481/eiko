@@ -91,6 +91,11 @@ const
     cusPh:false,
   };
 
+  let hdwt515 = {
+    cusName:false,
+    cusPh:false,
+  };
+
   let shareimageAttachment = false;
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
@@ -102,6 +107,7 @@ const
   let frame52Answers = {};
   let sdwt515Answers = {};
   let sdwt415Answers = {};
+  let hdwt515Answers = {};
   let userSendAttachment = [];
 
 
@@ -707,11 +713,11 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"yes",
+          "title":"yes..",
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
-          "title":"no",
+          "title":"no..",
           "payload":"<POSTBACK_PAYLOAD>"
         }
       ]
@@ -992,7 +998,45 @@ if (received_message.text == "yes.") {
     sdwt415.cusPh = false;
 }
 
+//db hdwt515
+if (received_message.text == "yes..") {
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
+      }
+    hdwt515.cusName = true;
+} else if (received_message.text && hdwt515.cusName == true) {
+    hdwt515Answers.cusName = received_message.text;
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
+    }
+    hdwt515.cusName = false;
+    hdwt515.cusPh = true;
+} else if (received_message.text && hdwt515.cusPh == true) {
+      hdwt515Answers.cusPh = received_message.text;
 
+      let price_hdwt515 = 7000 * userAnswers.length_hd515 * userAnswers.width_hd515;
+      let total_price_hdwt515 = 7000 * userAnswers.length_hd515 * userAnswers.width_hd515 * userAnswers.quantity_hd515;
+      let data = {
+        id : sender_psid,
+        name:hdwt515Answers.cusName,
+        phone_no: hdwt515Answers.cusPh,
+        quantity_hdwt515: userAnswers.quantity_hd515,
+        length_hdwt515: userAnswers.length_hd515,
+        width_hdwt515: userAnswers.width_hd515,
+        image_hdwt515: userSendAttachment.shareimagehdwtAttachment,
+        price_hdwt515: price_sdwt515,
+        total_price_hdwt515: total_price_hdwt515,
+      }
+
+      db.collection('order_dw_wood515').doc().set(data);
+
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
+    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    callSend(sender_psid, response1).then(()=>{
+        return callSend(sender_psid, response2);
+    }); 
+    hdwt515.cusPh = false;
+}
 
 if (received_message.text == "yes") {
     response = {
