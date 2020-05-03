@@ -74,6 +74,7 @@ const
   let shareimageAttachment = false;
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
+  let shareimagedwkAttachment = false;
   
 
   let userAnswers = {};
@@ -230,22 +231,7 @@ function handleMessage(sender_psid, received_message) {
 }
 
 //for get design quick replies
-else if (received_message.text == "တံခါးမကြီးခွေ" || received_message.text == "ပြတင်းကြီးခွေ") {
-     response = {
-        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
-         "quick_replies":[
-        {
-          "content_type":"text",
-          "title":'5"*3"',
-          "payload":"DDu1"
-        },{
-          "content_type":"text",
-          "title":'5"*2"',
-          "payload":"DDu2"
-        }
-      ]
-    }
-}else if (received_message.text == '5"*3"') {
+else if (received_message.text == '5"*3"') {
     response = {
       "text":'ဟုတ်ကဲ့အလျားလေးပြောပြပေးပါ။ ဥပမာ - အလျား၆ပေရှိပါက 6 ၊ ၅ပေခွဲရှိပါက 5.5 ဟုပေးပို့ပေးပါ'
     }
@@ -287,6 +273,62 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
   botQuestions.length_wl415 = true;  
 }
 
+
+//share picture (တံခါးမကြီးခွေ,ပြတင်းကြီးခွေ)
+else if (received_message.text == "တံခါးမကြီးခွေ" || received_message.text == "ပြတင်းကြီးခွေ") {
+    response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
+    }
+    shareimagedwkAttachment = true;
+}else if (received_message.attachments && shareimagedwkAttachment == true) {
+    shareimagedwkAttachment == false;
+    // Get the URL of the message attachment
+    let attachment_url4 = received_message.attachments[0].payload.url;
+    userSendAttachment.shareimagedwkAttachment = attachment_url4;
+    let response1 = {
+      "attachment":{
+            "type":"image", 
+            "payload":{
+              "url":attachment_url4, 
+              "is_reusable":true
+            }
+          }
+    };
+    let response2 = {"text": "ဤပုံက လူကြီးမင်းမှာယူလိုတဲ့ပုံမှန်ပါသလား။",
+                    "quick_replies":[
+                                      {
+                                        "content_type":"text",
+                                        "title":"ဟုတ်ပါတယ်...",
+                                        "payload":"shareYesk"
+                                      },{
+                                        "content_type":"text",
+                                        "title":"မဟုတ်ပါ...",
+                                        "payload":"shareNok"
+                                      }]
+  };
+  callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response2);
+    });   
+  }else if (received_message.text == "ဟုတ်ပါတယ်...") {
+     response = {
+        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":'5"*3"',
+          "payload":"DDu1"
+        },{
+          "content_type":"text",
+          "title":'5"*2"',
+          "payload":"DDu2"
+        }
+      ]
+    }
+  }else if (received_message.text == "မဟုတ်ပါ...") {
+    response = {
+      "text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပြန်ပို့ပေးပါနော်'   
+    }
+    shareimagedwkAttachment = true;
+  }
 
 
 
@@ -782,20 +824,23 @@ else if (received_message.text && botQuestions.cusName == true) {
 
 else if (received_message.text && botQuestions.cusPh == true) {
       userAnswers.cusPh = received_message.text;
-        let data = {
+      let price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53;
+      let total_price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53 * userAnswers.quantity_f53;
+      let data = {
         id : sender_psid,
         name:userAnswers.cusName,
         phone_no: userAnswers.cusPh,
         quantity_k53: userAnswers.quantity_f53,
         length_k53: userAnswers.length_f53,
         width_k53: userAnswers.width_f53,
-        quantity_k52: userAnswers.quantity_f52,
-        length_k52: userAnswers.length_f52,
-        width_k52: userAnswers.width_f52,
-        order_number : "",
+        image_frame: userSendAttachment.shareimagedwkAttachment,
+        price_frame53: price_frame53,
+        total_price_frame53: total_price_frame53,
       }
 
-      db.collection('orders').doc().set(data);
+      db.collection('order_frame_53').doc().set(data);
+
+
 
     
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
