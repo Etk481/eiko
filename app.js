@@ -625,11 +625,11 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"Yes!",
+          "title":"Yes..",
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
-          "title":"No!",
+          "title":"No..",
           "payload":"<POSTBACK_PAYLOAD>"
         }
       ]
@@ -931,7 +931,7 @@ if (received_message.text == "yes") {
     botQuestions.cusPh = false;
 }
 
-else if (received_message.text == "No" || received_message.text == "No." ||received_message.text == "No!" || received_message.text == "no") {
+else if (received_message.text == "No" || received_message.text == "No." ||received_message.text == "No.." || received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
       }
