@@ -91,7 +91,7 @@ const
     cusPh:false,
   };
 
-  let hdwt15 = {
+  let hdwt515 = {
     cusName:false,
     cusPh:false,
   };
