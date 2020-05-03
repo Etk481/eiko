@@ -71,7 +71,12 @@ const
     cusPh:false,
   };
 
-  let frame = {
+  let frame53 = {
+    cusName:false,
+    cusPh:false,
+  };
+
+  let frame52 = {
     cusName:false,
     cusPh:false,
   };
@@ -83,7 +88,8 @@ const
   
 
   let userAnswers = {};
-  let frameAnswers = {};
+  let frame53Answers = {};
+  let frame52Answers = {};
   let userSendAttachment = [];
 
 
@@ -573,11 +579,11 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"yes",
+          "title":"Yes.",
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
-          "title":"no",
+          "title":"No.",
           "payload":"<POSTBACK_PAYLOAD>"
         }
       ]
@@ -817,16 +823,16 @@ if (received_message.text == "Yes") {
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
-    frame.cusName = true;
-} else if (received_message.text && frame.cusName == true) {
-    frameAnswers.cusName = received_message.text;
+    frame53.cusName = true;
+} else if (received_message.text && frame53.cusName == true) {
+    frame53Answers.cusName = received_message.text;
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
     }
-    frame.cusName = false;
-    frame.cusPh = true;
-} else if (received_message.text && frame.cusPh == true) {
-      frameAnswers.cusPh = received_message.text;
+    frame53.cusName = false;
+    frame53.cusPh = true;
+} else if (received_message.text && frame53.cusPh == true) {
+      frame53Answers.cusPh = received_message.text;
       let price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53;
       let total_price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53 * userAnswers.quantity_f53;
       let data = {
@@ -836,20 +842,59 @@ if (received_message.text == "Yes") {
         quantity_k53: userAnswers.quantity_f53,
         length_k53: userAnswers.length_f53,
         width_k53: userAnswers.width_f53,
-        image_frame: userSendAttachment.shareimagedwkAttachment,
+        image_frame52: userSendAttachment.shareimagedwkAttachment,
         price_frame53: price_frame53,
         total_price_frame53: total_price_frame53,
       }
 
-      db.collection('order_frame_53').doc().set(data);
+      db.collection('orders').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
-    frame.cusPh = false;
+    frame53.cusPh = false;
 } 
+
+
+if (received_message.text == "Yes.") {
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
+      }
+    frame52.cusName = true;
+} else if (received_message.text && frame52.cusName == true) {
+    frame52Answers.cusName = received_message.text;
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
+    }
+    frame52.cusName = false;
+    frame52.cusPh = true;
+} else if (received_message.text && frame52.cusPh == true) {
+      frame52Answers.cusPh = received_message.text;
+      let price_frame52 = 3000 * userAnswers.length_f52 * userAnswers.width_f52;
+      let total_price_frame52 = 3000 * userAnswers.length_f52 * userAnswers.width_f52 * userAnswers.quantity_f52;
+      let data = {
+        id : sender_psid,
+        name:frame52Answers.cusName,
+        phone_no: frame52Answers.cusPh,
+        quantity_k52: userAnswers.quantity_f52,
+        length_k52: userAnswers.length_f52,
+        width_k52: userAnswers.width_f52,
+        image_frame52: userSendAttachment.shareimagedwkAttachment,
+        price_frame52: price_frame52,
+        total_price_frame52: total_price_frame52,
+      }
+
+      db.collection('orders').doc().set(data);
+
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
+    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    callSend(sender_psid, response1).then(()=>{
+        return callSend(sender_psid, response2);
+    }); 
+    frame52.cusPh = false;
+}
 
 
 if (received_message.text == "yes") {
@@ -875,7 +920,7 @@ if (received_message.text == "yes") {
     botQuestions.cusPh = false;
 }
 
-else if (received_message.text == "No" || received_message.text == "no") {
+else if (received_message.text == "No" || received_message.text == "No." ||received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
       }
