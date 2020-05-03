@@ -529,7 +529,7 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"yes",
+          "title":"Yes",
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
@@ -807,22 +807,19 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
       botQuestions.quantity_wl415 = false;
   }
 
-else if (received_message.text == "yes") {
+if (received_message.text == "Yes") {
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
     botQuestions.cusName = true;
-} 
-else if (received_message.text && botQuestions.cusName == true) {
+} else if (received_message.text && botQuestions.cusName == true) {
     userAnswers.cusName = received_message.text;
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
     }
     botQuestions.cusName = false;
     botQuestions.cusPh = true;
-}
-
-else if (received_message.text && botQuestions.cusPh == true) {
+} else if (received_message.text && botQuestions.cusPh == true) {
       userAnswers.cusPh = received_message.text;
       let price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53;
       let total_price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53 * userAnswers.quantity_f53;
@@ -840,9 +837,6 @@ else if (received_message.text && botQuestions.cusPh == true) {
 
       db.collection('order_frame_53').doc().set(data);
 
-
-
-    
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
     callSend(sender_psid, response1).then(()=>{
@@ -854,6 +848,30 @@ else if (received_message.text && botQuestions.cusPh == true) {
         "text":'ကျေးဇူးတင်ပါတယ်' 
       }
   }
+
+
+if (received_message.text == "yes") {
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
+      }
+    botQuestions.cusName = true;
+} else if (received_message.text && botQuestions.cusName == true) {
+    userAnswers.cusName = received_message.text;
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
+    }
+    botQuestions.cusName = false;
+    botQuestions.cusPh = true;
+} else if (received_message.text && botQuestions.cusPh == true) {
+      userAnswers.cusPh = received_message.text;
+
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
+    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    callSend(sender_psid, response1).then(()=>{
+        return callSend(sender_psid, response2);
+    }); 
+    botQuestions.cusPh = false;
+}
 
         
 
