@@ -81,11 +81,6 @@ const
     cusPh:false,
   };
 
-  let sdwt515 = {
-    cusName:false,
-    cusPh:false,
-  };
-
   let shareimageAttachment = false;
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
@@ -95,7 +90,6 @@ const
   let userAnswers = {};
   let frame53Answers = {};
   let frame52Answers = {};
-  let sdwt515Answers = {};
   let userSendAttachment = [];
 
 
@@ -625,11 +619,11 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"Yes..",
+          "title":"yes",
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
-          "title":"No..",
+          "title":"no",
           "payload":"<POSTBACK_PAYLOAD>"
         }
       ]
@@ -931,7 +925,7 @@ if (received_message.text == "yes") {
     botQuestions.cusPh = false;
 }
 
-else if (received_message.text == "No" || received_message.text == "No." ||received_message.text == "No.." || received_message.text == "no") {
+else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
       }
