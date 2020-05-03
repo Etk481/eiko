@@ -826,6 +826,9 @@ else if (received_message.text && botQuestions.cusPh == true) {
       userAnswers.cusPh = received_message.text;
       let price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53;
       let total_price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53 * userAnswers.quantity_f53;
+      let quantity_k52 = userAnswers.quantity_f52;
+      let length_k52 = userAnswers.length_f52;
+      let width_k52 = userAnswers.width_f52;
       let price_frame52 = 3000 * userAnswers.length_f52 * userAnswers.width_f52;
       let total_price_frame52 = 3000 * userAnswers.length_f52 * userAnswers.width_f52 * userAnswers.quantity_f52;
       let data = {
@@ -837,9 +840,9 @@ else if (received_message.text && botQuestions.cusPh == true) {
         width_k53: userAnswers.width_f53,
         image_frame53: userSendAttachment.shareimagedwkAttachment,
         price_frame53: price_frame53,
-        quantity_k52: userAnswers.quantity_f52,
-        length_k52: userAnswers.length_f52,
-        width_k52: userAnswers.width_f52,
+        quantity_k52: quantity_k52,
+        length_k52: length_k52,
+        width_k52: width_k52,
         total_price_frame53: total_price_frame53,
         price_frame52: price_frame52,
         total_price_frame52: total_price_frame52,
