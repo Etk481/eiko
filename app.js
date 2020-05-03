@@ -858,43 +858,7 @@ if (received_message.text == "Yes") {
 } 
 
 
-if (received_message.text == "Yes.") {
-    response = {
-      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
-      }
-    frame52.cusName = true;
-} else if (received_message.text && frame52.cusName == true) {
-    frame52Answers.cusName = received_message.text;
-    response = {
-      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
-    }
-    frame52.cusName = false;
-    frame52.cusPh = true;
-} else if (received_message.text && frame52.cusPh == true) {
-      frame52Answers.cusPh = received_message.text;
-      let price_frame52 = 3000 * userAnswers.length_f52 * userAnswers.width_f52;
-      let total_price_frame52 = 3000 * userAnswers.length_f52 * userAnswers.width_f52 * userAnswers.quantity_f52;
-      let data = {
-        id : sender_psid,
-        name:frame52Answers.cusName,
-        phone_no: frame52Answers.cusPh,
-        quantity_k52: userAnswers.quantity_f52,
-        length_k52: userAnswers.length_f52,
-        width_k52: userAnswers.width_f52,
-        image_frame52: userSendAttachment.shareimagedwkAttachment,
-        price_frame52: price_frame52,
-        total_price_frame52: total_price_frame52,
-      }
 
-      db.collection('order').doc().set(data);
-
-    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
-    callSend(sender_psid, response1).then(()=>{
-        return callSend(sender_psid, response2);
-    }); 
-    frame52.cusPh = false;
-}
 
 
 if (received_message.text == "yes") {
