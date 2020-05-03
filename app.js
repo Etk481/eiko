@@ -81,6 +81,11 @@ const
     cusPh:false,
   };
 
+  let sdwt515 = {
+    cusName:false,
+    cusPh:false,
+  };
+
   let shareimageAttachment = false;
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
@@ -90,6 +95,7 @@ const
   let userAnswers = {};
   let frame53Answers = {};
   let frame52Answers = {};
+  let sdwt515Answers = {};
   let userSendAttachment = [];
 
 
@@ -619,11 +625,11 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
          "quick_replies":[
         {
           "content_type":"text",
-          "title":"yes",
+          "title":"Yes!",
           "payload":"<POSTBACK_PAYLOAD>"
         },{
           "content_type":"text",
-          "title":"no",
+          "title":"No!",
           "payload":"<POSTBACK_PAYLOAD>"
         }
       ]
@@ -823,7 +829,7 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
 
 
 //db frame53
-if (received_message.text == "Yes") 
+if (received_message.text == "Yes") {
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
@@ -900,6 +906,46 @@ if (received_message.text == "Yes.") {
     frame52.cusPh = false;
 } 
 
+//db sdwt515
+if (received_message.text == "Yes!") {
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
+      }
+    sdwt515.cusName = true;
+} else if (received_message.text && sdwt515.cusName == true) {
+    sdwt515Answers.cusName = received_message.text;
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
+    }
+    sdwt515.cusName = false;
+    sdwt515.cusPh = true;
+} else if (received_message.text && sdwt515.cusPh == true) {
+      sdwt515Answers.cusPh = received_message.text;
+
+      let price_515 = 7000 * userAnswers.length_sd515 * userAnswers.width_sd515;
+      let total_price_515 = 7000 * userAnswers.length_sd515 * userAnswers.width_sd515 * userAnswers.quantity_sd515;
+      let data = {
+        id : sender_psid,
+        name:sdwt515Answers.cusName,
+        phone_no: sdwt515Answers.cusPh,
+        quantity_515: userAnswers.quantity_sd515,
+        length_515: userAnswers.length_sd515,
+        width_515: userAnswers.width_sd515,
+        image_515: userSendAttachment.shareimageAttachment,
+        price_515: price_515,
+        total_price_515: total_price_515,
+      }
+
+      db.collection('order_dw_wood515').doc().set(data);
+
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
+    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    callSend(sender_psid, response1).then(()=>{
+        return callSend(sender_psid, response2);
+    }); 
+    sdwt515.cusPh = false;
+}
+
 
 
 if (received_message.text == "yes") {
@@ -925,7 +971,7 @@ if (received_message.text == "yes") {
     botQuestions.cusPh = false;
 }
 
-else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "no") {
+else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "No!"|| received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
       }
