@@ -1014,8 +1014,8 @@ if (received_message.text == "yes..") {
 } else if (received_message.text && hdwt515.cusPh == true) {
       hdwt515Answers.cusPh = received_message.text;
 
-      let price_hdwt515 = 7000 * userAnswers.length_hd515 * userAnswers.width_hd515;
-      let total_price_hdwt515 = 7000 * userAnswers.length_hd515 * userAnswers.width_hd515 * userAnswers.quantity_hd515;
+      let price_hdwt515 = 8000 * userAnswers.length_hd515 * userAnswers.width_hd515;
+      let total_price_hdwt515 = 8000 * userAnswers.length_hd515 * userAnswers.width_hd515 * userAnswers.quantity_hd515;
       let data = {
         id : sender_psid,
         name:hdwt515Answers.cusName,
@@ -1024,11 +1024,11 @@ if (received_message.text == "yes..") {
         length_hdwt515: userAnswers.length_hd515,
         width_hdwt515: userAnswers.width_hd515,
         image_hdwt515: userSendAttachment.shareimagehdwtAttachment,
-        price_hdwt515: price_sdwt515,
+        price_hdwt515: price_hdwt515,
         total_price_hdwt515: total_price_hdwt515,
       }
 
-      db.collection('order_dw_wood515').doc().set(data);
+      db.collection('order_hdw_wood515').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
