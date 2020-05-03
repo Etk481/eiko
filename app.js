@@ -929,7 +929,7 @@ if (received_message.text == "Yes!") {
       sdwt515Answers.cusPh = received_message.text;
 
       let price_sdwt515 = 7000 * userAnswers.length_sd515 * userAnswers.width_sd515;
-      let total_sdwtprice_515 = 7000 * userAnswers.length_sd515 * userAnswers.width_sd515 * userAnswers.quantity_sd515;
+      let total_price_sdwt515 = 7000 * userAnswers.length_sd515 * userAnswers.width_sd515 * userAnswers.quantity_sd515;
       let data = {
         id : sender_psid,
         name:sdwt515Answers.cusName,
