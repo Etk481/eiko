@@ -879,15 +879,16 @@ if (received_message.text == "Yes") {
         id : sender_psid,
         name:frame53Answers.cusName,
         phone_no: frame53Answers.cusPh,
-        quantity_k53: userAnswers.quantity_f53,
-        length_k53: userAnswers.length_f53,
-        width_k53: userAnswers.width_f53,
-        image_frame53: userSendAttachment.shareimagedwkAttachment,
-        price_frame53: price_frame53,
-        total_price_frame53: total_price_frame53,
+        quantity: userAnswers.quantity_f53,
+        length: userAnswers.length_f53,
+        width: userAnswers.width_f53,
+        mass: "5*3(inch)",
+        image: userSendAttachment.shareimagedwkAttachment,
+        one_price: price_frame53,
+        total_price: total_price_frame53,
       }
 
-      db.collection('order_frame_53').doc().set(data);
+      db.collection('orders_info').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
@@ -918,15 +919,16 @@ if (received_message.text == "Yes.") {
         id : sender_psid,
         name:frame52Answers.cusName,
         phone_no: frame52Answers.cusPh,
-        quantity_k52: userAnswers.quantity_f52,
-        length_k52: userAnswers.length_f52,
-        width_k52: userAnswers.width_f52,
-        image_frame52: userSendAttachment.shareimagedwkAttachment,
-        price_frame52: price_frame52,
-        total_price_frame52: total_price_frame52,
+        quantity: userAnswers.quantity_f52,
+        length: userAnswers.length_f52,
+        width: userAnswers.width_f52,
+        mass: "5*2(inch)",
+        image: userSendAttachment.shareimagedwkAttachment,
+        one_price: price_frame52,
+        total: total_price_frame52,
       }
 
-      db.collection('order_frame_52').doc().set(data);
+      db.collection('orders_info').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
@@ -958,15 +960,16 @@ if (received_message.text == "Yes!") {
         id : sender_psid,
         name:sdwt515Answers.cusName,
         phone_no: sdwt515Answers.cusPh,
-        quantity_sdwt515: userAnswers.quantity_sd515,
-        length_sdwt515: userAnswers.length_sd515,
-        width_sdwt515: userAnswers.width_sd515,
-        image_sdwt515: userSendAttachment.shareimageAttachment,
-        price_sdwt515: price_sdwt515,
-        total_price_sdwt515: total_price_sdwt515,
+        quantity: userAnswers.quantity_sd515,
+        length: userAnswers.length_sd515,
+        width: userAnswers.width_sd515,
+        mass: "5*1.5(inch)",
+        image: userSendAttachment.shareimageAttachment,
+        one_price: price_sdwt515,
+        total_price: total_price_sdwt515,
       }
 
-      db.collection('order_dw_wood515').doc().set(data);
+      db.collection('orders_info').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
