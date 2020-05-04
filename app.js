@@ -1158,22 +1158,7 @@ if (received_message.text == "yes") {
 } else if (received_message.text && wlg415.cusPh == true) {
       wlg415Answers.cusPh = received_message.text;
 
-      let price_wlg415 = 4900 * userAnswers.length_wl415 * userAnswers.width_wl415;
-      let total_price_wlg415 = 4900 * userAnswers.length_wl415 * userAnswers.width_wl415 * userAnswers.quantity_wl415;
-      let data = {
-        id : sender_psid,
-        name:wlg415Answers.cusName,
-        phone_no: wlg415Answers.cusPh,
-        quantity: userAnswers.quantity_wl415,
-        length: userAnswers.length_wl415,
-        width: userAnswers.width_wl415,
-        mass: ""
-        image: userSendAttachment.shareimagehwlgAttachment,
-        one_price: price_wlg415,
-        total_price: total_price_wlg415,
-      }
 
-      db.collection('orders_info').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
