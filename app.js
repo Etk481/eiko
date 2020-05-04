@@ -960,15 +960,16 @@ if (received_message.text == "Yes!") {
         id : sender_psid,
         name:sdwt515Answers.cusName,
         phone_no: sdwt515Answers.cusPh,
-        quantity_sdwt515: userAnswers.quantity_sd515,
-        length_sdwt515: userAnswers.length_sd515,
-        width_sdwt515: userAnswers.width_sd515,
-        image_sdwt515: userSendAttachment.shareimageAttachment,
-        price_sdwt515: price_sdwt515,
-        total_price_sdwt515: total_price_sdwt515,
+        quantity: userAnswers.quantity_sd515,
+        length: userAnswers.length_sd515,
+        width: userAnswers.width_sd515,
+        mass: "5*1.5(inch)",
+        image: userSendAttachment.shareimageAttachment,
+        one_price: price_sdwt515,
+        total_price: total_price_sdwt515,
       }
 
-      db.collection('order_dw_wood515').doc().set(data);
+      db.collection('orders_info').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
@@ -1000,15 +1001,16 @@ if (received_message.text == "yes.") {
         id : sender_psid,
         name:sdwt415Answers.cusName,
         phone_no: sdwt415Answers.cusPh,
-        quantity_sdwt415: userAnswers.quantity_sd415,
-        length_sdwt415: userAnswers.length_sd415,
-        width_sdwt415: userAnswers.width_sd415,
-        image_sdwt415: userSendAttachment.shareimageAttachment,
-        price_sdwt415: price_sdwt415,
-        total_price_sdwt415: total_price_sdwt415,
+        quantity: userAnswers.quantity_sd415,
+        length: userAnswers.length_sd415,
+        width: userAnswers.width_sd415,
+        mass: "4*1.5(inch)",
+        image: userSendAttachment.shareimageAttachment,
+        one_price: price_sdwt415,
+        total_price: total_price_sdwt415,
       }
 
-      db.collection('order_dw_wood415').doc().set(data);
+      db.collection('orders_info').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
