@@ -106,6 +106,11 @@ const
     cusPh:false,
   };
 
+  let wlg415 = {
+    cusName:false,
+    cusPh:false,
+  };
+
   let shareimageAttachment = false;
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
@@ -120,6 +125,7 @@ const
   let hdwt515Answers = {};
   let hdwt415Answers = {}; 
   let wlg515Answers = {}; 
+  let wlg415Answers = {};
   let userSendAttachment = [];
 
 
