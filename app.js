@@ -101,6 +101,11 @@ const
     cusPh:false,
   };
 
+  let wlg515 = {
+    cusName:false,
+    cusPh:false,
+  };
+
   let shareimageAttachment = false;
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
@@ -113,7 +118,8 @@ const
   let sdwt515Answers = {};
   let sdwt415Answers = {};
   let hdwt515Answers = {};
-  let hdwt415Answers = {};  
+  let hdwt415Answers = {}; 
+  let wlg515Answers = {}; 
   let userSendAttachment = [];
 
 
@@ -1084,6 +1090,53 @@ if (received_message.text == "yes!") {
     hdwt415.cusPh = false;
 }
 
+//db wlg515
+if (received_message.text == "yes") {
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
+      }
+    wlg515.cusName = true;
+} else if (received_message.text && wlg515.cusName == true) {
+    wlg515Answers.cusName = received_message.text;
+    response = {
+      "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
+    }
+    wlg515.cusName = false;
+    wlg515.cusPh = true;
+} else if (received_message.text && wlg515.cusPh == true) {
+      wlg515Answers.cusPh = received_message.text;
+
+      let price_wlg515 = 5200 * userAnswers.length_wl515 * userAnswers.width_wl515;
+      let total_price_wlg515 = 5200 * userAnswers.length_wl515 * userAnswers.width_wl515 * userAnswers.quantity_wl515;
+      let data = {
+        id : sender_psid,
+        name:wlg515Answers.cusName,
+        phone_no: wlg515Answers.cusPh,
+        quantity_hdwt415: userAnswers.quantity_wl515,
+        length_hdwt415: userAnswers.length_wl515,
+        width_hdwt415: userAnswers.width_wl515,
+        image_hdwt415: userSendAttachment.shareimagehwlgAttachment,
+        price_hdwt415: price_wlg515,
+        total_price_hdwt415: total_price_wlg515,
+      }
+
+      db.collection('order_hdw_wood415').doc().set(data);
+
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
+    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    callSend(sender_psid, response1).then(()=>{
+        return callSend(sender_psid, response2);
+    }); 
+    wlg515.cusPh = false;
+}
+
+else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no.." || received_message.text == "no!" || received_message.text == "no..." || received_message.text == "no") {
+      response = {
+        "text":'ကျေးဇူးတင်ပါတယ်' 
+      }
+  }
+
+
 if (received_message.text == "yes") {
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
@@ -1107,7 +1160,7 @@ if (received_message.text == "yes") {
     botQuestions.cusPh = false;
 }
 
-else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no.." || received_message.text == "no!" || received_message.text == "no") {
+else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no.." || received_message.text == "no!" || received_message.text == "no..." || received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
       }
