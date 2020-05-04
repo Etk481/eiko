@@ -1136,11 +1136,6 @@ if (received_message.text == "yes...") {
     wlg515.cusPh = false;
 }
 
-else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no.." || received_message.text == "no!" || received_message.text == "no..." || received_message.text == "no") {
-      response = {
-        "text":'ကျေးဇူးတင်ပါတယ်' 
-      }
-  }
 
 //db wlg415
 if (received_message.text == "yes") {
