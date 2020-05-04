@@ -1045,6 +1045,7 @@ if (received_message.text == "yes..") {
         quantity: userAnswers.quantity_hd515,
         length: userAnswers.length_hd515,
         width: userAnswers.width_hd515,
+        mass: "5*1.5(inch)",
         image: userSendAttachment.shareimagehdwtAttachment,
         one_price: price_hdwt515,
         total_price: total_price_hdwt515,
