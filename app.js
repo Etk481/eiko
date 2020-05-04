@@ -1097,7 +1097,7 @@ if (received_message.text == "yes!") {
 }
 
 //db wlg515
-if (received_message.text == "yes") {
+if (received_message.text == "yes...") {
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
