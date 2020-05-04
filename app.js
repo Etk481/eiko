@@ -824,7 +824,7 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
   }
   else if (received_message.text && botQuestions.width_wl415 == true) {
       userAnswers.width_wl415 = received_message.text;
-      let totalFoot_wl415 = 6800 * (userAnswers.width_wl415 * userAnswers.length_wl415);
+      let totalFoot_wl415 = 4900 * (userAnswers.width_wl415 * userAnswers.length_wl415);
       response = {
         "text":`၁ခုအတွက် ${totalFoot_wl415} ကျပ်ကျပါမယ်။ ဘယ်နှစ်ခုမှာယူလိုပါသလဲ? မှာယူလိုသော Amount ကိုရိုက်ထည့်ပေးပါ။ eg. 1`
       };
@@ -833,7 +833,7 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
   }  
   else if (received_message.text && botQuestions.quantity_wl415 == true) {
       userAnswers.quantity_wl415 = parseInt(received_message.text);
-      let total_wl415 = (6800 * (userAnswers.width_wl415 * userAnswers.length_wl415)) * userAnswers.quantity_wl415;
+      let total_wl415 = (4900 * (userAnswers.width_wl415 * userAnswers.length_wl415)) * userAnswers.quantity_wl415;
       response = {
         "text":`စုစုပေါင်း ကျသင့်‌ငွေမှာ ${total_wl415} ဖြစ်ပါတယ်။ မှာယူမှာသေချာပါသလား?`,
          "quick_replies":[
@@ -1136,28 +1136,45 @@ else if (received_message.text == "No" || received_message.text == "No." || rece
       }
   }
 
-
+//db wlg415
 if (received_message.text == "yes") {
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏အမည်လေးရိုက်ပို့ပေးပါ။ (eg. Ei Myat Ko))'
       }
-    botQuestions.cusName = true;
-} else if (received_message.text && botQuestions.cusName == true) {
-    userAnswers.cusName = received_message.text;
+    wlg415.cusName = true;
+} else if (received_message.text && wlg415.cusName == true) {
+    wlg415Answers.cusName = received_message.text;
     response = {
       "text":'ဟုတ်ကဲ့ခင်ဗျာ လူကြီးမင်း၏ဖုန်းနံပါတ်လေးသိပါရစေ။ (eg. 09797676113))'
     }
-    botQuestions.cusName = false;
-    botQuestions.cusPh = true;
-} else if (received_message.text && botQuestions.cusPh == true) {
-      userAnswers.cusPh = received_message.text;
+    wlg415.cusName = false;
+    wlg415.cusPh = true;
+} else if (received_message.text && wlg415.cusPh == true) {
+      wlg415Answers.cusPh = received_message.text;
+
+      let price_wlg415 = 4900 * userAnswers.length_wl415 * userAnswers.width_wl415;
+      let total_price_wlg415 = 4900 * userAnswers.length_wl415 * userAnswers.width_wl415 * userAnswers.quantity_wl415;
+      let data = {
+        id : sender_psid,
+        name:wlg415Answers.cusName,
+        phone_no: wlg415Answers.cusPh,
+        quantity: userAnswers.quantity_wl415,
+        length: userAnswers.length_wl415,
+        width: userAnswers.width_wl415,
+        mass: "(4"*1.5")"
+        image: userSendAttachment.shareimagehwlgAttachment,
+        one_price: price_wlg415,
+        total_price: total_price_wlg415,
+      }
+
+      db.collection('orders_info').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
-    botQuestions.cusPh = false;
+    wlg415.cusPh = false;
 }
 
 else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no.." || received_message.text == "no!" || received_message.text == "no..." || received_message.text == "no") {
