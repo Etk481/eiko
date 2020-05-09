@@ -1005,8 +1005,8 @@ if (received_message.text == "Yes.") {
     userSendAttachment.userPaymentattachment = attachment_url6;
 
       let price_frame52 = 3000 * (userAnswers.length_f52 * userAnswers.width_f52);
-      let total_price_frame52 = (3000 * (userAnswers.length_f52 * userAnswers.width_f52)) * userAnswers.quantity_f52;
-      let balance = ((3000 * (userAnswers.length_f52 * userAnswers.width_f52)) * userAnswers.quantity_f52) - 10000;
+      let total_price_frame52 = price_frame52 * userAnswers.quantity_f52;
+      let balance = total_price_frame52 - 10000;
       let data = {
         User_ID : sender_psid,
         User_Name:frame52Answers.cusName,
@@ -1019,6 +1019,7 @@ if (received_message.text == "Yes.") {
         Unit_Price: "3000",
         Amount: price_frame52,
         Total_Amount: total_price_frame52,
+        Part_Payment_In_Advance: userSendAttachment.userPaymentattachment,
         Balance: balance,
       }
 
