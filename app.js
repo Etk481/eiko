@@ -887,7 +887,7 @@ if (received_message.text == "Yes") {
         "attachment":{
             "type":"image", 
             "payload":{
-              "url":"", 
+              "url":"https://www.facebook.com/116284523247459/photos/a.128691958673382/162722401937004/?type=3&eid=ARALMSKKMtKigm0G9BZqjZ_oudZtjTwleDwco-BOBO9oidaDiSJx1nbjLYodzID-RQI3rv0d8mXKLGyT&__xts__%5B0%5D=68.ARATPyABvmlK2JOpbohRb_P4upy91EUFn_Z0q1p5MeZko5Qi1jc8sQe6_cqtrlXBfCzl1-PVdkMEZJI1rIf8nPz0EQrrmyW3OqU2ID1IXAhdiOFd68xxq0B6aHbRGjBEM12vuXxLN3lMpb-FxhpN_Q0dXWhXx-NzNms7Tv5YG1IH4ZswitpFH4kmRxuSW2RoiuiFk55mWbbVBnJeNUtoZw113FrgIg4_zHTWq-zRFLSnfD4RiWQvqVStBNydQlOXnMvaMGtE2nqzZ_6V6NIstwHkZ3ACd1coWjWJ9Iu02U1V3T7wYYhIeejyRVmDL9C52uPduVeRDFM8AV0t2hmvxGU&__tn__=EEHH-R", 
               "is_reusable":true
             }
           }
@@ -907,8 +907,8 @@ if (received_message.text == "Yes") {
 }else if (received_message.attachments && userPaymentattachment == true) {
     userPaymentattachment == false;
     // Get the URL of the message attachment
-    let attachment_url = received_message.attachments[0].payload.url;
-    userSendAttachment.userPaymentattachment = attachment_url;
+    let attachment_url6 = received_message.attachments[0].payload.url;
+    userSendAttachment.userPaymentattachment = attachment_url6;
 
       let price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53;
       let total_price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53 * userAnswers.quantity_f53;
