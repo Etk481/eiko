@@ -1556,7 +1556,7 @@ if (payload === 'getstarted' ) {
     }
   }    
   else if (payload === 'wk') {
-    response = {
+  let response1 = {
     "attachment":{
       "type":"template",
       "payload":{
@@ -1583,8 +1583,34 @@ if (payload === 'getstarted' ) {
       }
     }
    }
+  let response2 = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "ကျွန်ုပ်တို့ဆိုင်မှာရှိတဲ့ပုံများကို မကြိုက်ဖူးလား? ",
+                      "subtitle": "လူကြီးမင်း စိတ်ကြိုက်လိုချင်သော ပုံကိုပေးပို့၍လည်း မှာယူနိုင်ပါတယ်ခင်ဗျာ",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ပေးပို့၍မှာမည်",
+                          "payload": "gd1",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "မမှာယူလိုပါ",
+                          "payload": "No!!!",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              };
+  callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+        });
   }else if (payload === 'w1') {
-    response = {
+  let response1 = {
     "attachment":{
       "type":"template",
       "payload":{
@@ -1627,9 +1653,35 @@ if (payload === 'getstarted' ) {
         ]
       }
     }
-   }
+  }
+  let response2 = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "ကျွန်ုပ်တို့ဆိုင်မှာရှိတဲ့ပုံများကို မကြိုက်ဖူးလား? ",
+                      "subtitle": "လူကြီးမင်း စိတ်ကြိုက်လိုချင်သော ပုံကိုပေးပို့၍လည်း မှာယူနိုင်ပါတယ်ခင်ဗျာ",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ပေးပို့၍မှာမည်",
+                          "payload": "gd1",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "မမှာယူလိုပါ",
+                          "payload": "No!!!",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              };
+  callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+        });
   }else if (payload === 'w2') {
-    response = {
+  let response1 = {
     "attachment":{
       "type":"template",
       "payload":{
@@ -1790,9 +1842,35 @@ if (payload === 'getstarted' ) {
         ]
       }
     }
-   }
+  }
+  let response2 = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "ကျွန်ုပ်တို့ဆိုင်မှာရှိတဲ့ပုံများကို မကြိုက်ဖူးလား? ",
+                      "subtitle": "လူကြီးမင်း စိတ်ကြိုက်လိုချင်သော ပုံကိုပေးပို့၍လည်း မှာယူနိုင်ပါတယ်ခင်ဗျာ",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ပေးပို့၍မှာမည်",
+                          "payload": "gd1",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "မမှာယူလိုပါ",
+                          "payload": "No!!!",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              };
+  callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+        });
   }else if (payload === 'dk') {
-    response = {
+  let response1 = {
     "attachment":{
       "type":"template",
       "payload":{
@@ -1818,11 +1896,37 @@ if (payload === 'getstarted' ) {
         ]
       }
     }
-   }
+  }
+  let response2 = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "ကျွန်ုပ်တို့ဆိုင်မှာရှိတဲ့ပုံများကို မကြိုက်ဖူးလား? ",
+                      "subtitle": "လူကြီးမင်း စိတ်ကြိုက်လိုချင်သော ပုံကိုပေးပို့၍လည်း မှာယူနိုင်ပါတယ်ခင်ဗျာ",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ပေးပို့၍မှာမည်",
+                          "payload": "gd1",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "မမှာယူလိုပါ",
+                          "payload": "No!!!",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              };
+  callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+        });
   }
 
   else if (payload === 'd1') {
-    response = {
+  let response1 = {
     "attachment":{
       "type":"template",
       "payload":{
@@ -1848,9 +1952,35 @@ if (payload === 'getstarted' ) {
         ]
       }
     }
-   }
+  }
+  let response2 = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "ကျွန်ုပ်တို့ဆိုင်မှာရှိတဲ့ပုံများကို မကြိုက်ဖူးလား? ",
+                      "subtitle": "လူကြီးမင်း စိတ်ကြိုက်လိုချင်သော ပုံကိုပေးပို့၍လည်း မှာယူနိုင်ပါတယ်ခင်ဗျာ",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ပေးပို့၍မှာမည်",
+                          "payload": "gd1",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "မမှာယူလိုပါ",
+                          "payload": "No!!!",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              };
+  callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+        });
   }else if (payload === 'd2') {
-    response = {
+  let response1 = {
     "attachment":{
       "type":"template",
       "payload":{
@@ -1977,7 +2107,33 @@ if (payload === 'getstarted' ) {
         ]
       }
     }
-   }
+  }
+  let response2 = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "ကျွန်ုပ်တို့ဆိုင်မှာရှိတဲ့ပုံများကို မကြိုက်ဖူးလား? ",
+                      "subtitle": "လူကြီးမင်း စိတ်ကြိုက်လိုချင်သော ပုံကိုပေးပို့၍လည်း မှာယူနိုင်ပါတယ်ခင်ဗျာ",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ပေးပို့၍မှာမည်",
+                          "payload": "gd1",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "မမှာယူလိုပါ",
+                          "payload": "No!!!",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              };
+  callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+        });
   } 
 
 //function save image for dkch,wkch
