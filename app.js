@@ -1808,7 +1808,7 @@ if (payload === 'getstarted' ) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"dkCh"
+                "payload":"dkCh_1"
               }              
             ]      
           }
