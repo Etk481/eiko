@@ -934,7 +934,7 @@ if (received_message.text == "Yes") {
         Width: userAnswers.width_f53,
         Mass: "5*3(inch)",
         Image: userSendAttachment.shareimagedwkAttachment,
-        Unit_Price: "4000"
+        Unit_Price: "4000",
         Amount: price_frame53,
         Total_Amount: total_price_frame53,
         Part_Payment_In_Advance: userSendAttachment.userPaymentAttachment,
