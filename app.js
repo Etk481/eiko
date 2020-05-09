@@ -897,7 +897,7 @@ if (received_message.text == "Yes") {
         "attachment":{
             "type":"image", 
             "payload":{
-              "url":"https://www.facebook.com/116284523247459/photos/a.128691958673382/162722401937004/?type=3&eid=ARALMSKKMtKigm0G9BZqjZ_oudZtjTwleDwco-BOBO9oidaDiSJx1nbjLYodzID-RQI3rv0d8mXKLGyT&__xts__%5B0%5D=68.ARATPyABvmlK2JOpbohRb_P4upy91EUFn_Z0q1p5MeZko5Qi1jc8sQe6_cqtrlXBfCzl1-PVdkMEZJI1rIf8nPz0EQrrmyW3OqU2ID1IXAhdiOFd68xxq0B6aHbRGjBEM12vuXxLN3lMpb-FxhpN_Q0dXWhXx-NzNms7Tv5YG1IH4ZswitpFH4kmRxuSW2RoiuiFk55mWbbVBnJeNUtoZw113FrgIg4_zHTWq-zRFLSnfD4RiWQvqVStBNydQlOXnMvaMGtE2nqzZ_6V6NIstwHkZ3ACd1coWjWJ9Iu02U1V3T7wYYhIeejyRVmDL9C52uPduVeRDFM8AV0t2hmvxGU&__tn__=EEHH-R", 
+              "url":"https://scontent.fmdl1-2.fna.fbcdn.net/v/t1.0-9/s960x960/96119431_162722408603670_5690533566404886528_o.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeERdI93VI5ct1zuDe9ISol13LmDhVKFNCjcuYOFUoU0KI2E4Unl8OWRm_6ST5eqzrrWCbzmXvUZWNffGaqNdBNL&_nc_ohc=la9E8GF_SO4AX82_fWb&_nc_ht=scontent.fmdl1-2.fna&_nc_tp=7&oh=098046ace482367d4fad7aef4366b76c&oe=5EDBDB46", 
               "is_reusable":true
             }
           }
@@ -921,16 +921,14 @@ if (received_message.text == "Yes") {
 }else if (received_message.attachments && userPaymentAttachment == true) {
     userPaymentAttachment = false;
     // Get the URL of the message attachment
-    userSendAttachment.userPaymentAttachment = received_message.attachments;
-
+    let attachment_url6 = received_message.attachments[0].payload.url;
+    userSendAttachment.userPaymentattachment = attachment_url6;
 
       let price_frame53 = 4000 * (userAnswers.length_f53 * userAnswers.width_f53);
       let total_price_frame53 = (4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53;
       let balance =  ((4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53) - 5000;
-      let orderNumber = Math.floor(Math.random() * 100) + 1;
       let data = {
         User_ID : sender_psid,
-        Order_Number: orderNumber,
         User_Name:frame53Answers.cusName,
         Phone_No: frame53Answers.cusPh,
         Quantity: userAnswers.quantity_f53,
