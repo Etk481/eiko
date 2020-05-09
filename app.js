@@ -116,7 +116,7 @@ const
   let shareimagehwlgAttachment = false;
   let shareimagedwkAttachment = false;
 
-  let userPaymentattachment = false;
+  let userPaymentAttachment = false;
   
 
   let userAnswers = {};
