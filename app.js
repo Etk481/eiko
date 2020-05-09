@@ -923,7 +923,7 @@ if (received_message.text == "Yes") {
         image: userSendAttachment.shareimagedwkAttachment,
         one_price: price_frame53,
         total_price: total_price_frame53,
-        payment: userSendAttachment.userPaymentattachment,
+        
       }
 
       db.collection('orders_info').doc().set(data);
