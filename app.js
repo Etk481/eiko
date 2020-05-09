@@ -335,6 +335,8 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
     shareimageAttachment = false;
     shareimagehdwtAttachment = false;
     shareimagehwlgAttachment = false;
+    userPaymentAttachment52 = false;
+    userPaymentAttachment53 = false;
 }else if (received_message.attachments && shareimagedwkAttachment == true) {
     shareimagedwkAttachment == false;
     // Get the URL of the message attachment
@@ -396,6 +398,8 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     shareimagehdwtAttachment = false;
     shareimagehwlgAttachment = false;
     shareimagedwkAttachment = false;
+    userPaymentAttachment52 = false;
+    userPaymentAttachment53 = false;
 }else if (received_message.attachments && shareimageAttachment == true) {
     shareimageAttachment == false;
     // Get the URL of the message attachment
@@ -457,6 +461,8 @@ else if (received_message.text == "ကုံးတံခါးမကြီး" |
     shareimageAttachment = false;
     shareimagehwlgAttachment = false;
     shareimagedwkAttachment = false;
+    userPaymentAttachment52 = false;
+    userPaymentAttachment53 = false;
 }else if (received_message.attachments && shareimagehdwtAttachment == true) {
     shareimagehdwtAttachment == false;
     // Get the URL of the message attachment
@@ -516,6 +522,8 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
     shareimagehdwtAttachment = false;
     shareimagedwkAttachment = false;
     shareimageAttachment = false;
+    userPaymentAttachment52 = false;
+    userPaymentAttachment53 = false;
 }else if (received_message.attachments && shareimagehwlgAttachment == true) {
     shareimagehwlgAttachment == false;
     // Get the URL of the message attachment
@@ -916,6 +924,10 @@ if (received_message.text == "Yes") {
   frame53.cusPh = false;
   userPaymentAttachment53 = true;
   userPaymentattachment52 = false;
+  shareimagedwkAttachment = false;
+  shareimagehdwtAttachment = false;
+  shareimagehwlgAttachment = false;
+  shareimageAttachment = false;
 }else if (received_message.attachments && userPaymentAttachment53 == true) {
     userPaymentAttachment53 = false;
     // Get the URL of the message attachment
@@ -993,6 +1005,10 @@ if (received_message.text == "Yes.") {
     frame52.cusPh = false;
     userPaymentAttachment52 = true;
     userPaymentAttachment53 = false;
+    shareimagedwkAttachment = false;
+    shareimagehdwtAttachment = false;
+    shareimagehwlgAttachment = false;
+    shareimageAttachment = false;
 }else if (received_message.attachments && userPaymentAttachment52 == true) {
     userPaymentAttachment52 = false;
     // Get the URL of the message attachment
