@@ -939,7 +939,7 @@ if (received_message.text == "Yes") {
         Unit_Price: "4000",
         Amount: price_frame53,
         Total_Amount: total_price_frame53,
-        Part_Payment_In_Advance: userSendAttachment.userPaymentAttachment,
+        Part_Payment_In_Advance: attachment_url6,
         Balance: balance,
       }
 
