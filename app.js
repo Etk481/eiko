@@ -1198,7 +1198,7 @@ if (received_message.text == "yes") {
 
 
 
-else if (received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no.." || received_message.text == "no!" || received_message.text == "no..." || received_message.text == "no") {
+else if (received_message.text == "No!!!!" || received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no.." || received_message.text == "no!" || received_message.text == "no..." || received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
       }
@@ -1384,32 +1384,6 @@ if (payload === 'getstarted' ) {
 }
 
 
-  else if (payload === 'dtans1') {
-  let response1 = {"text": "ဟုတ်ကဲ့ပါခင်ဗျာ အခုလိုဖြေကြားပေးတဲ့အတွက် ကျွန်တော်တို့ရဲ့ NS Doors & Windows Shop မှ ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ"};
-  let response2 = {"text":'ကျွန်ုပ်တို့ဆိုင်မှာရှိတဲ့ တံခါးပုံများကို   မကြိုက်ပါက လူကြီးမင်း စိတ်ကြိုက်လိုချင်သော တံခါးပုံကိုပေးပို့၍လည်း မှာယူနိုင်ပါသည်ခင်ဗျာ'};
-  let response3 = {
-        "text":'မှာယူလိုပါသလား',
-         "quick_replies":[
-        {
-          "content_type":"text",
-          "title":"yes!",
-          "payload":"dtans2"
-        },{
-          "content_type":"text",
-          "title":"no!",
-          "payload":"dtans3"
-        }
-      ]
-      };
-
-    callSend(sender_psid, response1).then(()=>{
-      return callSend(sender_psid, response2).then(()=>{
-          return callSend(sender_psid, response3);
-        });
-      });
-    }
-
-
 
 //For Door
   else if (payload === 'door') {
@@ -1471,7 +1445,7 @@ if (payload === 'getstarted' ) {
                 }
               }
   }else if (payload === 'light') {
-    response = {
+    let response1 = {
     "attachment":{
       "type":"template",
       "payload":{
@@ -1549,7 +1523,34 @@ if (payload === 'getstarted' ) {
       }
     }
    }
-  }else if (payload === 'wk') {
+  let response2 = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                      "title": "NS Doors & Windows Shop",
+                      "subtitle": "ကျွန်ုပ်တို့ဆိုင်မှာရှိတဲ့ တံခါးပုံများကို   မကြိုက်ပါက လူကြီးမင်း စိတ်ကြိုက်လိုချင်သော ပုံကိုပေးပို့၍လည်း မှာယူနိုင်ပါသည်ခင်ဗျာ",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "ပေးပို့၍မှာမည်",
+                          "payload": "gd1",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "မမှာယူလိုပါ",
+                          "payload": "No!!!",
+                        }
+                      ],
+                    }]
+                  }
+                }
+              };
+  callSend(sender_psid, response1).then(()=>{
+    return callSend(sender_psid, response2);
+        });
+  }
+  else if (payload === 'wk') {
     response = {
     "attachment":{
       "type":"template",
