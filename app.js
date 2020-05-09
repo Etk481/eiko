@@ -913,13 +913,12 @@ if (received_message.text == "Yes") {
       });
     });
   frame53.cusPh = false;
-  userPaymentattachment == true;
-}else if (received_message.attachments && userPaymentattachment == true) {
-    userPaymentattachment == false;
-    shareimagedwkAttachment = false;
+  userPaymentAttachment = true;
+}else if (received_message.attachments && userPaymentAttachment = true) {
+    userPaymentAttachment = false;
     // Get the URL of the message attachment
     let attachment_url6 = received_message.attachments[0].payload.url;
-    userSendAttachment.userPaymentattachment = attachment_url6;
+    userSendAttachment.userPaymentAttachment = attachment_url6;
       
       let price_frame53 = 4000 * (userAnswers.length_f53 * userAnswers.width_f53);
       let total_price_frame53 = (4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53;
@@ -938,7 +937,7 @@ if (received_message.text == "Yes") {
         Unit_Price: "4000"
         Amount: price_frame53,
         Total_Amount: total_price_frame53,
-        Part_Payment_In_Advance: userSendAttachment.userPaymentattachment,
+        Part_Payment_In_Advance: userSendAttachment.userPaymentAttachment,
         Balance: balance,
       }
 
