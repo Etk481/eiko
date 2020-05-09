@@ -1550,7 +1550,7 @@ if (payload === 'getstarted' ) {
     return callSend(sender_psid, response2);
         });
   }
-  else if (received_message.payload == "No!!!") {
+  else if (payload == "No!!!") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
     }
