@@ -115,7 +115,6 @@ const
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
   let shareimagedwkAttachment = false;
-  let userPaymentattachment = false;
   
 
   let userAnswers = {};
@@ -128,7 +127,6 @@ const
   let wlg515Answers = {}; 
   let wlg415Answers = {};
   let userSendAttachment = [];
-
 
 
 
@@ -860,8 +858,6 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
   }
 
 
-
-
 //db frame53
 if (received_message.text == "Yes") {
     response = {
@@ -877,33 +873,30 @@ if (received_message.text == "Yes") {
     frame53.cusPh = true;
 }else if (received_message.text && frame53.cusPh == true) {
       frame53Answers.cusPh = received_message.text;
-      let response1 = {
-        "text": 'ဟုတ်ကဲ့ခင်ဗျာလူကြီးမင်း၏အချက်အလက်များကိုလက်ခံရရှိပါတယ်။ လူကြီးမင်းမှာယူထားသောပစ္စည်း၏ကျသင့်‌ေငွကို KBZ Pay (သို့မဟုတ်) Wave Money မှတစ်ဆင့်ပေးချေနိုင်ပါတယ်ခင်ဗျာ။'
-      };
-      let response2 = {
-        "text": 'Wave 09797676113, Password ကို 676113 ထားပေးပါခင်ဗျာ။'
-      };
-      let response3 = {
-        "attachment":{
-            "type":"image", 
-            "payload":{
-              "url":"https://www.facebook.com/116284523247459/photos/a.128691958673382/162722401937004/?type=3&eid=ARALMSKKMtKigm0G9BZqjZ_oudZtjTwleDwco-BOBO9oidaDiSJx1nbjLYodzID-RQI3rv0d8mXKLGyT&__xts__%5B0%5D=68.ARATPyABvmlK2JOpbohRb_P4upy91EUFn_Z0q1p5MeZko5Qi1jc8sQe6_cqtrlXBfCzl1-PVdkMEZJI1rIf8nPz0EQrrmyW3OqU2ID1IXAhdiOFd68xxq0B6aHbRGjBEM12vuXxLN3lMpb-FxhpN_Q0dXWhXx-NzNms7Tv5YG1IH4ZswitpFH4kmRxuSW2RoiuiFk55mWbbVBnJeNUtoZw113FrgIg4_zHTWq-zRFLSnfD4RiWQvqVStBNydQlOXnMvaMGtE2nqzZ_6V6NIstwHkZ3ACd1coWjWJ9Iu02U1V3T7wYYhIeejyRVmDL9C52uPduVeRDFM8AV0t2hmvxGU&__tn__=EEHH-R", 
-              "is_reusable":true
-            }
-          }
-      };
-      let response4 = {
-        "text": 'ငွေလွှဲထားကြောင်းကို screenshot ရိုက်ပီးပုံလေးပို့ပေးပါ‌ခင်ဗျာ။'
-      };
+      let price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53;
+      let total_price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53 * userAnswers.quantity_f53;
+      let data = {
+        id : sender_psid,
+        name:frame53Answers.cusName,
+        phone_no: frame53Answers.cusPh,
+        quantity: userAnswers.quantity_f53,
+        length: userAnswers.length_f53,
+        width: userAnswers.width_f53,
+        mass: "5*3(inch)",
+        image: userSendAttachment.shareimagedwkAttachment,
+        one_price: price_frame53,
+        total_price: total_price_frame53,
+      }
+
+      db.collection('orders_info').doc().set(data);
+
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
+    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
     callSend(sender_psid, response1).then(()=>{
-      return callSend(sender_psid, response2).then(()=>{
-        return callSend(sender_psid, response3).then(()=>{
-          return callSend(sender_psid, response4);
-        });
-      });
-    });
-  frame53.cusPh = false;
-}
+        return callSend(sender_psid, response2);
+    }); 
+    frame53.cusPh = false;
+} 
 
 //db frame52
 if (received_message.text == "Yes.") {
