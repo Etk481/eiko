@@ -941,7 +941,7 @@ if (received_message.text == "Yes") {
         Balance: balance,
       }
 
-      db.collection('orders_info').doc().set(data);
+      db.collection('order_information').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
