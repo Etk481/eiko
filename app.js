@@ -914,13 +914,12 @@ if (received_message.text == "Yes") {
     });
   frame53.cusPh = false;
   userPaymentAttachment = true;
-}else if (received_message.attachments && userPaymentAttachment = true) {
+}else if (received_message.attachments && userPaymentAttachment == true) {
     userPaymentAttachment = false;
     // Get the URL of the message attachment
-    let attachment_url6 = received_message.attachments[0].payload.url;
-    userSendAttachment.userPaymentAttachment = attachment_url6;
+    userSendAttachment.userPaymentAttachment = received_message.attachments;
 
-      let userSendAttachment.userPaymentAttachment = Part_Payment_In_Advance;
+
       let price_frame53 = 4000 * (userAnswers.length_f53 * userAnswers.width_f53);
       let total_price_frame53 = (4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53;
       let balance =  ((4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53) - 5000;
@@ -938,7 +937,7 @@ if (received_message.text == "Yes") {
         Unit_Price: "4000",
         Amount: price_frame53,
         Total_Amount: total_price_frame53,
-        Part_Payment_In_Advance: Part_Payment_In_Advance,
+        Part_Payment_In_Advance: userSendAttachment.userPaymentAttachment,
         Balance: balance,
       }
 
