@@ -919,8 +919,30 @@ if (received_message.text == "Yes") {
     // Get the URL of the message attachment
     let attachment_url6 = received_message.attachments[0].payload.url;
     userSendAttachment.userPaymentAttachment = attachment_url6;
-    
 
+      let userSendAttachment.userPaymentAttachment = Part_Payment_In_Advance;
+      let price_frame53 = 4000 * (userAnswers.length_f53 * userAnswers.width_f53);
+      let total_price_frame53 = (4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53;
+      let balance =  ((4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53) - 5000;
+      let orderNumber = Math.floor(Math.random() * 100) + 1;
+      let data = {
+        User_ID : sender_psid,
+        Order_Number: orderNumber,
+        User_Name:frame53Answers.cusName,
+        Phone_No: frame53Answers.cusPh,
+        Quantity: userAnswers.quantity_f53,
+        Length: userAnswers.length_f53,
+        Width: userAnswers.width_f53,
+        Mass: "5*3(inch)",
+        Image: userSendAttachment.shareimagedwkAttachment,
+        Unit_Price: "4000",
+        Amount: price_frame53,
+        Total_Amount: total_price_frame53,
+        Part_Payment_In_Advance: Part_Payment_In_Advance,
+        Balance: balance,
+      }
+
+      db.collection('order_information').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
