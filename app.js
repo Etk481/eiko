@@ -115,6 +115,7 @@ const
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
   let shareimagedwkAttachment = false;
+  let userGiveMoneyattachment = false;
   
 
   let userAnswers = {};
@@ -127,6 +128,7 @@ const
   let wlg515Answers = {}; 
   let wlg415Answers = {};
   let userSendAttachment = [];
+  let userSentMoneyAttachment = [];
 
 
 
@@ -858,6 +860,8 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
   }
 
 
+
+
 //db frame53
 if (received_message.text == "Yes") {
     response = {
@@ -873,6 +877,36 @@ if (received_message.text == "Yes") {
     frame53.cusPh = true;
 }else if (received_message.text && frame53.cusPh == true) {
       frame53Answers.cusPh = received_message.text;
+      let response1 = {
+        "text": 'ဟုတ်ကဲ့ခင်ဗျာလူကြီးမင်း၏အချက်အလက်များကိုလက်ခံရရှိပါတယ်။ လူကြီးမင်းမှာယူထားသောပစ္စည်း၏ကျသင့်‌ေငွကို KBZ Pay (သို့မဟုတ်) Wave Money မှတစ်ဆင့်ပေးချေနိုင်ပါတယ်ခင်ဗျာ။'
+      };
+      let response2 = {
+        "text": 'Wave 09797676113, Password ကို 676113 ထားပေးပါခင်ဗျာ။'
+      };
+      let response3 = {
+        "attachment":{
+            "type":"image", 
+            "payload":{
+              "url":"", 
+              "is_reusable":true
+            }
+          }
+      };
+      let response4 = {
+        "text": 'ငွေလွှဲထားကြောင်းကို screenshot ရိုက်ပီးပုံလေးပို့ပေးပါ‌ခင်ဗျာ။'
+      };
+    callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response2).then(()=>{
+        return callSend(sender_psid, response3).then(()=>{
+          return callSend(sender_psid, response4);
+        });
+      });
+    });
+  frame53.cusPh = false;
+  userGiveMoneyattachment = true;
+}else if (received_message.attachment && userGiveMoneyattachment == true) {
+  userSentMoneyAttachment = received_message.attachment;
+
       let price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53;
       let total_price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53 * userAnswers.quantity_f53;
       let data = {
@@ -886,6 +920,7 @@ if (received_message.text == "Yes") {
         image: userSendAttachment.shareimagedwkAttachment,
         one_price: price_frame53,
         total_price: total_price_frame53,
+        payment: userSentMoneyAttachment,
       }
 
       db.collection('orders_info').doc().set(data);
@@ -895,7 +930,7 @@ if (received_message.text == "Yes") {
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
-    frame53.cusPh = false;
+    userGiveMoneyattachment = false;
 } 
 
 //db frame52
