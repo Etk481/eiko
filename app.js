@@ -1198,11 +1198,11 @@ if (received_message.text == "yes") {
 
 
 
-else if (received_message.text == "No!!!" || received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no.." || received_message.text == "no!" || received_message.text == "no..." || received_message.text == "no") {
+else if ( received_message.text == "No" || received_message.text == "No." || received_message.text == "No!" || received_message.text == "no." || received_message.text == "no.." || received_message.text == "no!" || received_message.text == "no..." || received_message.text == "no") {
       response = {
         "text":'ကျေးဇူးတင်ပါတယ်' 
-      }
   }
+      }
 
         
 
@@ -1550,6 +1550,11 @@ if (payload === 'getstarted' ) {
     return callSend(sender_psid, response2);
         });
   }
+  else if (received_message.payload == "No!!!") {
+      response = {
+        "text":'ကျေးဇူးတင်ပါတယ်' 
+    }
+  }    
   else if (payload === 'wk') {
     response = {
     "attachment":{
