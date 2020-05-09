@@ -933,7 +933,6 @@ if (received_message.text == "Yes") {
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
-    userPaymentattachment = false;
 } 
 
 //db frame52
