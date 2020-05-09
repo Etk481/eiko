@@ -329,6 +329,9 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
     shareimagedwkAttachment = true;
+    shareimageAttachment = false;
+    shareimagehdwtAttachment = false;
+    shareimagehwlgAttachment = false;
 }else if (received_message.attachments && shareimagedwkAttachment == true) {
     shareimagedwkAttachment == false;
     // Get the URL of the message attachment
@@ -387,6 +390,9 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
     shareimageAttachment = true;
+    shareimagehdwtAttachment = false;
+    shareimagehwlgAttachment = false;
+    shareimagedwkAttachment = false;
 }else if (received_message.attachments && shareimageAttachment == true) {
     shareimageAttachment == false;
     // Get the URL of the message attachment
@@ -445,6 +451,9 @@ else if (received_message.text == "ကုံးတံခါးမကြီး" |
       "text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
     shareimagehdwtAttachment = true;
+    shareimageAttachment = false;
+    shareimagehwlgAttachment = false;
+    shareimagedwkAttachment = false;
 }else if (received_message.attachments && shareimagehdwtAttachment == true) {
     shareimagehdwtAttachment == false;
     // Get the URL of the message attachment
@@ -501,6 +510,9 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
     response = {"text": 'မှာယူလိုတဲ့ဒီဇိုင်းပုံလေးပို့ပေးပါနော်'   
     }
     shareimagehwlgAttachment = true;
+    shareimagehdwtAttachment = false;
+    shareimagedwkAttachment = false;
+    shareimageAttachment = false;
 }else if (received_message.attachments && shareimagehwlgAttachment == true) {
     shareimagehwlgAttachment == false;
     // Get the URL of the message attachment
@@ -1560,9 +1572,9 @@ if (payload === 'getstarted' ) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"အလျား = 4'",
+            "title":"",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94615637_158424789033432_29034176489455616_o.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGxHptClUWk_FHCiLMMr-OjJgR10uQKP3YmBHXS5Ao_dmu1I4soFzl5myy-bWKP39LtHIrrk65FsJTJHPBef-mj&_nc_ohc=vTAOHDleMNsAX91xieh&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=3350cd0b8d0300ba52154423e815fc8f&oe=5ECBE456",
-            "subtitle":"အနံ = 3.5'",
+            "subtitle":"ပြတင်းကြီးခွေ",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94615637_158424789033432_29034176489455616_o.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGxHptClUWk_FHCiLMMr-OjJgR10uQKP3YmBHXS5Ao_dmu1I4soFzl5myy-bWKP39LtHIrrk65FsJTJHPBef-mj&_nc_ohc=vTAOHDleMNsAX91xieh&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=3350cd0b8d0300ba52154423e815fc8f&oe=5ECBE456",
