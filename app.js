@@ -904,36 +904,7 @@ if (received_message.text == "Yes") {
     });
   frame53.cusPh = false;
   userPaymentattachment = true;
-}else if (received_message.attachments && userPaymentattachment == true) {
-    userPaymentattachment == false;
-    // Get the URL of the message attachment
-    let attachment_url6 = received_message.attachments[0].payload.url;
-    userSendAttachment.userPaymentattachment = attachment_url6;
-
-      let price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53;
-      let total_price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53 * userAnswers.quantity_f53;
-      let data = {
-        id : sender_psid,
-        name:frame53Answers.cusName,
-        phone_no: frame53Answers.cusPh,
-        quantity: userAnswers.quantity_f53,
-        length: userAnswers.length_f53,
-        width: userAnswers.width_f53,
-        mass: "5*3(inch)",
-        image: userSendAttachment.shareimagedwkAttachment,
-        one_price: price_frame53,
-        total_price: total_price_frame53,
-        
-      }
-
-      db.collection('orders_info').doc().set(data);
-
-    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
-    callSend(sender_psid, response1).then(()=>{
-        return callSend(sender_psid, response2);
-    }); 
-} 
+}
 
 //db frame52
 if (received_message.text == "Yes.") {
