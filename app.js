@@ -1713,7 +1713,7 @@ if (payload === 'getstarted' ) {
              {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"w2Ch"
+                "payload":"w2Ch_1"
               }              
             ]      
           },          {
@@ -1746,7 +1746,7 @@ if (payload === 'getstarted' ) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"w2Ch"
+                "payload":"w2Ch_2"
               }              
             ]      
           },
@@ -1763,7 +1763,7 @@ if (payload === 'getstarted' ) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"w2Ch"
+                "payload":"w2Ch_3"
               }              
             ]      
           },
@@ -1780,7 +1780,7 @@ if (payload === 'getstarted' ) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"w2Ch"
+                "payload":"w2Ch_4"
               }              
             ]      
           }
@@ -2011,6 +2011,8 @@ else if (payload ==  'd1Ch' || payload ==  'w1Ch') {
     }
 }
 
+
+//function save image for d2Ch,w2Ch
 else if (payload ==  'd2Ch' || payload ==  'w2Ch') {
   order2(sender_psid);
 }
@@ -2042,8 +2044,24 @@ else if (payload == 'd2Ch_7') {
    userSendAttachment.shareimagehdwtAttachment = "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94883260_158969862312258_5367153981061595136_o.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeF1t2BNHAyHfcRCqJ_V3MBinJY8XZGtCy-cljxdka0LLyQASk2EQ5SiskWJBK3gD3UiHx2wFDr-MscMWqBr0HI4&_nc_ohc=A86Q1m1mDEsAX_7D6Sr&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=df256361d9297c8e060e8cdc84830acd&oe=5ECE3FC5";
   order2(sender_psid);
 }
+else if (payload == 'w2Ch_1') {
+   userSendAttachment.shareimagehdwtAttachment = "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94934046_158969882312256_5243515363102031872_o.jpg?_nc_cat=101&_nc_sid=110474&_nc_eui2=AeEqOirDo-iF4wYZ89M1Az2EbvDCZmMNLBNu8MJmYw0sE-FdrbH6BaEiHzpQV1FJVsIDj2qfunyLo2c-bhTfRKwk&_nc_ohc=0zeGPvxQ0qUAX9DX_Yb&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=16cd87d44f6cd6d802d29342ee84cca2&oe=5ECB7CE3";
+  order2(sender_psid);
+}
+else if (payload == 'w2Ch_2') {
+   userSendAttachment.shareimagehdwtAttachment = "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84353475_128707478671830_2425593354625482752_o.jpg?_nc_cat=110&_nc_ohc=mlYuYO7C55cAX848IYT&_nc_ht=scontent.fnyt1-1.fna&oh=0207efe0b84d3f432b35c7f52346cdc6&oe=5EB8AC7A";
+  order2(sender_psid);
+}
+else if (payload == 'w2Ch_3') {
+   userSendAttachment.shareimagehdwtAttachment = "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85145127_128707675338477_5778662326769025024_o.jpg?_nc_cat=100&_nc_ohc=T2fDm1dMklMAX9zwjN5&_nc_ht=scontent.fnyt1-1.fna&oh=f46c2aec1ea73b75ae684736bb25a3d7&oe=5ECAA092";
+  order2(sender_psid);
+}
+else if (payload == 'w2Ch_4') {
+   userSendAttachment.shareimagehdwtAttachment = "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85106340_128707742005137_7266967579728543744_o.jpg?_nc_cat=105&_nc_ohc=U-PKOqC73h0AX-0SIlS&_nc_ht=scontent.fnyt1-1.fna&oh=30e2deaf28b3f0533f5a81140ef8fcf7&oe=5EBC4CFA";
+  order2(sender_psid);
+}
 
-
+//function save image for wChg,lCh
 else if (payload ==  'wChg' || payload ==  'lCh') {
   order1(sender_psid);
 }
