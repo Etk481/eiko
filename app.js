@@ -2026,6 +2026,18 @@ else if (payload == 'd2Ch_3') {
    userSendAttachment.shareimagehdwtAttachment = "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85124252_128731588669419_8225910691752574976_o.jpg?_nc_cat=109&_nc_ohc=Z5dkuSQUQJwAX8kXFSa&_nc_ht=scontent.fnyt1-1.fna&oh=525217a6019e787cdb74108c40b0f42f&oe=5ED07986";
   order2(sender_psid);
 }
+else if (payload == 'd2Ch_4') {
+   userSendAttachment.shareimagehdwtAttachment = "";
+  order2(sender_psid);
+}
+else if (payload == 'd2Ch_5') {
+   userSendAttachment.shareimagehdwtAttachment = "";
+  order2(sender_psid);
+}
+else if (payload == 'd2Ch_6') {
+   userSendAttachment.shareimagehdwtAttachment = "";
+  order2(sender_psid);
+}
 
 
 else if (payload ==  'wChg' || payload ==  'lCh') {
