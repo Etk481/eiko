@@ -1600,7 +1600,7 @@ if (payload === 'getstarted' ) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"wChg"
+                "payload":"wChg1"
               }              
             ]      
           },
@@ -2027,8 +2027,11 @@ else if (payload ==  'd2Ch' || payload ==  'w2Ch') {
       ]
     }
 }
-
 else if (payload ==  'wChg' || payload ==  'lCh') {
+  order1(sender_psid);
+}
+else if (payload == 'wChg1') {
+  userSendAttachment.shareimageAttachment = "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84516484_128707305338514_4909051974701285376_o.jpg?_nc_cat=103&_nc_ohc=ZEf538L72_oAX8wsJqy&_nc_ht=scontent.fnyt1-1.fna&oh=2b9bcfc820440c59704ca4eb143da255&oe=5EBA7D91";
   order1(sender_psid);
 }
 
