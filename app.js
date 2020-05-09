@@ -335,6 +335,8 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
     shareimageAttachment = false;
     shareimagehdwtAttachment = false;
     shareimagehwlgAttachment = false;
+    userPaymentAttachment53 = false;
+    userPaymentattachment52 = false;
 }else if (received_message.attachments && shareimagedwkAttachment == true) {
     shareimagedwkAttachment == false;
     // Get the URL of the message attachment
@@ -366,7 +368,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
     });   
   }else if (received_message.text == "ဟုတ်ပါတယ်...") {
      response = {
-        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*2")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
         {
           "content_type":"text",
@@ -992,10 +994,6 @@ if (received_message.text == "Yes.") {
     });
     frame52.cusPh = false;
     userPaymentAttachment52 = true;
-    shareimagehwlgAttachment = false;
-    shareimagehdwtAttachment = false;
-    shareimagedwkAttachment = false;
-    shareimageAttachment = false;
     userPaymentAttachment53 = false;
 }else if (received_message.attachments && userPaymentAttachment52 == true) {
     userPaymentAttachment52 = false;
@@ -2406,7 +2404,7 @@ let response;
 function order4 (sender_psid){
 let response;
      response = {
-        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*2")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
         {
           "content_type":"text",
