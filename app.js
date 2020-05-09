@@ -1866,7 +1866,7 @@ if (payload === 'getstarted' ) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"d2Ch"
+                "payload":"d2Ch_1"
               }              
             ]      
           },{
@@ -1882,7 +1882,7 @@ if (payload === 'getstarted' ) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"d2Ch"
+                "payload":"d2Ch_2"
               }              
             ]      
           },
@@ -1899,7 +1899,7 @@ if (payload === 'getstarted' ) {
               {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"d2Ch"
+                "payload":"d2Ch_3"
               }              
             ]      
           },
@@ -2012,21 +2012,22 @@ else if (payload ==  'd1Ch' || payload ==  'w1Ch') {
 }
 
 else if (payload ==  'd2Ch' || payload ==  'w2Ch') {
-     response = {
-        "text":'ဟုတ်ကဲ့ (5"*1.5")နဲ့ခွေရင် ၁ပေဈေးကတော့ 8000ကျပ်ဖြစ်ပါတယ်။ (4"*1.5")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 7500ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*1.5")နဲ့ခွေမှာလား? (4"*1.5")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
-         "quick_replies":[
-        {
-          "content_type":"text",
-          "title":'(5"*1.5")',
-          "payload":"d2Ch1"
-        },{
-          "content_type":"text",
-          "title":'(4"*1.5")',
-          "payload":"d2Ch2"
-        }
-      ]
-    }
+  order2(sender_psid);
 }
+else if (payload == 'd2Ch_1') {
+   userSendAttachment.shareimagehwlgAttachment = "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/84445199_128731638669414_8788996082672599040_o.jpg?_nc_cat=105&_nc_ohc=B_5XxoqU2V8AX8av3yE&_nc_ht=scontent.fnyt1-1.fna&oh=7c8e5a7d417f8c466f5361e55ef55a40&oe=5EC08340";
+  order2(sender_psid);
+}
+else if (payload == 'd2Ch_2') {
+   userSendAttachment.shareimagehwlgAttachment = "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94700139_158969935645584_6329142220603523072_o.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeH4-y2NSWcVBuHyzqxZtjwjtgeJ4KF8Qzq2B4ngoXxDOvUVqVcOuHdvNuXHtsYKJ2Fa677_TNo1cZghtxUPPKBG&_nc_ohc=1BPbiEWTHrYAX-Q-nqU&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=bd00dcdd5a3f61a616245940ca3f3619&oe=5ECC5F0F";
+  order2(sender_psid);
+}
+else if (payload == 'd2Ch_3') {
+   userSendAttachment.shareimagehwlgAttachment = "https://scontent.fnyt1-1.fna.fbcdn.net/v/t1.0-9/s960x960/85124252_128731588669419_8225910691752574976_o.jpg?_nc_cat=109&_nc_ohc=Z5dkuSQUQJwAX8kXFSa&_nc_ht=scontent.fnyt1-1.fna&oh=525217a6019e787cdb74108c40b0f42f&oe=5ED07986";
+  order2(sender_psid);
+}
+
+
 else if (payload ==  'wChg' || payload ==  'lCh') {
   order1(sender_psid);
 }
@@ -2090,6 +2091,25 @@ let response;
           "content_type":"text",
           "title":'{4"*1.5"}',
           "payload":"lCh2"
+        }
+      ]
+    }
+  callSendAPI(sender_psid, response);
+}
+
+function order2 (sender_psid){
+let response;
+     response = {
+        "text":'ဟုတ်ကဲ့ (5"*1.5")နဲ့ခွေရင် ၁ပေဈေးကတော့ 8000ကျပ်ဖြစ်ပါတယ်။ (4"*1.5")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 7500ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*1.5")နဲ့ခွေမှာလား? (4"*1.5")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+         "quick_replies":[
+        {
+          "content_type":"text",
+          "title":'(5"*1.5")',
+          "payload":"d2Ch1"
+        },{
+          "content_type":"text",
+          "title":'(4"*1.5")',
+          "payload":"d2Ch2"
         }
       ]
     }
