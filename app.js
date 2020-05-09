@@ -116,7 +116,8 @@ const
   let shareimagehwlgAttachment = false;
   let shareimagedwkAttachment = false;
 
-  let userPaymentAttachment = false;
+  let userPaymentAttachment53 = false;
+  let userPaymentattachment52 = false;
   
 
   let userAnswers = {};
@@ -913,20 +914,21 @@ if (received_message.text == "Yes") {
       });
     });
   frame53.cusPh = false;
-  userPaymentAttachment = true;
+  userPaymentAttachment53 = true;
   shareimagehwlgAttachment = false;
   shareimagehdwtAttachment = false;
   shareimagedwkAttachment = false;
   shareimageAttachment = false;
-}else if (received_message.attachments && userPaymentAttachment == true) {
-    userPaymentAttachment = false;
+  userPaymentattachment52 = false;
+}else if (received_message.attachments && userPaymentAttachment53 == true) {
+    userPaymentAttachment53 = false;
     // Get the URL of the message attachment
     let attachment_url6 = received_message.attachments[0].payload.url;
-    userSendAttachment.userPaymentattachment = attachment_url6;
+    userSendAttachment.userPaymentAttachment53 = attachment_url6;
 
       let price_frame53 = 4000 * (userAnswers.length_f53 * userAnswers.width_f53);
-      let total_price_frame53 = (4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53;
-      let balance =  ((4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53) - 10000;
+      let total_price_frame53 = price_frame53 * userAnswers.quantity_f53;
+      let balance =  total_price_frame53 - 10000;
       let data = {
         User_ID : sender_psid,
         User_Name:frame53Answers.cusName,
@@ -939,7 +941,7 @@ if (received_message.text == "Yes") {
         Unit_Price: "4000",
         Amount: price_frame53,
         Total_Amount: total_price_frame53,
-        Part_Payment_In_Advance: userSendAttachment.userPaymentattachment,
+        Part_Payment_In_Advance: userSendAttachment.userPaymentAttachment53,
         Balance: balance,
       }
 
@@ -993,16 +995,17 @@ if (received_message.text == "Yes.") {
       });
     });
     frame52.cusPh = false;
-    userPaymentAttachment = true;
+    userPaymentAttachment52 = true;
     shareimagehwlgAttachment = false;
     shareimagehdwtAttachment = false;
     shareimagedwkAttachment = false;
     shareimageAttachment = false;
-}else if (received_message.attachments && userPaymentAttachment == true) {
-    userPaymentAttachment = false;
+    userPaymentAttachment53 = false;
+}else if (received_message.attachments && userPaymentAttachment52 == true) {
+    userPaymentAttachment52 = false;
     // Get the URL of the message attachment
     let attachment_url6 = received_message.attachments[0].payload.url;
-    userSendAttachment.userPaymentattachment = attachment_url6;
+    userSendAttachment.userPaymentAttachment52 = attachment_url6;
 
       let price_frame52 = 3000 * (userAnswers.length_f52 * userAnswers.width_f52);
       let total_price_frame52 = price_frame52 * userAnswers.quantity_f52;
@@ -1019,7 +1022,7 @@ if (received_message.text == "Yes.") {
         Unit_Price: "3000",
         Amount: price_frame52,
         Total_Amount: total_price_frame52,
-        Part_Payment_In_Advance: userSendAttachment.userPaymentattachment,
+        Part_Payment_In_Advance: userSendAttachment.userPaymentAttachment52,
         Balance: balance,
       }
 
