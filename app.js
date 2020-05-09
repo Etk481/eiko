@@ -903,7 +903,6 @@ if (received_message.text == "Yes") {
       });
     });
   frame53.cusPh = false;
-  userPaymentattachment = true;
 }
 
 //db frame52
