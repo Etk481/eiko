@@ -1729,7 +1729,7 @@ if (payload === 'getstarted' ) {
              {
                 "type":"postback",
                 "title":"မှာမည်",
-                "payload":"wChg"
+                "payload":"wChg6"
               }              
             ]      
           },
