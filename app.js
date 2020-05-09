@@ -365,7 +365,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
     });   
   }else if (received_message.text == "ဟုတ်ပါတယ်...") {
      response = {
-        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*2")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
         {
           "content_type":"text",
@@ -1047,31 +1047,70 @@ if (received_message.text == "Yes!") {
     sdwt515.cusPh = true;
 } else if (received_message.text && sdwt515.cusPh == true) {
       sdwt515Answers.cusPh = received_message.text;
+      let response1 = {
+        "text": 'ဟုတ်ကဲ့ခင်ဗျာလူကြီးမင်း၏အချက်အလက်များကိုလက်ခံရရှိပါတယ်။ စရန်ငွေ တစ်သောင်းကျပ်တိတိ ပေးရန်လိုအပ်ပါတယ်။ ကျန်ငွေကိုတော့ ဆိုင်မှာပစ္စည်းလာရွေးမှ ပေးချေရမှာပါခင်ဗျာ။ KBZ Pay (သို့မဟုတ်) Wave Money မှတစ်ဆင့်ပေးချေနိုင်ပါတယ်။ လူကြီးမင်းမှာယူထားသောပစ္စည်းကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။'
+      };
+      let response2 = {
+        "text": 'Wave 09797676113, Password ကို 676113 ထားပေးပါခင်ဗျာ။'
+      };
+      let response3 = {
+        "attachment":{
+            "type":"image", 
+            "payload":{
+              "url":"https://scontent.fmdl1-2.fna.fbcdn.net/v/t1.0-9/s960x960/96119431_162722408603670_5690533566404886528_o.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeERdI93VI5ct1zuDe9ISol13LmDhVKFNCjcuYOFUoU0KI2E4Unl8OWRm_6ST5eqzrrWCbzmXvUZWNffGaqNdBNL&_nc_ohc=la9E8GF_SO4AX82_fWb&_nc_ht=scontent.fmdl1-2.fna&_nc_tp=7&oh=098046ace482367d4fad7aef4366b76c&oe=5EDBDB46", 
+              "is_reusable":true
+            }
+          }
+      };
+      let response4 = {
+        "text": 'ငွေလွှဲထားကြောင်းကို screenshot ရိုက်ပီးပုံလေးပို့ပေးပါ‌ခင်ဗျာ။'
+      };
+      callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response2).then(()=>{
+        return callSend(sender_psid, response3).then(()=>{
+          return callSend(sender_psid, response4);
+        });
+      });
+    });
+    sdwt515.cusPh = false;
+    userPaymentAttachment = true;
+    shareimagehwlgAttachment = false;
+    shareimagehdwtAttachment = false;
+    shareimagedwkAttachment = false;
+    shareimageAttachment = false;
+}else if (received_message.attachments && userPaymentAttachment == true) {
+    userPaymentAttachment = false;
+    // Get the URL of the message attachment
+    let attachment_url8 = received_message.attachments[0].payload.url;
+    userSendAttachment.userPaymentAttachment = attachment_url8;
 
-      let price_sdwt515 = 7000 * userAnswers.length_sd515 * userAnswers.width_sd515;
-      let total_price_sdwt515 = 7000 * userAnswers.length_sd515 * userAnswers.width_sd515 * userAnswers.quantity_sd515;
+      let price_sdwt515 = 7000 * (userAnswers.length_sd515 * userAnswers.width_sd515);
+      let total_price_sdwt515 = price_sdwt515 * userAnswers.quantity_sd515;
+            let balance = total_price_sdwt515 - 10000;
       let data = {
-        id : sender_psid,
-        name:sdwt515Answers.cusName,
-        phone_no: sdwt515Answers.cusPh,
-        quantity: userAnswers.quantity_sd515,
-        length: userAnswers.length_sd515,
-        width: userAnswers.width_sd515,
-        mass: "5*1.5(inch)",
-        image: userSendAttachment.shareimageAttachment,
-        one_price: price_sdwt515,
-        total_price: total_price_sdwt515,
+        User_ID : sender_psid,
+        User_Name:sdwt515Answers.cusName,
+        Phone_No: sdwt515Answers.cusPh,
+        Quantity: userAnswers.quantity_sd515,
+        Length: userAnswers.length_sd515,
+        Width: userAnswers.width_sd515,
+        Mass: "5*1.5(inch)",
+        Image: userSendAttachment.shareimageAttachment,
+        Unit_Price: "7000",
+        Amount: price_sdwt515,
+        Total_Amount: total_price_sdwt515,
+        Part_Payment_In_Advance: userSendAttachment.userPaymentAttachment,
+        Balance: balance,
       }
 
-      db.collection('orders_info').doc().set(data);
+      db.collection('order_information').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
-    sdwt515.cusPh = false;
-}
+} 
 
 //db sdwt415
 if (received_message.text == "yes.") {
@@ -2407,7 +2446,7 @@ let response;
 function order4 (sender_psid){
 let response;
      response = {
-        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*2")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
         {
           "content_type":"text",
