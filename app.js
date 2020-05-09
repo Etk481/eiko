@@ -915,10 +915,6 @@ if (received_message.text == "Yes") {
     });
   frame53.cusPh = false;
   userPaymentAttachment53 = true;
-  shareimagehwlgAttachment = false;
-  shareimagehdwtAttachment = false;
-  shareimagedwkAttachment = false;
-  shareimageAttachment = false;
   userPaymentattachment52 = false;
 }else if (received_message.attachments && userPaymentAttachment53 == true) {
     userPaymentAttachment53 = false;
@@ -996,10 +992,6 @@ if (received_message.text == "Yes.") {
     });
     frame52.cusPh = false;
     userPaymentAttachment52 = true;
-    shareimagehwlgAttachment = false;
-    shareimagehdwtAttachment = false;
-    shareimagedwkAttachment = false;
-    shareimageAttachment = false;
     userPaymentAttachment53 = false;
 }else if (received_message.attachments && userPaymentAttachment52 == true) {
     userPaymentAttachment52 = false;
