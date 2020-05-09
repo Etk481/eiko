@@ -116,8 +116,7 @@ const
   let shareimagehwlgAttachment = false;
   let shareimagedwkAttachment = false;
 
-  let userPaymentAttachment53 = false;
-  let userPaymentattachment52 = false;
+  let userPaymentAttachment = false;
   
 
   let userAnswers = {};
@@ -335,8 +334,6 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
     shareimageAttachment = false;
     shareimagehdwtAttachment = false;
     shareimagehwlgAttachment = false;
-    userPaymentAttachment53 = false;
-    userPaymentattachment52 = false;
 }else if (received_message.attachments && shareimagedwkAttachment == true) {
     shareimagedwkAttachment == false;
     // Get the URL of the message attachment
@@ -368,7 +365,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
     });   
   }else if (received_message.text == "ဟုတ်ပါတယ်...") {
      response = {
-        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*2")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
         {
           "content_type":"text",
@@ -916,13 +913,16 @@ if (received_message.text == "Yes") {
       });
     });
   frame53.cusPh = false;
-  userPaymentAttachment53 = true;
-  userPaymentattachment52 = false;
-}else if (received_message.attachments && userPaymentAttachment53 == true) {
-    userPaymentAttachment53 = false;
+  userPaymentAttachment = true;
+  shareimagehwlgAttachment = false;
+  shareimagehdwtAttachment = false;
+  shareimagedwkAttachment = false;
+  shareimageAttachment = false;
+}else if (received_message.attachments && userPaymentAttachment == true) {
+    userPaymentAttachment = false;
     // Get the URL of the message attachment
     let attachment_url6 = received_message.attachments[0].payload.url;
-    userSendAttachment.userPaymentAttachment53 = attachment_url6;
+    userSendAttachment.userPaymentattachment = attachment_url6;
 
       let price_frame53 = 4000 * (userAnswers.length_f53 * userAnswers.width_f53);
       let total_price_frame53 = price_frame53 * userAnswers.quantity_f53;
@@ -939,7 +939,7 @@ if (received_message.text == "Yes") {
         Unit_Price: "4000",
         Amount: price_frame53,
         Total_Amount: total_price_frame53,
-        Part_Payment_In_Advance: userSendAttachment.userPaymentAttachment53,
+        Part_Payment_In_Advance: userSendAttachment.userPaymentattachment,
         Balance: balance,
       }
 
@@ -993,13 +993,16 @@ if (received_message.text == "Yes.") {
       });
     });
     frame52.cusPh = false;
-    userPaymentAttachment52 = true;
-    userPaymentAttachment53 = false;
-}else if (received_message.attachments && userPaymentAttachment52 == true) {
-    userPaymentAttachment52 = false;
+    userPaymentAttachment = true;
+    shareimagehwlgAttachment = false;
+    shareimagehdwtAttachment = false;
+    shareimagedwkAttachment = false;
+    shareimageAttachment = false;
+}else if (received_message.attachments && userPaymentAttachment == true) {
+    userPaymentAttachment = false;
     // Get the URL of the message attachment
-    let attachment_url6 = received_message.attachments[0].payload.url;
-    userSendAttachment.userPaymentAttachment52 = attachment_url6;
+    let attachment_url7 = received_message.attachments[0].payload.url;
+    userSendAttachment.userPaymentAttachment = attachment_url7;
 
       let price_frame52 = 3000 * (userAnswers.length_f52 * userAnswers.width_f52);
       let total_price_frame52 = price_frame52 * userAnswers.quantity_f52;
@@ -1016,7 +1019,7 @@ if (received_message.text == "Yes.") {
         Unit_Price: "3000",
         Amount: price_frame52,
         Total_Amount: total_price_frame52,
-        Part_Payment_In_Advance: userSendAttachment.userPaymentAttachment52,
+        Part_Payment_In_Advance: userSendAttachment.userPaymentAttachment,
         Balance: balance,
       }
 
@@ -2404,7 +2407,7 @@ let response;
 function order4 (sender_psid){
 let response;
      response = {
-        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*2")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
+        "text":'ဟုတ်ကဲ့ (5"*3")နဲ့ခွေရင် ၁ပေဈေးကတော့ 4000ကျပ်ဖြစ်ပါတယ်။ (5"*2")နဲ့ခွေမယ်ဆိုရင်တော့ ၁ပေဈေးက 3000ကျပ် ဖြစ်ပါတယ်။ မှာယူလိုပါက (5"*3")နဲ့ခွေမှာလား? (5"*3")နဲ့ခွေမှာလား? ရွေးပေးပါခင်ဗျာ။',
          "quick_replies":[
         {
           "content_type":"text",
