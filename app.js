@@ -115,7 +115,7 @@ const
   let shareimagehdwtAttachment = false;
   let shareimagehwlgAttachment = false;
   let shareimagedwkAttachment = false;
-  let userGiveMoneyattachment = false;
+  let userPaymentattachment = false;
   
 
   let userAnswers = {};
@@ -128,7 +128,7 @@ const
   let wlg515Answers = {}; 
   let wlg415Answers = {};
   let userSendAttachment = [];
-  let userSentMoneyAttachment = [];
+
 
 
 
@@ -903,9 +903,12 @@ if (received_message.text == "Yes") {
       });
     });
   frame53.cusPh = false;
-  userGiveMoneyattachment = true;
-}else if (received_message.attachment && userGiveMoneyattachment == true) {
-  userSentMoneyAttachment = received_message.attachment;
+  userPaymentattachment = true;
+}else if (received_message.attachments && userPaymentattachment == true) {
+    userPaymentattachment == false;
+    // Get the URL of the message attachment
+    let attachment_url = received_message.attachments[0].payload.url;
+    userSendAttachment.userPaymentattachment = attachment_url;
 
       let price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53;
       let total_price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53 * userAnswers.quantity_f53;
@@ -930,7 +933,7 @@ if (received_message.text == "Yes") {
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
-    userGiveMoneyattachment = false;
+    userPaymentattachment = false;
 } 
 
 //db frame52
