@@ -921,9 +921,8 @@ if (received_message.text == "Yes") {
 }else if (received_message.attachments && userPaymentAttachment == true) {
     userPaymentAttachment = false;
     // Get the URL of the message attachment
-    let attachment_url6 = received_message.attachments[0].payload.url;
-    userSendAttachment.userPaymentattachment = attachment_url6;
-
+    let userSendAttachment.userPaymentattachment = received_message.attachments[0].payload.url;
+    
       let price_frame53 = 4000 * (userAnswers.length_f53 * userAnswers.width_f53);
       let total_price_frame53 = (4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53;
       let balance =  ((4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53) - 5000;
