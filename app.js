@@ -883,7 +883,7 @@ if (received_message.text == "Yes") {
         length: userAnswers.length_f53,
         width: userAnswers.width_f53,
         mass: "5*3(inch)",
-        image: userSendAttachment.shareimagedwkAttachment,
+        //image: userSendAttachment.shareimagedwkAttachment,
         one_price: price_frame53,
         total_price: total_price_frame53,
       }
