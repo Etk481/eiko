@@ -914,6 +914,10 @@ if (received_message.text == "Yes") {
     });
   frame53.cusPh = false;
   userPaymentAttachment = true;
+  shareimagehwlgAttachment = false;
+  shareimagehdwtAttachment = false;
+  shareimagedwkAttachment = false;
+  shareimageAttachment = false;
 }else if (received_message.attachments && userPaymentAttachment == true) {
     userPaymentAttachment = false;
     // Get the URL of the message attachment
