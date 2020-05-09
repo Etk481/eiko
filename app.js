@@ -1563,9 +1563,9 @@ if (payload === 'getstarted' ) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"",
+            "title":"ပြတင်းကြီးခွေ",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94615637_158424789033432_29034176489455616_o.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGxHptClUWk_FHCiLMMr-OjJgR10uQKP3YmBHXS5Ao_dmu1I4soFzl5myy-bWKP39LtHIrrk65FsJTJHPBef-mj&_nc_ohc=vTAOHDleMNsAX91xieh&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=3350cd0b8d0300ba52154423e815fc8f&oe=5ECBE456",
-            "subtitle":"ပြတင်းကြီးခွေ",
+            "subtitle":"",
             "default_action": {
               "type": "web_url",
               "url": "https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/p720x720/94615637_158424789033432_29034176489455616_o.jpg?_nc_cat=109&_nc_sid=110474&_nc_eui2=AeGxHptClUWk_FHCiLMMr-OjJgR10uQKP3YmBHXS5Ao_dmu1I4soFzl5myy-bWKP39LtHIrrk65FsJTJHPBef-mj&_nc_ohc=vTAOHDleMNsAX91xieh&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=6&oh=3350cd0b8d0300ba52154423e815fc8f&oe=5ECBE456",
@@ -1582,7 +1582,7 @@ if (payload === 'getstarted' ) {
         ]
       }
     }
-   }
+  }
   let response2 = { "attachment": {
                   "type": "template",
                   "payload": {
