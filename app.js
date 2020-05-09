@@ -921,9 +921,9 @@ if (received_message.text == "Yes") {
     let attachment_url6 = received_message.attachments[0].payload.url;
     userSendAttachment.userPaymentattachment = attachment_url6;
       
-      let price_frame53 = 4000 * userAnswers.length_f53 * userAnswers.width_f53;
-      let total_price_frame53 = price_frame53 * userAnswers.quantity_f53;
-      let balance = total_price_frame53 - 5000;
+      let price_frame53 = 4000 * (userAnswers.length_f53 * userAnswers.width_f53);
+      let total_price_frame53 = (4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53;
+      let balance =  ((4000 * (userAnswers.length_f53 * userAnswers.width_f53)) * userAnswers.quantity_f53) - 5000;
       let orderNumber = Math.floor(Math.random() * 100) + 1;
       let data = {
         User_ID : sender_psid,
