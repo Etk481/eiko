@@ -976,19 +976,19 @@ if (received_message.text == "Yes") {
       let total_price_frame53 = price_frame53 * userAnswers.quantity_f53;
       let balance =  total_price_frame53 - 10000;
       let data = {
-        User_ID : sender_psid,
-        User_Name:frame53Answers.cusName,
-        Phone_No: frame53Answers.cusPh,
-        Quantity: userAnswers.quantity_f53,
-        Length: userAnswers.length_f53,
-        Width: userAnswers.width_f53,
-        Mass: "5*3(inch)",
-        Image: userSendAttachment.shareimagedwkAttachment,
-        Unit_Price: "4000",
-        Amount: price_frame53,
-        Total_Amount: total_price_frame53,
-        Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment53,
-        Balance: balance,
+        a_User_ID : sender_psid,
+        b_User_Name:frame53Answers.cusName,
+        c_Phone_No: frame53Answers.cusPh,
+        d_Quantity: userAnswers.quantity_f53,
+        e_Length: userAnswers.length_f53,
+        f_Width: userAnswers.width_f53,
+        g_Mass: "5*3(inch)",
+        h_Image: userSendAttachment.shareimagedwkAttachment,
+        i_Unit_Price: "4000",
+        j_Amount: price_frame53,
+        k_Total_Amount: total_price_frame53,
+        l_Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment53,
+        m_Balance: balance,
       }
 
       db.collection('order_information').doc().set(data);
@@ -1064,19 +1064,19 @@ if (received_message.text == "Yes.") {
       let total_price_frame52 = price_frame52 * userAnswers.quantity_f52;
       let balance = total_price_frame52 - 10000;
       let data = {
-        User_ID : sender_psid,
-        User_Name:frame52Answers.cusName,
-        Phone_No: frame52Answers.cusPh,
-        Quantity: userAnswers.quantity_f52,
-        Length: userAnswers.length_f52,
-        Width: userAnswers.width_f52,
-        Mass: "5*2(inch)",
-        Image: userSendAttachment.shareimagedwkAttachment,
-        Unit_Price: "3000",
-        Amount: price_frame52,
-        Total_Amount: total_price_frame52,
-        Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment52,
-        Balance: balance,
+        a_User_ID : sender_psid,
+        b_User_Name:frame52Answers.cusName,
+        c_Phone_No: frame52Answers.cusPh,
+        d_Quantity: userAnswers.quantity_f52,
+        e_Length: userAnswers.length_f52,
+        f_Width: userAnswers.width_f52,
+        g_Mass: "5*2(inch)",
+        h_Image: userSendAttachment.shareimagedwkAttachment,
+        i_Unit_Price: "3000",
+        j_Amount: price_frame52,
+        k_Total_Amount: total_price_frame52,
+        l_Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment52,
+        m_Balance: balance,
       }
 
       db.collection('order_information').doc().set(data);
@@ -1152,19 +1152,19 @@ if (received_message.text == "Yes!") {
       let total_price_sdwt515 = price_sdwt515 * userAnswers.quantity_sd515;
       let balance = total_price_sdwt515 - 10000;
       let data = {
-        User_ID : sender_psid,
-        User_Name:sdwt515Answers.cusName,
-        Phone_No: sdwt515Answers.cusPh,
-        Quantity: userAnswers.quantity_sd515,
-        Length: userAnswers.length_sd515,
-        Width: userAnswers.width_sd515,
-        Mass: "5*1.5(inch)",
-        Image: userSendAttachment.shareimageAttachment,
-        Unit_Price: "7000",
-        Amount: price_sdwt515,
-        Total_Amount: total_price_sdwt515,
-        Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_sdwt515,
-        Balance: balance,
+        a_User_ID : sender_psid,
+        b_User_Name:sdwt515Answers.cusName,
+        c_Phone_No: sdwt515Answers.cusPh,
+        d_Quantity: userAnswers.quantity_sd515,
+        e_Length: userAnswers.length_sd515,
+        f_Width: userAnswers.width_sd515,
+        g_Mass: "5*1.5(inch)",
+        h_Image: userSendAttachment.shareimageAttachment,
+        i_Unit_Price: "7000",
+        j_Amount: price_sdwt515,
+        k_Total_Amount: total_price_sdwt515,
+        l_Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_sdwt515,
+        m_Balance: balance,
       }
 
       db.collection('order_information').doc().set(data);
@@ -1241,19 +1241,19 @@ if (received_message.text == "yes.") {
       let total_price_sdwt415 = price_sdwt415 * userAnswers.quantity_sd415;
       let balance = total_price_sdwt415 - 10000;
       let data = {
-        User_ID : sender_psid,
-        User_Name:sdwt415Answers.cusName,
-        Phone_No: sdwt415Answers.cusPh,
-        Quantity: userAnswers.quantity_sd415,
-        Length: userAnswers.length_sd415,
-        Width: userAnswers.width_sd415,
-        Mass: "4*1.5(inch)",
-        Image: userSendAttachment.shareimageAttachment,
-        Unit_Price: "6700",
-        Amount: price_sdwt415,
-        Total_Amount: total_price_sdwt415,
-        Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_sdwt415,
-        Balance: balance,
+        a_User_ID : sender_psid,
+        b_User_Name:sdwt415Answers.cusName,
+        c_Phone_No: sdwt415Answers.cusPh,
+        d_Quantity: userAnswers.quantity_sd415,
+        e_Length: userAnswers.length_sd415,
+        f_Width: userAnswers.width_sd415,
+        g_Mass: "4*1.5(inch)",
+        h_Image: userSendAttachment.shareimageAttachment,
+        i_Unit_Price: "6700",
+        j_Amount: price_sdwt415,
+        k_Total_Amount: total_price_sdwt415,
+        l_Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_sdwt415,
+        m_Balance: balance,
       }
 
       db.collection('order_information').doc().set(data);
@@ -1327,19 +1327,19 @@ if (received_message.text == "yes..") {
       let total_price_hdwt515 = price_hdwt515 * userAnswers.quantity_hd515;
       let balance = total_price_hdwt515 - 10000;
       let data = {
-        User_ID : sender_psid,
-        User_Name:hdwt515Answers.cusName,
-        Phone_No: hdwt515Answers.cusPh,
-        Quantity: userAnswers.quantity_hd515,
-        Length: userAnswers.length_hd515,
-        Width: userAnswers.width_hd515,
-        Mass: "5*1.5(inch)",
-        Image: userSendAttachment.shareimagehdwtAttachment,
-        Unit_Price: "8000",
-        Amount: price_hdwt515,
-        Total_Amount: total_price_hdwt515,
-        Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_hdwt515,
-        Balance: balance,
+        a_User_ID : sender_psid,
+        b_User_Name:hdwt515Answers.cusName,
+        c_Phone_No: hdwt515Answers.cusPh,
+        d_Quantity: userAnswers.quantity_hd515,
+        e_Length: userAnswers.length_hd515,
+        f_Width: userAnswers.width_hd515,
+        g_Mass: "5*1.5(inch)",
+        h_Image: userSendAttachment.shareimagehdwtAttachment,
+        i_Unit_Price: "8000",
+        j_Amount: price_hdwt515,
+        k_Total_Amount: total_price_hdwt515,
+        l_Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_hdwt515,
+        m_Balance: balance,
       }
 
       db.collection('order_information').doc().set(data);
@@ -1417,19 +1417,19 @@ if (received_message.text == "yes!") {
       let total_price_hdwt415 = price_hdwt415 * userAnswers.quantity_hd415;
       let balance = total_price_hdwt415 - 10000;
       let data = {
-        User_ID : sender_psid,
-        User_Name:hdwt415Answers.cusName,
-        Phone_No: hdwt415Answers.cusPh,
-        Quantity: userAnswers.quantity_hd415,
-        Length: userAnswers.length_hd415,
-        Width: userAnswers.width_hd415,
-        Mass: "4*1.5(inch)",
-        Image: userSendAttachment.shareimagehdwtAttachment,
-        Unit_Price: "7500",
-        Amount: price_hdwt415,
-        Total_Amount: total_price_hdwt415,
-        Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_hdwt415,
-        Balance: balance,        
+        a_User_ID : sender_psid,
+        b_User_Name:hdwt415Answers.cusName,
+        c_Phone_No: hdwt415Answers.cusPh,
+        d_Quantity: userAnswers.quantity_hd415,
+        e_Length: userAnswers.length_hd415,
+        f_Width: userAnswers.width_hd415,
+        g_Mass: "4*1.5(inch)",
+        h_Image: userSendAttachment.shareimagehdwtAttachment,
+        i_Unit_Price: "7500",
+        j_Amount: price_hdwt415,
+        k_Total_Amount: total_price_hdwt415,
+        l_Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_hdwt415,
+        m_Balance: balance,        
       }
 
       db.collection('order_information').doc().set(data);
@@ -1506,19 +1506,19 @@ if (received_message.text == "yes...") {
       let total_price_wlg515 = price_wlg515 * userAnswers.quantity_wl515;
       let balance = total_price_wlg515 - 10000;      
       let data = {
-        User_ID : sender_psid,
-        User_Name:wlg515Answers.cusName,
-        Phone_No: wlg515Answers.cusPh,
-        Quantity: userAnswers.quantity_wl515,
-        Length: userAnswers.length_wl515,
-        Width: userAnswers.width_wl515,
-        Mass: "5*1.5(inch)",
-        Image: userSendAttachment.shareimagehwlgAttachment,
-        Unit_Price: "5200",
-        Amount: price_wlg515,
-        Total_Amount: total_price_wlg515,
-        Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_wlg515,
-        Balance: balance,        
+        a_User_ID : sender_psid,
+        b_User_Name:wlg515Answers.cusName,
+        c_Phone_No: wlg515Answers.cusPh,
+        d_Quantity: userAnswers.quantity_wl515,
+        e_Length: userAnswers.length_wl515,
+        f_Width: userAnswers.width_wl515,
+        g_Mass: "5*1.5(inch)",
+        h_Image: userSendAttachment.shareimagehwlgAttachment,
+        i_Unit_Price: "5200",
+        j_Amount: price_wlg515,
+        k_Total_Amount: total_price_wlg515,
+        l_Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_wlg515,
+        m_Balance: balance,        
       }
 
       db.collection('order_information').doc().set(data);
@@ -1594,19 +1594,19 @@ if (received_message.text == "yes") {
       let total_price_wlg415 = price_wlg415 * userAnswers.quantity_wl415;
       let balance = total_price_wlg415 - 10000;         
       let data = {
-        N1_User_ID : sender_psid,
-        N2_User_Name:wlg415Answers.cusName,
-        N3_Phone_No: wlg415Answers.cusPh,
-        N4_Quantity: userAnswers.quantity_wl415,
-        N5_Length: userAnswers.length_wl415,
-        N6_Width: userAnswers.width_wl415,
-        N7_Mass: "4*1.5(inch)",
-        N8_Image: userSendAttachment.shareimagehwlgAttachment,
-        N9_Unit_Price: "4900",
-        N10_Amount: price_wlg415,
-        N11_Total_Amount: total_price_wlg415,
-        N12_Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_wlg415,
-        N13_Balance: balance,        
+        a_User_ID : sender_psid,
+        b_User_Name:wlg415Answers.cusName,
+        c_Phone_No: wlg415Answers.cusPh,
+        d_Quantity: userAnswers.quantity_wl415,
+        e_Length: userAnswers.length_wl415,
+        f_Width: userAnswers.width_wl415,
+        g_Mass: "4*1.5(inch)",
+        h_Image: userSendAttachment.shareimagehwlgAttachment,
+        i_Unit_Price: "4900",
+        j_Amount: price_wlg415,
+        k_Total_Amount: total_price_wlg415,
+        l_Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_wlg415,
+        m_Balance: balance,        
       }
 
       db.collection('order_information').doc().set(data);
