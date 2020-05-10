@@ -920,6 +920,10 @@ if (received_message.text == "Yes") {
     });
       frame53.cusPh = false;
       userPaymentAttachment53 = true;
+      shareimageAttachment = false;
+      shareimagehdwtAttachment = false;
+      shareimagehwlgAttachment = false;
+      shareimagedwkAttachment = false;
       userPaymentAttachment52 = false;
       userPaymentAttachment_sdwt515 = false;
       userPaymentAttachment_sdwt415 = false;
@@ -999,14 +1003,19 @@ if (received_message.text == "Yes.") {
         });
       });
     });
-    frame52.cusPh = false;
-    userPaymentAttachment52 = true;
-    userPaymentAttachment53 = false;
-    userPaymentAttachment_sdwt515 = false;
-    userPaymentAttachment_sdwt415 = false;
-    userPaymentAttachment_hdwt515 = false;
-    userPaymentAttachment_hdwt415 = false;
-}else if (received_message.attachments && userPaymentAttachment52 == true) {
+      frame52.cusPh = false;
+      userPaymentAttachment52 = true;
+      shareimageAttachment = false;
+      shareimagehdwtAttachment = false;
+      shareimagehwlgAttachment = false;
+      shareimagedwkAttachment = false;
+      userPaymentAttachment53 = false;
+      userPaymentAttachment_sdwt515 = false;
+      userPaymentAttachment_sdwt415 = false;
+      userPaymentAttachment_hdwt515 = false;
+      userPaymentAttachment_hdwt415 = false;
+    }
+    else if (received_message.attachments && userPaymentAttachment52 == true) {
     userPaymentAttachment52 = false;
     // Get the URL of the message attachment
     let attachment_url7 = received_message.attachments[0].payload.url;
@@ -1080,13 +1089,17 @@ if (received_message.text == "Yes!") {
         });
       });
     });
-    sdwt515.cusPh = false;
-    userPaymentAttachment_sdwt515 = true;
-    userPaymentAttachment53 = false;
-    userPaymentAttachment52 = false;
-    userPaymentAttachment_sdwt415 = false;
-    userPaymentAttachment_hdwt515 = false;
-    userPaymentAttachment_hdwt415 = false;
+      sdwt515.cusPh = false;
+      userPaymentAttachment_sdwt515 = true;
+      shareimageAttachment = false;
+      shareimagehdwtAttachment = false;
+      shareimagehwlgAttachment = false;
+      shareimagedwkAttachment = false;    
+      userPaymentAttachment53 = false;
+      userPaymentAttachment52 = false;
+      userPaymentAttachment_sdwt415 = false;
+      userPaymentAttachment_hdwt515 = false;
+      userPaymentAttachment_hdwt415 = false;
     }
     else if (received_message.attachments && userPaymentAttachment_sdwt515 == true) {
     userPaymentAttachment_sdwt515 = false;
@@ -1163,15 +1176,19 @@ if (received_message.text == "yes.") {
         });
       });
     });
-    sdwt415.cusPh = false;
-    userPaymentAttachment_sdwt415 = true;
-    userPaymentAttachment53 = false;
-    userPaymentAttachment52 = false;
-    userPaymentAttachment_sdwt515 = false;
-    userPaymentAttachment_hdwt515 = false;
-    userPaymentAttachment_hdwt415 = false;
+      sdwt415.cusPh = false;
+      userPaymentAttachment_sdwt415 = true;
+      shareimageAttachment = false;
+      shareimagehdwtAttachment = false;
+      shareimagehwlgAttachment = false;
+      shareimagedwkAttachment = false;
+      userPaymentAttachment53 = false;
+      userPaymentAttachment52 = false;
+      userPaymentAttachment_sdwt515 = false;
+      userPaymentAttachment_hdwt515 = false;
+      userPaymentAttachment_hdwt415 = false;
     } 
-  else if (received_message.attachments && userPaymentAttachment_sdwt415 == true) {
+    else if (received_message.attachments && userPaymentAttachment_sdwt415 == true) {
     userPaymentAttachment_sdwt415 = false;
     // Get the URL of the message attachment
     let attachment_url9 = received_message.attachments[0].payload.url;
@@ -1245,13 +1262,17 @@ if (received_message.text == "yes..") {
         });
       });
     });
-    hdwt515.cusPh = false;
-    userPaymentAttachment_hdwt515 = true;
-    userPaymentAttachment53 = false;
-    userPaymentAttachment52 = false;
-    userPaymentAttachment_sdwt515 = false;
-    userPaymentAttachment_sdwt415 = false;
-    userPaymentAttachment_hdwt415 = false;
+      hdwt515.cusPh = false;
+      userPaymentAttachment_hdwt515 = true;
+      shareimageAttachment = false;
+      shareimagehdwtAttachment = false;
+      shareimagehwlgAttachment = false;
+      shareimagedwkAttachment = false;    
+      userPaymentAttachment53 = false;
+      userPaymentAttachment52 = false;
+      userPaymentAttachment_sdwt515 = false;
+      userPaymentAttachment_sdwt415 = false;
+      userPaymentAttachment_hdwt415 = false;
     } 
     else if (received_message.attachments && userPaymentAttachment_hdwt515 == true) {
     userPaymentAttachment_hdwt515 = false;
@@ -1329,13 +1350,17 @@ if (received_message.text == "yes!") {
         });
       });
     });
-    hdwt415.cusPh = false;
-    userPaymentAttachment_hdwt415 = true;
-    userPaymentAttachment53 = false;
-    userPaymentAttachment52 = false;
-    userPaymentAttachment_sdwt515 = false;
-    userPaymentAttachment_sdwt415 = false;
-    userPaymentAttachment_hdwt515 = false;
+      hdwt415.cusPh = false;
+      userPaymentAttachment_hdwt415 = true;
+      shareimageAttachment = false;
+      shareimagehdwtAttachment = false;
+      shareimagehwlgAttachment = false;
+      shareimagedwkAttachment = false;    
+      userPaymentAttachment53 = false;
+      userPaymentAttachment52 = false;
+      userPaymentAttachment_sdwt515 = false;
+      userPaymentAttachment_sdwt415 = false;
+      userPaymentAttachment_hdwt515 = false;
     } 
     else if (received_message.attachments && userPaymentAttachment_hdwt415 == true) {
     userPaymentAttachment_hdwt415 = false;
