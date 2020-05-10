@@ -1168,7 +1168,7 @@ if (received_message.text == "yes.") {
 
       let price_sdwt415 = 6700 * (userAnswers.length_sd415 * userAnswers.width_sd415);
       let total_price_sdwt415 = price_sdwt415 * userAnswers.quantity_sd415;
-      let balance = total_price_sdwt515 - 10000;
+      let balance = total_price_sdwt415 - 10000;
       let data = {
         User_ID : sender_psid,
         User_Name:sdwt415Answers.cusName,
@@ -1178,7 +1178,7 @@ if (received_message.text == "yes.") {
         Width: userAnswers.width_sd415,
         Mass: "4*1.5(inch)",
         Image: userSendAttachment.shareimageAttachment,
-        Unit_Price: "7000",
+        Unit_Price: "6700",
         Amount: price_sdwt415,
         Total_Amount: total_price_sdwt415,
         Part_Payment_In_Advance: userSendAttachment.userPaymentAttachment,
