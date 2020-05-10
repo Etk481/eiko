@@ -340,6 +340,12 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
     shareimageAttachment = false;
     shareimagehdwtAttachment = false;
     shareimagehwlgAttachment = false;
+     userPaymentAttachment53 = false;
+      userPaymentAttachment52 = false;
+      userPaymentAttachment_sdwt515 = false;
+      userPaymentAttachment_sdwt415 = false;
+            userPaymentAttachment_hdwt415 = false;
+      userPaymentAttachment_hdwt515 = false;
 }else if (received_message.attachments && shareimagedwkAttachment == true) {
     shareimagedwkAttachment == false;
     // Get the URL of the message attachment
@@ -401,6 +407,12 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     shareimagehdwtAttachment = false;
     shareimagehwlgAttachment = false;
     shareimagedwkAttachment = false;
+         userPaymentAttachment53 = false;
+      userPaymentAttachment52 = false;
+      userPaymentAttachment_sdwt515 = false;
+      userPaymentAttachment_sdwt415 = false;
+            userPaymentAttachment_hdwt415 = false;
+      userPaymentAttachment_hdwt515 = false;
 }else if (received_message.attachments && shareimageAttachment == true) {
     shareimageAttachment == false;
     // Get the URL of the message attachment
@@ -462,6 +474,12 @@ else if (received_message.text == "ကုံးတံခါးမကြီး" |
     shareimageAttachment = false;
     shareimagehwlgAttachment = false;
     shareimagedwkAttachment = false;
+         userPaymentAttachment53 = false;
+      userPaymentAttachment52 = false;
+      userPaymentAttachment_sdwt515 = false;
+      userPaymentAttachment_sdwt415 = false;
+            userPaymentAttachment_hdwt415 = false;
+      userPaymentAttachment_hdwt515 = false;
 }else if (received_message.attachments && shareimagehdwtAttachment == true) {
     shareimagehdwtAttachment == false;
     // Get the URL of the message attachment
@@ -521,6 +539,12 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
     shareimagehdwtAttachment = false;
     shareimagedwkAttachment = false;
     shareimageAttachment = false;
+         userPaymentAttachment53 = false;
+      userPaymentAttachment52 = false;
+      userPaymentAttachment_sdwt515 = false;
+      userPaymentAttachment_sdwt415 = false;
+            userPaymentAttachment_hdwt415 = false;
+      userPaymentAttachment_hdwt515 = false;
 }else if (received_message.attachments && shareimagehwlgAttachment == true) {
     shareimagehwlgAttachment == false;
     // Get the URL of the message attachment
