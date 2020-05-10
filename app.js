@@ -123,6 +123,7 @@ const
   let userPaymentAttachment_hdwt515 = false;
   let userPaymentAttachment_hdwt415 = false;
   let userPaymentAttachment_wlg515 = false;
+  let userPaymentAttachment_wlg415 = false;
   
 
   let userAnswers = {};
@@ -348,6 +349,7 @@ else if (received_message.text == "တံခါးမကြီးခွေ" || r
     userPaymentAttachment_hdwt415 = false;
     userPaymentAttachment_hdwt515 = false;
     userPaymentAttachment_wlg515 = false;
+    userPaymentAttachment_wlg415 = false;
 }else if (received_message.attachments && shareimagedwkAttachment == true) {
     shareimagedwkAttachment == false;
     // Get the URL of the message attachment
@@ -416,6 +418,7 @@ else if (received_message.text == "ရိုးရိုးတံခါးမက
     userPaymentAttachment_hdwt415 = false;
     userPaymentAttachment_hdwt515 = false;
     userPaymentAttachment_wlg515 = false;
+    userPaymentAttachment_wlg415 = false;
 }else if (received_message.attachments && shareimageAttachment == true) {
     shareimageAttachment == false;
     // Get the URL of the message attachment
@@ -484,6 +487,7 @@ else if (received_message.text == "ကုံးတံခါးမကြီး" |
     userPaymentAttachment_hdwt415 = false;
     userPaymentAttachment_hdwt515 = false;
     userPaymentAttachment_wlg515 = false;
+    userPaymentAttachment_wlg415 = false;
 }else if (received_message.attachments && shareimagehdwtAttachment == true) {
     shareimagehdwtAttachment == false;
     // Get the URL of the message attachment
@@ -550,6 +554,7 @@ else if (received_message.text == "ရိုးပြတင်းမှန်ဆ
     userPaymentAttachment_hdwt415 = false;
     userPaymentAttachment_hdwt515 = false;
     userPaymentAttachment_wlg515 = false;
+    userPaymentAttachment_wlg415 = false;
 }else if (received_message.attachments && shareimagehwlgAttachment == true) {
     shareimagehwlgAttachment == false;
     // Get the URL of the message attachment
@@ -959,6 +964,7 @@ if (received_message.text == "Yes") {
       userPaymentAttachment_hdwt515 = false;
       userPaymentAttachment_hdwt415 = false;
       userPaymentAttachment_wlg515 = false;
+      userPaymentAttachment_wlg415 = false;
     }
     else if (received_message.attachments && userPaymentAttachment53 == true) {
     userPaymentAttachment53 = false;
@@ -1046,6 +1052,7 @@ if (received_message.text == "Yes.") {
       userPaymentAttachment_hdwt515 = false;
       userPaymentAttachment_hdwt415 = false;
       userPaymentAttachment_wlg515 = false;
+      userPaymentAttachment_wlg415 = false;
     }
     else if (received_message.attachments && userPaymentAttachment52 == true) {
     userPaymentAttachment52 = false;
@@ -1133,6 +1140,7 @@ if (received_message.text == "Yes!") {
       userPaymentAttachment_hdwt515 = false;
       userPaymentAttachment_hdwt415 = false;
       userPaymentAttachment_wlg515 = false;
+      userPaymentAttachment_wlg415 = false;
     }
     else if (received_message.attachments && userPaymentAttachment_sdwt515 == true) {
     userPaymentAttachment_sdwt515 = false;
@@ -1221,6 +1229,7 @@ if (received_message.text == "yes.") {
       userPaymentAttachment_hdwt515 = false;
       userPaymentAttachment_hdwt415 = false;
       userPaymentAttachment_wlg515 = false;
+      userPaymentAttachment_wlg415 = false;
     } 
     else if (received_message.attachments && userPaymentAttachment_sdwt415 == true) {
     userPaymentAttachment_sdwt415 = false;
@@ -1396,6 +1405,7 @@ if (received_message.text == "yes!") {
       userPaymentAttachment_sdwt415 = false;
       userPaymentAttachment_hdwt515 = false;
       userPaymentAttachment_wlg515 = false;
+      userPaymentAttachment_wlg415 = false;
     } 
     else if (received_message.attachments && userPaymentAttachment_hdwt415 == true) {
     userPaymentAttachment_hdwt415 = false;
@@ -1483,7 +1493,8 @@ if (received_message.text == "yes...") {
       userPaymentAttachment_sdwt515 = false;
       userPaymentAttachment_sdwt415 = false;
       userPaymentAttachment_hdwt515 = false;
-      userPaymentAttachment_hdwt415 = false;     
+      userPaymentAttachment_hdwt415 = false;
+      userPaymentAttachment_wlg415 = false;     
     } 
     else if (received_message.attachments && userPaymentAttachment_wlg515 == true) {
     userPaymentAttachment_wlg515 = false;
@@ -1504,8 +1515,8 @@ if (received_message.text == "yes...") {
         Mass: "5*1.5(inch)",
         Image: userSendAttachment.shareimagehwlgAttachment,
         Unit_Price: "5200",
-        Total_Amount: price_wlg515,
-        total_price: total_price_wlg515,
+        Amount: price_wlg515,
+        Total_Amount: total_price_wlg515,
         Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_wlg515,
         Balance: balance,        
       }
@@ -1534,31 +1545,78 @@ if (received_message.text == "yes") {
     wlg415.cusPh = true;
 } else if (received_message.text && wlg415.cusPh == true) {
       wlg415Answers.cusPh = received_message.text;
+      let response1 = {
+        "text": 'ဟုတ်ကဲ့ခင်ဗျာလူကြီးမင်း၏အချက်အလက်များကိုလက်ခံရရှိပါတယ်။ စရန်ငွေ တစ်သောင်းကျပ်တိတိ ပေးရန်လိုအပ်ပါတယ်။ ကျန်ငွေကိုတော့ ဆိုင်မှာပစ္စည်းလာရွေးမှ ပေးချေရမှာပါခင်ဗျာ။ KBZ Pay (သို့မဟုတ်) Wave Money မှတစ်ဆင့်ပေးချေနိုင်ပါတယ်။ လူကြီးမင်းမှာယူထားသောပစ္စည်းကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။'
+      };
+      let response2 = {
+        "text": 'Wave 09797676113, Password ကို 676113 ထားပေးပါခင်ဗျာ။'
+      };
+      let response3 = {
+        "attachment":{
+            "type":"image", 
+            "payload":{
+              "url":"https://scontent.fmdl1-2.fna.fbcdn.net/v/t1.0-9/s960x960/96119431_162722408603670_5690533566404886528_o.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeERdI93VI5ct1zuDe9ISol13LmDhVKFNCjcuYOFUoU0KI2E4Unl8OWRm_6ST5eqzrrWCbzmXvUZWNffGaqNdBNL&_nc_ohc=la9E8GF_SO4AX82_fWb&_nc_ht=scontent.fmdl1-2.fna&_nc_tp=7&oh=098046ace482367d4fad7aef4366b76c&oe=5EDBDB46", 
+              "is_reusable":true
+            }
+          }
+      };
+      let response4 = {
+        "text": 'ငွေလွှဲထားကြောင်းကို screenshot ရိုက်ပီးပုံလေးပို့ပေးပါ‌ခင်ဗျာ။'
+      };
+      callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response2).then(()=>{
+        return callSend(sender_psid, response3).then(()=>{
+          return callSend(sender_psid, response4);
+        });
+      });
+    });
+      wlg415.cusPh = false;      
+      userPaymentAttachment_wlg415 = true;
+      shareimageAttachment = false;
+      shareimagehdwtAttachment = false;
+      shareimagehwlgAttachment = false;
+      shareimagedwkAttachment = false;    
+      userPaymentAttachment53 = false;
+      userPaymentAttachment52 = false;
+      userPaymentAttachment_sdwt515 = false;
+      userPaymentAttachment_sdwt415 = false;
+      userPaymentAttachment_hdwt515 = false;
+      userPaymentAttachment_hdwt415 = false;
+      userPaymentAttachment_wlg515 = false;     
+    } 
+    else if (received_message.attachments && userPaymentAttachment_wlg415 == true) {
+    userPaymentAttachment_wlg415 = false;
+    // Get the URL of the message attachment
+    let attachment_url13 = received_message.attachments[0].payload.url;
+    userSendPaymentAttachment.userPaymentAttachment_wlg415 = attachment_url13;
 
-      let price_wlg415 = 4900 * userAnswers.length_wl415 * userAnswers.width_wl415;
-      let total_price_wlg415 = 4900 * userAnswers.length_wl415 * userAnswers.width_wl415 * userAnswers.quantity_wl415;
+      let price_wlg415 = 4900 * (userAnswers.length_wl415 * userAnswers.width_wl415);
+      let total_price_wlg415 = price_wlg415 * userAnswers.quantity_wl415;
+      let balance = total_price_wlg415 - 10000;         
       let data = {
-        id : sender_psid,
-        name:wlg415Answers.cusName,
-        phone_no: wlg415Answers.cusPh,
-        quantity: userAnswers.quantity_wl415,
-        length: userAnswers.length_wl415,
-        width: userAnswers.width_wl415,
-        mass: "4*1.5(inch)",
-        image: userSendAttachment.shareimagehwlgAttachment,
-        one_price: price_wlg415,
-        total_price: total_price_wlg415,
+        N1_User_ID : sender_psid,
+        N2_User_Name:wlg415Answers.cusName,
+        N3_Phone_No: wlg415Answers.cusPh,
+        N4_Quantity: userAnswers.quantity_wl415,
+        N5_Length: userAnswers.length_wl415,
+        N6_Width: userAnswers.width_wl415,
+        N7_Mass: "4*1.5(inch)",
+        N8_Image: userSendAttachment.shareimagehwlgAttachment,
+        N9_Unit_Price: "4900",
+        N10_Amount: price_wlg415,
+        N11_Total_Amount: total_price_wlg415,
+        N12_Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_wlg415,
+        N13_Balance: balance,        
       }
 
-      db.collection('orders_info').doc().set(data);
+      db.collection('order_information').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
-    wlg415.cusPh = false;
-}
+} 
 
 
 
