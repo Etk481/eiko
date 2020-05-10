@@ -120,6 +120,7 @@ const
   let userPaymentAttachment52 = false;
   let userPaymentAttachment_sdwt515 = false;
   let userPaymentAttachment_sdwt415 = false;
+  let userPaymentAttachment_hdwt515 = false;
   
 
   let userAnswers = {};
@@ -921,7 +922,7 @@ if (received_message.text == "Yes") {
       userPaymentAttachment52 = false;
       userPaymentAttachment_sdwt515 = false;
       userPaymentAttachment_sdwt415 = false;
-
+      userPaymentAttachment_hdwt515 = false;
 }else if (received_message.attachments && userPaymentAttachment53 == true) {
     userPaymentAttachment53 = false;
     // Get the URL of the message attachment
@@ -1001,7 +1002,7 @@ if (received_message.text == "Yes.") {
     userPaymentAttachment53 = false;
     userPaymentAttachment_sdwt515 = false;
     userPaymentAttachment_sdwt415 = false;
-    
+    userPaymentAttachment_hdwt515 = false;
 
 }else if (received_message.attachments && userPaymentAttachment52 == true) {
     userPaymentAttachment52 = false;
@@ -1082,6 +1083,7 @@ if (received_message.text == "Yes!") {
     userPaymentAttachment53 = false;
     userPaymentAttachment52 = false;
     userPaymentAttachment_sdwt415 = false;
+    userPaymentAttachment_hdwt515 = false;
     }
     else if (received_message.attachments && userPaymentAttachment_sdwt515 == true) {
     userPaymentAttachment_sdwt515 = false;
@@ -1163,6 +1165,7 @@ if (received_message.text == "yes.") {
     userPaymentAttachment53 = false;
     userPaymentAttachment52 = false;
     userPaymentAttachment_sdwt515 = false;
+    userPaymentAttachment_hdwt515 = false;
     } 
   else if (received_message.attachments && userPaymentAttachment_sdwt415 == true) {
     userPaymentAttachment_sdwt415 = false;
@@ -1213,30 +1216,71 @@ if (received_message.text == "yes..") {
     hdwt515.cusPh = true;
 } else if (received_message.text && hdwt515.cusPh == true) {
       hdwt515Answers.cusPh = received_message.text;
+      let response1 = {
+        "text": 'ဟုတ်ကဲ့ခင်ဗျာလူကြီးမင်း၏အချက်အလက်များကိုလက်ခံရရှိပါတယ်။ စရန်ငွေ တစ်သောင်းကျပ်တိတိ ပေးရန်လိုအပ်ပါတယ်။ ကျန်ငွေကိုတော့ ဆိုင်မှာပစ္စည်းလာရွေးမှ ပေးချေရမှာပါခင်ဗျာ။ KBZ Pay (သို့မဟုတ်) Wave Money မှတစ်ဆင့်ပေးချေနိုင်ပါတယ်။ လူကြီးမင်းမှာယူထားသောပစ္စည်းကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။'
+      };
+      let response2 = {
+        "text": 'Wave 09797676113, Password ကို 676113 ထားပေးပါခင်ဗျာ။'
+      };
+      let response3 = {
+        "attachment":{
+            "type":"image", 
+            "payload":{
+              "url":"https://scontent.fmdl1-2.fna.fbcdn.net/v/t1.0-9/s960x960/96119431_162722408603670_5690533566404886528_o.jpg?_nc_cat=107&_nc_sid=110474&_nc_eui2=AeERdI93VI5ct1zuDe9ISol13LmDhVKFNCjcuYOFUoU0KI2E4Unl8OWRm_6ST5eqzrrWCbzmXvUZWNffGaqNdBNL&_nc_ohc=la9E8GF_SO4AX82_fWb&_nc_ht=scontent.fmdl1-2.fna&_nc_tp=7&oh=098046ace482367d4fad7aef4366b76c&oe=5EDBDB46", 
+              "is_reusable":true
+            }
+          }
+      };
+      let response4 = {
+        "text": 'ငွေလွှဲထားကြောင်းကို screenshot ရိုက်ပီးပုံလေးပို့ပေးပါ‌ခင်ဗျာ။'
+      };
+      callSend(sender_psid, response1).then(()=>{
+      return callSend(sender_psid, response2).then(()=>{
+        return callSend(sender_psid, response3).then(()=>{
+          return callSend(sender_psid, response4);
+        });
+      });
+    });
+    hdwt515.cusPh = false;
+    userPaymentAttachment_hdwt515 = true;
+    userPaymentAttachment53 = false;
+    userPaymentAttachment52 = false;
+    userPaymentAttachment_sdwt515 = false;
+    userPaymentAttachment_sdwt415 = false;
+    } 
+    else if (received_message.attachments && userPaymentAttachment_hdwt515 == true) {
+    userPaymentAttachment_hdwt515 = false;
+    // Get the URL of the message attachment
+    let attachment_url10 = received_message.attachments[0].payload.url;
+    userSendPaymentAttachment.userPaymentAttachment_hdwt515 = attachment_url10;
 
-      let price_hdwt515 = 8000 * userAnswers.length_hd515 * userAnswers.width_hd515;
-      let total_price_hdwt515 = 8000 * userAnswers.length_hd515 * userAnswers.width_hd515 * userAnswers.quantity_hd515;
+      let price_hdwt515 = 8000 * (userAnswers.length_hd515 * userAnswers.width_hd515);
+      let total_price_hdwt515 = price_hdwt515 * userAnswers.quantity_hd515;
+      let balance = total_price_hdwt515 - 10000;
       let data = {
-        id : sender_psid,
-        name:hdwt515Answers.cusName,
-        phone_no: hdwt515Answers.cusPh,
-        quantity: userAnswers.quantity_hd515,
-        length: userAnswers.length_hd515,
-        width: userAnswers.width_hd515,
-        mass: "5*1.5(inch)",
-        image: userSendAttachment.shareimagehdwtAttachment,
-        one_price: price_hdwt515,
-        total_price: total_price_hdwt515,
+        User_ID : sender_psid,
+        User_Name:hdwt515Answers.cusName,
+        Phone_No: hdwt515Answers.cusPh,
+        Quantity: userAnswers.quantity_hd515,
+        Length: userAnswers.length_hd515,
+        Width: userAnswers.width_hd515,
+        Mass: "5*1.5(inch)",
+        Image: userSendAttachment.shareimagehdwtAttachment,
+        Unit_Price: "8000",
+        Amount: price_hdwt515,
+        Total_Amount: total_price_hdwt515,
+        Part_Payment_In_Advance: userSendPaymentAttachment.userPaymentAttachment_hdwt515,
+        Balance: balance,
       }
 
-      db.collection('orders_info').doc().set(data);
+      db.collection('order_information').doc().set(data);
 
     let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
     let response2 = { "text" : 'လူကြီးမင်းမှာယူထားသောအော်ဒါကို ပြုလုပ်ပီးပါက လူကြီးမင်းဆီသို့ ဖုန်းဆက်၍‌ေသာ်လည်း‌ေကာင်း၊ စာတိုပေးပို့၍‌ေသာ်လည်း‌ေကာင်း အကြောင်းကြားပေးပါမည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
-    hdwt515.cusPh = false;
+    
 }
 
 //db hdwt415
