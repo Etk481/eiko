@@ -988,8 +988,8 @@ if (received_message.text == "Yes") {
 
       db.collection('order_information').doc().set(data);
 
-    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response2 = { "text" : 'ဆက်လက်မှာယူလိုပါက hi ဟုပို့ပေးပါ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
@@ -1076,8 +1076,8 @@ if (received_message.text == "Yes.") {
 
       db.collection('order_information').doc().set(data);
 
-    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response2 = { "text" : 'ဆက်လက်မှာယူလိုပါက hi ဟုပို့ပေးပါ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
@@ -1164,8 +1164,8 @@ if (received_message.text == "Yes!") {
 
       db.collection('order_information').doc().set(data);
 
-    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response2 = { "text" : 'ဆက်လက်မှာယူလိုပါက hi ဟုပို့ပေးပါ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
@@ -1253,8 +1253,8 @@ if (received_message.text == "yes.") {
 
       db.collection('order_information').doc().set(data);
 
-    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response2 = { "text" : 'ဆက်လက်မှာယူလိုပါက hi ဟုပို့ပေးပါ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
@@ -1339,8 +1339,8 @@ if (received_message.text == "yes..") {
 
       db.collection('order_information').doc().set(data);
 
-    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response2 = { "text" : 'ဆက်လက်မှာယူလိုပါက hi ဟုပို့ပေးပါ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
@@ -1429,8 +1429,8 @@ if (received_message.text == "yes!") {
 
       db.collection('order_information').doc().set(data);
 
-    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response2 = { "text" : 'ဆက်လက်မှာယူလိုပါက hi ဟုပို့ပေးပါ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
@@ -1518,8 +1518,8 @@ if (received_message.text == "yes...") {
 
       db.collection('order_information').doc().set(data);
 
-    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response2 = { "text" : 'ဆက်လက်မှာယူလိုပါက hi ဟုပို့ပေးပါ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
@@ -1606,8 +1606,8 @@ if (received_message.text == "yes") {
 
       db.collection('order_information').doc().set(data);
 
-    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။'};
-    let response2 = { "text" : ' ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response1 = { "text":'မှာယူမှုအောင်မြင်ပါသည်။ ဝယ်ယူမှုအတွက်ကျေးဇူးအထူးဘဲတင်ရှိပါတယ်ခင်ဗျာ။'};
+    let response2 = { "text" : ' ဆက်လက်မှာယူလိုပါက hi ဟုပို့ပေးပါ။'};
     callSend(sender_psid, response1).then(()=>{
         return callSend(sender_psid, response2);
     }); 
