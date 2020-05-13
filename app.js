@@ -268,11 +268,6 @@ function handleMessage(sender_psid, received_message) {
                           "type": "postback",
                           "title": "ဒီဇိုင်းပေး၍မှာမည်",
                           "payload": "gd1",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "View Order",
-                          "payload": "VO1",
                         }
                       ],
                     }]
@@ -1674,11 +1669,6 @@ if (payload === 'getstarted' ) {
                           "type": "postback",
                           "title": "ဒီဇိုင်းပေး၍မှာမည်",
                           "payload": "gd1",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "View Order",
-                          "payload": "VO1",
                         }
                       ],
                     }]
